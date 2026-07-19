@@ -1,0 +1,20 @@
+{
+  "source": "leiden",
+  "country": null,
+  "coverage": "worldwide",
+  "ranking_year": 2025,
+  "retrieval_method": "zenodo-container",
+  "data_license": "CC0-1.0",
+  "data_attribution": null,
+  "retrieved_at": "2026-07-19T13:17:03+00:00",
+  "records": 12474,
+  "records_by_scope": {
+    "biomedical-health-sciences": 2165,
+    "life-earth-sciences": 1692,
+    "mathematics-computer-science": 1910,
+    "overall": 2773,
+    "physical-sciences-engineering": 2134,
+    "social-sciences-humanities": 1800
+  },
+  "failures": []
+}

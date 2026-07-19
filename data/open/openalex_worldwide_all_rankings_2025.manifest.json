@@ -1,0 +1,15 @@
+{
+  "source": "openalex",
+  "country": null,
+  "coverage": "worldwide",
+  "ranking_year": 2025,
+  "retrieval_method": "openalex-api",
+  "data_license": "CC0-1.0",
+  "data_attribution": null,
+  "retrieved_at": "2026-07-19T13:13:00+00:00",
+  "records": 9637,
+  "records_by_scope": {
+    "overall": 9637
+  },
+  "failures": []
+}
