@@ -389,6 +389,102 @@ class ScraperTests(unittest.TestCase):
         self.assertNotIn("chemical-engineering", scraper.SCIMAGO_AREA_CODES)
         self.assertNotIn("multidisciplinary", scraper.SCIMAGO_AREA_CODES)
 
+    def test_nature_parser_supports_table_and_compact_formats(self):
+        single_year_table = (
+            "| Position | Institution | Share 2024 | Count 2024 |\n"
+            "| --- | --- | --- | --- |\n"
+            "| 1 | [Example University, United States of America (USA)]"
+            "(https://www.nature.com/nature-index/institution-outputs/"
+            "United%20States%20of%20America%20%28USA%29/"
+            "Example%20University/000000000000000000000001) | 12.50 | 31 |\n"
+        )
+        comparison_table = (
+            "| Position | Institution | Share 2021 | Share 2022 | "
+            "Count 2022 | Change in Share 2021-2022 |\n"
+            "| --- | --- | --- | --- | --- | --- |\n"
+            "| 1 | [Example University, United States of America (USA)]"
+            "(https://www.nature.com/nature-index/institution-outputs/"
+            "United%20States%20of%20America%20%28USA%29/"
+            "Example%20University/000000000000000000000001) "
+            "| N/A | 12.50 | 31 | N/A |\n"
+        )
+        compact = (
+            "1[Example University, United States of America (USA)]"
+            "(https://www.nature.com/nature-index/institution-outputs/"
+            "United%20States%20of%20America%20%28USA%29/"
+            "Example%20University/000000000000000000000001)"
+            "N/A 12.50 31 N/A\n"
+            "2[Second University, Canada]"
+            "(https://www.nature.com/nature-index/institution-outputs/"
+            "Canada/Second%20University/000000000000000000000002)"
+            "11.50 10.50 20-8.7%\n"
+        )
+
+        table_result = scraper._parse_nature_markdown(single_year_table)
+        comparison_result = scraper._parse_nature_markdown(comparison_table)
+        compact_result = scraper._parse_nature_markdown(compact)
+
+        self.assertEqual("Example University", table_result.loc[0, "name"])
+        self.assertEqual(
+            "United States of America (USA)",
+            table_result.loc[0, "country"],
+        )
+        self.assertEqual(12.5, table_result.loc[0, "share"])
+        self.assertTrue(pd.isna(table_result.loc[0, "previous_share"]))
+        self.assertTrue(pd.isna(comparison_result.loc[0, "previous_share"]))
+        self.assertTrue(pd.isna(comparison_result.loc[0, "share_change_percent"]))
+        self.assertTrue(pd.isna(compact_result.loc[0, "previous_share"]))
+        self.assertTrue(pd.isna(compact_result.loc[0, "share_change_percent"]))
+        self.assertEqual(11.5, compact_result.loc[1, "previous_share"])
+        self.assertEqual(-8.7, compact_result.loc[1, "share_change_percent"])
+
+    @patch("university_ranking_scraper.scraper.httpx.Client")
+    def test_nature_uses_reader_proxy_and_filters_country(self, client_class):
+        rows = []
+        for ranking in range(1, 101):
+            country = (
+                "United%20States%20of%20America%20%28USA%29"
+                if ranking == 1
+                else "Canada"
+            )
+            rows.append(
+                f"{ranking}[University {ranking}, Country]"
+                f"(https://www.nature.com/nature-index/institution-outputs/"
+                f"{country}/University%20{ranking}/{ranking:024x})"
+                f"{101 - ranking:.2f} {102 - ranking:.2f} "
+                f"{200 - ranking} 1.0%"
+            )
+        client = fake_client([FakeResponse(text="\n".join(rows))])
+        client_class.return_value = client
+
+        result = scraper.scrape_nature(
+            "academic-chemistry",
+            year=2026,
+            country="united-states",
+            reader_proxy=True,
+            max_retries=1,
+        )
+
+        self.assertEqual(["University 1"], result["name"].tolist())
+        self.assertEqual(["academic"], result["sector"].tolist())
+        self.assertEqual(["chemistry"], result["nature_subject"].tolist())
+        target = client.get.call_args.args[0]
+        self.assertTrue(target.startswith("https://r.jina.ai/https://"))
+        self.assertIn(
+            "/annual-tables/2026/institution/academic/chemistry/global",
+            target,
+        )
+
+    @patch("university_ranking_scraper.scraper.httpx.Client")
+    def test_nature_reports_direct_http_406(self, client_class):
+        client_class.return_value = fake_client([FakeResponse(status_code=406)])
+
+        with self.assertRaisesRegex(
+            scraper.ProviderBlockedError,
+            "Nature Index returned HTTP 406",
+        ):
+            scraper.scrape_nature(max_retries=1)
+
     @patch("university_ranking_scraper.scraper.httpx.Client")
     def test_qs_reports_cloudflare_block(self, client_class):
         client = fake_client([FakeResponse(status_code=403)])
@@ -774,6 +870,28 @@ class ScraperTests(unittest.TestCase):
             ],
             scopes,
         )
+
+    @patch("university_ranking_scraper.scraper._scope_frame")
+    def test_nature_batch_skips_scopes_before_their_launch_year(self, scope_frame):
+        scope_frame.return_value = pd.DataFrame(
+            [{"source": "nature", "ranking_scope": "overall", "name": "Example"}]
+        )
+
+        scraper.scrape_country_rankings(
+            "nature",
+            None,
+            year=2016,
+            include_overall=True,
+        )
+
+        scopes = [call.args[1] for call in scope_frame.call_args_list]
+        self.assertIn("overall", scopes)
+        self.assertIn("natural-sciences", scopes)
+        self.assertIn("academic-overall", scopes)
+        self.assertIn("academic-chemistry", scopes)
+        self.assertNotIn("health-sciences", scopes)
+        self.assertNotIn("applied-sciences", scopes)
+        self.assertNotIn("academic-social-sciences", scopes)
 
 
 if __name__ == "__main__":

@@ -34,7 +34,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description=(
             "Scrape university rankings from US News, Times Higher Education, "
-            "QS, and additional worldwide research-ranking providers"
+            "QS, Nature Index, and additional worldwide research-ranking "
+            "providers"
         )
     )
     parser.add_argument(
@@ -108,8 +109,8 @@ def build_parser() -> argparse.ArgumentParser:
         "--reader-proxy",
         action="store_true",
         help=(
-            "Fetch public QS or SCImago URLs through r.jina.ai after "
-            "Cloudflare blocks direct access"
+            "Fetch public QS, SCImago, or Nature Index URLs through r.jina.ai "
+            "after direct access is blocked"
         ),
     )
     parser.add_argument(
@@ -212,6 +213,7 @@ def _write_batch(
                 "cwur": "static-html",
                 "ntu": "public-json",
                 "arwu": "public-json",
+                "nature": "annual-tables",
                 "webometrics": "figshare",
             }.get(source, "direct")
         ),
@@ -405,8 +407,10 @@ def main(argv: list[str] | None = None) -> int:
         parser.error("--all-subjects and --subjects cannot be used together")
     if args.overall_only and args.subjects:
         parser.error("--overall-only and --subjects cannot be used together")
-    if args.reader_proxy and args.website not in {"qs", "scimago"}:
-        parser.error("--reader-proxy is only supported for QS and SCImago")
+    if args.reader_proxy and args.website not in {"qs", "scimago", "nature"}:
+        parser.error(
+            "--reader-proxy is only supported for QS, SCImago, and Nature Index"
+        )
     if args.workers < 1:
         parser.error("--workers must be at least 1")
     if args.request_delay < 0:

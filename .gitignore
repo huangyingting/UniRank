@@ -3,7 +3,8 @@
 !data/historical/*.csv
 !data/open/
 !data/open/*.csv
-data/restricted/
+!data/restricted/
+!data/restricted/*.csv
 .venv/
 .tmp-smoke/
 dist/

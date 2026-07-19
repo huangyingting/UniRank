@@ -14,7 +14,7 @@ from html import unescape
 from io import StringIO
 from pathlib import Path
 from typing import Any, Iterable
-from urllib.parse import quote
+from urllib.parse import quote, unquote, urlparse
 
 import httpx
 import pandas as pd
@@ -27,6 +27,7 @@ from .constant import (
     LEIDEN_FIELD_IDS,
     LATEST_QS_YEAR,
     LATEST_THE_YEAR,
+    NATURE_SCOPE_PATHS,
     NTU_SCOPE_CODES,
     QS_LEGACY_URLS,
     QS_OVERALL_NIDS,
@@ -56,6 +57,7 @@ CWUR_BASE_URL = "https://cwur.org"
 NTU_BASE_URL = "http://nturanking.csti.tw"
 ARWU_API_URL = "https://www.shanghairanking.com/api/pub/v1"
 SCIMAGO_URL = "https://www.scimagoir.com/getdata.php"
+NATURE_INDEX_URL = "https://www.nature.com/nature-index"
 
 
 class ScraperError(RuntimeError):
@@ -84,11 +86,16 @@ def _request(
     for attempt in range(max_retries):
         try:
             response = client.get(url, params=params)
-            if response.status_code == 403 and provider in {"qs", "scimago"}:
-                provider_name = "QS" if provider == "qs" else "SCImago"
+            blocked_statuses = {"qs": 403, "scimago": 403, "nature": 406}
+            if response.status_code == blocked_statuses.get(provider):
+                provider_name = {
+                    "qs": "QS",
+                    "scimago": "SCImago",
+                    "nature": "Nature Index",
+                }[provider]
                 raise ProviderBlockedError(
-                    f"{provider_name} returned HTTP 403 from its "
-                    "Cloudflare-protected site. "
+                    f"{provider_name} returned HTTP {response.status_code} from "
+                    "its protected site. "
                     "Retry with the explicit reader-proxy option, or use an "
                     f"authorized {provider_name} export."
                 )
@@ -304,10 +311,17 @@ def _country_key(value: Any) -> str:
     raw_value = _plain_text(str(value or "")).strip()
     if not raw_value:
         return ""
-    try:
-        return pycountry.countries.lookup(raw_value).alpha_2.casefold()
-    except LookupError:
-        pass
+    lookup_values = [raw_value]
+    parenthetical = re.search(r"\s+\(([A-Z]{2,3})\)$", raw_value)
+    if parenthetical:
+        lookup_values.extend(
+            [parenthetical.group(1), raw_value[: parenthetical.start()]]
+        )
+    for lookup_value in lookup_values:
+        try:
+            return pycountry.countries.lookup(lookup_value).alpha_2.casefold()
+        except LookupError:
+            continue
 
     ascii_value = (
         unicodedata.normalize("NFKD", raw_value)
@@ -1520,6 +1534,185 @@ def scrape_webometrics(
     return result
 
 
+_NATURE_TABLE_ROW_RE = re.compile(
+    r"(?m)^\|\s*(\d+)\s*\|\s*\[[^\]]+\]"
+    r"\((https://www\.nature\.com/nature-index/institution-outputs/"
+    r"[^)\n]+/[0-9a-fA-F]{24})\)\s*\|\s*(.*?)\s*\|\s*$"
+)
+_NATURE_COMPACT_ROW_RE = re.compile(
+    r"(?m)^(\d+)\[[^\]]+\]"
+    r"\((https://www\.nature\.com/nature-index/institution-outputs/"
+    r"[^)\n]+/[0-9a-fA-F]{24})\)([^\n]+)$"
+)
+_NATURE_COMPACT_METRICS_RE = re.compile(
+    r"^\s*(N/A|[\d,.]+)\s+([\d,.]+)\s+([\d,]+)"
+    r"\s*(N/A|[+\-−]?[\d,.]+%)\s*$"
+)
+
+
+def _nature_float(value: str) -> float:
+    return float(value.replace(",", "").replace("−", "-").strip())
+
+
+def _nature_optional_float(value: str | None) -> float | None:
+    if value is None or value.strip().casefold() in {"", "n/a", "na", "-", "—"}:
+        return None
+    return _nature_float(value.removesuffix("%"))
+
+
+def _nature_record(
+    ranking: str,
+    profile_url: str,
+    metrics: str,
+    *,
+    table_row: bool,
+) -> dict[str, Any]:
+    path_parts = urlparse(profile_url).path.strip("/").split("/")
+    try:
+        profile_index = path_parts.index("institution-outputs")
+        country = unquote(path_parts[profile_index + 1])
+        name = unquote(path_parts[profile_index + 2])
+        institution_id = path_parts[profile_index + 3]
+    except (ValueError, IndexError) as exc:
+        raise ScraperError(
+            f"Nature Index returned an invalid institution URL: {profile_url}"
+        ) from exc
+
+    if table_row:
+        metric_values = [value.strip() for value in metrics.split("|")]
+        if len(metric_values) == 2:
+            previous_share = None
+            share, count = metric_values
+            change = None
+        elif len(metric_values) == 4:
+            previous_share, share, count, change = metric_values
+        else:
+            raise ScraperError("Nature Index returned an unexpected table schema")
+    else:
+        metric_match = _NATURE_COMPACT_METRICS_RE.fullmatch(metrics)
+        if metric_match is None:
+            raise ScraperError(
+                f"Nature Index returned invalid ranking metrics: {metrics.strip()}"
+            )
+        previous_share, share, count, change = metric_match.groups()
+
+    return {
+        "ranking": int(ranking),
+        "name": name,
+        "country": country,
+        "institution_id": institution_id,
+        "share": _nature_float(share),
+        "count": int(count.replace(",", "")),
+        "previous_share": _nature_optional_float(previous_share),
+        "share_change_percent": _nature_optional_float(change),
+        "profile_url": profile_url,
+    }
+
+
+def _parse_nature_markdown(content: str) -> pd.DataFrame:
+    table_matches = _NATURE_TABLE_ROW_RE.findall(content)
+    if table_matches:
+        records = [
+            _nature_record(ranking, url, metrics, table_row=True)
+            for ranking, url, metrics in table_matches
+        ]
+    else:
+        records = [
+            _nature_record(ranking, url, metrics, table_row=False)
+            for ranking, url, metrics in _NATURE_COMPACT_ROW_RE.findall(content)
+        ]
+    if not records:
+        raise ScraperError("Nature Index returned no institution ranking rows")
+
+    result = pd.DataFrame(records)
+    if result["ranking"].tolist() != sorted(result["ranking"].tolist()):
+        raise ScraperError("Nature Index ranking rows are out of order")
+    if result["institution_id"].duplicated().any():
+        raise ScraperError("Nature Index returned duplicate institutions")
+    return result
+
+
+def scrape_nature(
+    subject: str = "",
+    year: int = 2026,
+    max_retries: int = 3,
+    base_delay: float = 1.0,
+    *,
+    country: str | None = None,
+    reader_proxy: bool = False,
+) -> pd.DataFrame:
+    """Scrape one authorized Nature Index annual institution ranking."""
+    if not 2016 <= year <= 2026:
+        raise ValueError(
+            "Nature Index annual institution rankings are available from "
+            "2016 through 2026"
+        )
+    if subject:
+        try:
+            sector, nature_subject = NATURE_SCOPE_PATHS[subject]
+        except KeyError as exc:
+            raise ValueError(f"Unsupported Nature Index scope: {subject}") from exc
+    else:
+        sector, nature_subject = "all", "all"
+
+    origin_url = (
+        f"{NATURE_INDEX_URL}/annual-tables/{year}/institution/"
+        f"{sector}/{nature_subject}/global"
+    )
+    target_url = (
+        READER_PROXY_URL + quote(origin_url, safe=":/")
+        if reader_proxy
+        else origin_url
+    )
+    last_error: ScraperError | None = None
+    with httpx.Client(
+        headers=HEADERS["nature"],
+        timeout=180.0,
+        follow_redirects=True,
+    ) as client:
+        for attempt in range(max_retries):
+            response = _request(
+                client,
+                target_url,
+                params=None,
+                provider="nature-reader" if reader_proxy else "nature",
+                max_retries=max_retries,
+                base_delay=base_delay,
+            )
+            try:
+                result = _parse_nature_markdown(response.text)
+                if int(result["ranking"].max()) not in {100, 500}:
+                    raise ScraperError(
+                        "Nature Index returned an incomplete annual ranking"
+                    )
+                break
+            except ScraperError as exc:
+                last_error = exc
+                if attempt == max_retries - 1:
+                    raise
+                client.headers["X-No-Cache"] = "true"
+                time.sleep(_retry_delay(base_delay, attempt))
+        else:
+            raise last_error or ScraperError("Nature Index returned no data")
+
+    result.insert(0, "edition", year)
+    result.insert(1, "data_year", year - 1)
+    result.insert(2, "sector", sector)
+    result.insert(3, "nature_subject", nature_subject)
+    result["source_url"] = origin_url
+    if country:
+        result = result[
+            result["country"].map(lambda value: _country_matches(country, value))
+        ]
+    logger.info(
+        "Collected %s Nature Index records for %s (%s)",
+        len(result),
+        subject or "overall",
+        year,
+    )
+    return result.reset_index(drop=True)
+
+
 def scrape_scimago(
     subject: str = "",
     year: int = 2026,
@@ -1813,6 +2006,16 @@ def _scope_frame(
             reader_proxy=reader_proxy,
         )
         return _normalize_additional(raw, source, scope, year)
+    if source == "nature":
+        raw = scrape_nature(
+            subject,
+            year=year,
+            max_retries=max_retries,
+            base_delay=base_delay,
+            country=country,
+            reader_proxy=reader_proxy,
+        )
+        return _normalize_additional(raw, source, scope, year)
     if source == "webometrics":
         raw = scrape_webometrics(
             subject,
@@ -1885,7 +2088,7 @@ def scrape_country_rankings(
         return index, frame
 
     effective_workers = max(1, min(workers, len(scopes) or 1))
-    if source in {"qs", "leiden", "openalex", "scimago"}:
+    if source in {"qs", "leiden", "openalex", "scimago", "nature"}:
         effective_workers = 1
 
     if effective_workers == 1:
@@ -1912,11 +2115,12 @@ def scrape_country_rankings(
                     }
                 )
             if (
-                source == "scimago"
+                source in {"scimago", "nature"}
                 and reader_proxy
                 and index + 1 < len(scopes)
             ):
-                time.sleep(max(request_delay, 2.0))
+                minimum_delay = 2.0 if source == "scimago" else 1.0
+                time.sleep(max(request_delay, minimum_delay))
     else:
         with ThreadPoolExecutor(max_workers=effective_workers) as executor:
             future_scopes = {

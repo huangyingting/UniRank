@@ -1,6 +1,6 @@
 # University Ranking Scraper
 
-Collect current and historical university rankings from ten providers. The CLI
+Collect current and historical university rankings from eleven providers. The CLI
 supports worldwide and country-filtered exports, subject/major rankings, year
 ranges, incremental CSV updates, and JSON manifests that record failures,
 retrieval methods, licenses, and required attribution.
@@ -21,10 +21,11 @@ python3 -m venv .venv
 | QS | `qs` | Archived 2018-2025 data and current rankings | Cloudflare-protected; explicit reader proxy available; provider terms apply |
 | Leiden Open Edition | `leiden` | 2023-2025 overall and five fields | Official Zenodo files, CC0 |
 | OpenAlex | `openalex` | Derived annual research-output ranking | Official API, CC0 |
-| CWUR | `cwur` | 2012-2026 overall | Public HTML; copyrighted, local output only |
-| NTU Ranking | `ntu` | 2007-2025 overall, fields, and subjects | Public JSON; copyrighted, local output only |
-| ShanghaiRanking | `arwu` | ARWU 2003-2017 and 2019-2025; GRAS 2017-2025 | Public JSON; copyrighted, local output only |
-| SCImago SIR | `scimago` | 2009-2026 overall and 19 supported areas | Public download with attribution; no explicit redistribution license; direct access is Cloudflare-blocked |
+| CWUR | `cwur` | 2012-2026 overall | Public HTML; provider-controlled; included under separate permission |
+| NTU Ranking | `ntu` | 2007-2025 overall, fields, and subjects | Public JSON; provider-controlled; included under separate permission |
+| ShanghaiRanking | `arwu` | ARWU 2003-2017 and 2019-2025; GRAS 2017-2025 | Public JSON; provider-controlled; included under separate permission |
+| SCImago SIR | `scimago` | 2009-2026 overall and 19 supported areas | Public download with attribution; included under separate permission; direct access is Cloudflare-blocked |
+| Nature Index | `nature` | 2016-2026 overall, academic, and eight discipline views | Annual institution tables; CC BY-NC-SA 4.0 numerical data; included under separate permission; direct access returns HTTP 406 |
 | Webometrics | `webometrics` | July 2025 overall, 32,053 institutions | Official Figshare PDF, CC BY 4.0 |
 
 Leiden downloads each large edition once per process, streams it through a
@@ -54,25 +55,36 @@ explicit failure rather than saving a partial ranking. GRAS 2018 remains
 available.
 
 SCImago officially permits downloads and requires attribution, but does not
-publish a Creative Commons-style redistribution license. Keep any export in
-`data/restricted/` unless separate permission is obtained. Its public CSV
-endpoint currently returns a Cloudflare challenge to direct requests, while the
-explicit reader proxy can retrieve it. The exporter identifies editions by the
-start of their five-year data window, so the adapter maps edition 2026 to data
-period 2020-2024 rather than silently requesting an invalid year. Challenge
-responses are rejected instead of being saved as data. The provider exporter
-supports 19 subject areas; eight other Scopus area codes silently return the
-overall table and are therefore deliberately not exposed as subject rankings.
+publish a Creative Commons-style redistribution license. Its snapshots remain
+in `data/restricted/` to preserve that distinction even though this repository
+has separate permission to include them. Its public CSV endpoint currently
+returns a Cloudflare challenge to direct requests, while the explicit reader
+proxy can retrieve it. The exporter identifies editions by the start of their
+five-year data window, so the adapter maps edition 2026 to data period 2020-2024
+rather than silently requesting an invalid year. Challenge responses are
+rejected instead of being saved as data. The provider exporter supports 19
+subject areas; eight other Scopus area codes silently return the overall table
+and are therefore deliberately not exposed as subject rankings.
 
-Nature Index is intentionally unsupported. Springer Nature's terms prohibit
-automated access, systematic database creation, and redistribution, and the
-site rejects automated requests with HTTP 406.
+Nature Index editions contain the prior full calendar year's research output:
+edition 2026 represents 2025. The adapter collects both all-sector and academic
+institution tables, including natural, biological, health, applied, physical,
+Earth and environmental, chemistry, and social sciences when available. Older
+discipline tables contain the published top 100 while newer tables contain the
+top 500 plus ties. Direct requests return HTTP 406, so collection requires the
+explicit reader proxy or an authorized export. Nature Index licenses numerical
+table data under CC BY-NC-SA 4.0; this repository also has separate permission
+to include the collected snapshots. The current rolling institution table is
+client-rendered and its complete CSV export requires an authenticated account,
+so the scraper uses the reproducible annual tables instead.
 
 ## Data directories and licensing
 
-Use `data/open/` for CC0 or CC BY datasets that may be committed. Use
-`data/restricted/` for CWUR, NTU, ARWU, and other provider-controlled output;
-that directory is ignored by Git.
+Use `data/open/` for CC0 or CC BY datasets. Provider-controlled snapshots stay
+in `data/restricted/` so their different reuse status remains explicit. Those
+snapshots are tracked in this repository under separately confirmed permission;
+that permission does not replace the providers' licenses or automatically grant
+downstream reuse rights.
 
 The scraper code does not grant rights to third-party ranking data. Review each
 manifest's `data_license` and `data_attribution` fields before reuse.
@@ -95,7 +107,7 @@ manifest's `data_license` and `data_attribution` fields before reuse.
   --website webometrics --worldwide --overall-only \
   --year 2025 --output-dir data/open
 
-# Copyrighted providers: keep snapshots local
+# Provider-controlled snapshots: collect only with appropriate permission
 .venv/bin/python -m university_ranking_scraper \
   --website cwur --worldwide --overall-only \
   --year 2026 --output-dir data/restricted
@@ -112,6 +124,11 @@ manifest's `data_license` and `data_attribution` fields before reuse.
   --website scimago --worldwide --all-subjects --include-overall \
   --year 2026 --reader-proxy --request-delay 2 \
   --output-dir data/restricted
+
+.venv/bin/python -m university_ranking_scraper \
+  --website nature --worldwide --all-subjects --include-overall \
+  --year 2026 --reader-proxy --request-delay 1 \
+  --output-dir data/restricted
 ```
 
 Country-filtered US examples:
@@ -127,9 +144,10 @@ Country-filtered US examples:
   --workers 3 --output-dir data
 ```
 
-QS currently returns an interactive Cloudflare challenge to direct requests.
-The explicit `--reader-proxy` option sends only constructed public ranking URLs
-(never cookies or credentials) through `r.jina.ai`:
+QS and SCImago currently return Cloudflare challenges to direct requests, while
+Nature Index returns HTTP 406. The explicit `--reader-proxy` option sends only
+constructed public ranking URLs (never cookies or credentials) through
+`r.jina.ai`:
 
 ```bash
 .venv/bin/python -m university_ranking_scraper \
@@ -172,6 +190,12 @@ An authorized QS export or API remains preferable when available.
   --start-year 2009 --end-year 2026 --reader-proxy \
   --request-delay 2 --output-dir data/restricted
 
+# Nature Index all-sector and academic institution history
+.venv/bin/python -m university_ranking_scraper \
+  --website nature --worldwide --all-subjects --include-overall \
+  --start-year 2016 --end-year 2026 --reader-proxy \
+  --request-delay 1 --output-dir data/restricted
+
 # Existing THE and QS history
 .venv/bin/python -m university_ranking_scraper \
   --website times --worldwide --all-subjects --include-overall \
@@ -209,8 +233,8 @@ The repository's existing snapshots contain:
 | Webometrics July 2025 | 32,053 |
 | **Additional open-data total** | **156,110** |
 
-Copyrighted and provider-controlled snapshots are not committed. The validated
-local collection in `data/restricted/` contains:
+The validated provider-controlled collection committed in `data/restricted/`
+under separate permission contains:
 
 | Dataset | Coverage | Records |
 | --- | --- | ---: |
@@ -218,7 +242,8 @@ local collection in `data/restricted/` contains:
 | NTU | Overall, fields, and available subjects, 2007-2025 | 157,371 |
 | ARWU/GRAS | ARWU except 2018; available GRAS subjects, 2003-2025 | 181,898 |
 | SCImago | Overall 2009-2026; all 19 areas for 2025-2026 | 171,304 |
-| **Local restricted-data total** | | **531,773** |
+| Nature Index | All-sector and academic tables with available disciplines, 2016-2026 | 43,761 |
+| **Approved provider-controlled total** | | **575,534** |
 
 ## Python API
 
@@ -231,6 +256,11 @@ leiden = rankings.scrape_leiden(
 )
 openalex = rankings.scrape_openalex(year=2025)
 cwur = rankings.scrape_cwur(year=2026, country="United States")
+nature = rankings.scrape_nature(
+    "academic-chemistry",
+    year=2026,
+    reader_proxy=True,
+)
 webometrics = rankings.scrape_webometrics(year=2025)
 ```
 

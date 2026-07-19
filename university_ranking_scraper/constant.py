@@ -9,6 +9,7 @@ VALID_SOURCES = [
     'ntu',
     'arwu',
     'scimago',
+    'nature',
     'webometrics',
 ]
 LATEST_THE_YEAR = 2026
@@ -23,6 +24,7 @@ LATEST_YEARS = {
     'ntu': 2025,
     'arwu': 2025,
     'scimago': 2026,
+    'nature': 2026,
     'webometrics': 2025,
 }
 YEARLY_SOURCES = set(VALID_SOURCES) - {'usnews'}
@@ -225,12 +227,43 @@ SCIMAGO_AREA_CODES = {
     'dentistry': 3500,
 }
 
+NATURE_SUBJECT_FIRST_YEAR = {
+    'natural-sciences': 2016,
+    'biological-sciences': 2016,
+    'chemistry': 2016,
+    'earth-and-environmental': 2016,
+    'physical-sciences': 2016,
+    'health-sciences': 2023,
+    'applied-sciences': 2025,
+    'social-sciences': 2025,
+}
+NATURE_SCOPE_PATHS = {
+    subject: ('all', subject)
+    for subject in NATURE_SUBJECT_FIRST_YEAR
+}
+NATURE_SCOPE_PATHS['academic-overall'] = ('academic', 'all')
+NATURE_SCOPE_PATHS.update(
+    {
+        f'academic-{subject}': ('academic', subject)
+        for subject in NATURE_SUBJECT_FIRST_YEAR
+    }
+)
+NATURE_SCOPE_FIRST_YEAR = {
+    **NATURE_SUBJECT_FIRST_YEAR,
+    'academic-overall': 2016,
+    **{
+        f'academic-{subject}': first_year
+        for subject, first_year in NATURE_SUBJECT_FIRST_YEAR.items()
+    },
+}
+
 SUBJECT_FIRST_YEAR = {
     'times': THE_SUBJECT_FIRST_YEAR,
     'leiden': {subject: 2023 for subject in LEIDEN_FIELD_IDS},
     'ntu': NTU_SCOPE_FIRST_YEAR,
     'arwu': ARWU_SUBJECT_FIRST_YEAR,
     'scimago': {subject: 2009 for subject in SCIMAGO_AREA_CODES},
+    'nature': NATURE_SCOPE_FIRST_YEAR,
 }
 
 SOURCE_LICENSES = {
@@ -243,10 +276,21 @@ SOURCE_LICENSES = {
     'ntu': 'Copyright NTU Ranking; no open redistribution license',
     'arwu': 'Copyright ShanghaiRanking Consultancy',
     'scimago': 'Provider-controlled; no explicit redistribution license',
+    'nature': 'CC-BY-NC-SA-4.0 (numerical table data)',
     'webometrics': 'CC-BY-4.0',
 }
 SOURCE_ATTRIBUTIONS = {
+    'cwur': 'Center for World University Rankings (CWUR), cwur.org',
+    'ntu': (
+        'Performance Ranking of Scientific Papers for World Universities, '
+        'National Taiwan University, nturanking.csti.tw'
+    ),
+    'arwu': (
+        'Academic Ranking of World Universities and Global Ranking of Academic '
+        'Subjects, ShanghaiRanking Consultancy, shanghairanking.com'
+    ),
     'scimago': 'SCImago Institutions Rankings (SIR), scimagoir.com',
+    'nature': 'Nature Index, Springer Nature, nature.com/nature-index',
     'webometrics': (
         'Aguillo, Isidro F. (2025). Ranking Web of Universities '
         '(webometrics.info), July 2025 edition. figshare. '
@@ -299,6 +343,7 @@ SUBJECTS = {
     'ntu': list(NTU_SCOPE_CODES),
     'arwu': list(ARWU_SUBJECT_CODES),
     'scimago': list(SCIMAGO_AREA_CODES),
+    'nature': list(NATURE_SCOPE_PATHS),
     'webometrics': [],
 }
 
@@ -472,31 +517,35 @@ HEADERS = {
     },
     'cwur': {
        'Accept': 'text/html,application/xhtml+xml',
-       'User-Agent': 'Mozilla/5.0 (compatible; university-ranking-scraper/0.0.7)',
+       'User-Agent': 'Mozilla/5.0 (compatible; university-ranking-scraper/0.0.8)',
     },
     'ntu': {
        'Accept': 'application/json',
-       'User-Agent': 'Mozilla/5.0 (compatible; university-ranking-scraper/0.0.7)',
+       'User-Agent': 'Mozilla/5.0 (compatible; university-ranking-scraper/0.0.8)',
     },
     'arwu': {
        'Accept': 'application/json',
        'Referer': 'https://www.shanghairanking.com/rankings',
-       'User-Agent': 'Mozilla/5.0 (compatible; university-ranking-scraper/0.0.7)',
+       'User-Agent': 'Mozilla/5.0 (compatible; university-ranking-scraper/0.0.8)',
     },
     'openalex': {
        'Accept': 'application/json',
-       'User-Agent': 'university-ranking-scraper/0.0.7',
+       'User-Agent': 'university-ranking-scraper/0.0.8',
     },
     'leiden': {
        'Accept': '*/*',
-       'User-Agent': 'university-ranking-scraper/0.0.7',
+       'User-Agent': 'university-ranking-scraper/0.0.8',
     },
     'scimago': {
        'Accept': 'text/csv,text/plain',
-       'User-Agent': 'Mozilla/5.0 (compatible; university-ranking-scraper/0.0.7)',
+       'User-Agent': 'Mozilla/5.0 (compatible; university-ranking-scraper/0.0.8)',
+    },
+    'nature': {
+       'Accept': 'text/html,text/plain',
+       'User-Agent': 'Mozilla/5.0 (compatible; university-ranking-scraper/0.0.8)',
     },
     'webometrics': {
        'Accept': '*/*',
-       'User-Agent': 'university-ranking-scraper/0.0.7',
+       'User-Agent': 'university-ranking-scraper/0.0.8',
     },
 }
