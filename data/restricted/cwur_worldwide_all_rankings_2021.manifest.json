@@ -1,0 +1,15 @@
+{
+  "source": "cwur",
+  "country": null,
+  "coverage": "worldwide",
+  "ranking_year": 2021,
+  "retrieval_method": "static-html",
+  "data_license": "Copyright CWUR; no open redistribution license",
+  "data_attribution": "Center for World University Rankings (CWUR), cwur.org",
+  "retrieved_at": "2026-07-19T13:10:58+00:00",
+  "records": 2000,
+  "records_by_scope": {
+    "overall": 2000
+  },
+  "failures": []
+}

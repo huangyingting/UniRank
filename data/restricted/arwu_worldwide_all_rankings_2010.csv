@@ -1,0 +1,501 @@
+source,retrieved_at,ranking_scope,ranking_year,ranking,name,university_code,university_slug,country,country_code,country_ranking,score,indicator_alumni,indicator_award,indicator_hici,indicator_n_s,indicator_pub,indicator_pcp
+arwu,2026-07-19T13:10:53+00:00,overall,2010,1,Harvard University,,harvard-university,United States,US,1,100.0,100.0,100.0,100.0,100.0,100.0,69.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,2,"University of California, Berkeley",,university-of-california-berkeley,United States,US,2,72.4,67.6,79.3,69.0,70.9,70.6,54.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,3,Stanford University,,stanford-university,United States,US,3,72.1,40.2,78.4,87.6,68.4,69.7,50.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,4,Massachusetts Institute of Technology (MIT),,massachusetts-institute-of-technology-mit,United States,US,4,71.4,70.5,80.3,66.8,70.1,61.4,64.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,5,University of Cambridge,,university-of-cambridge,United Kingdom,GB,1,69.6,88.5,92.6,53.9,54.3,65.7,53.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,6,California Institute of Technology,,california-institute-of-technology,United States,US,5,64.4,50.3,68.8,56.7,64.8,46.9,100.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,7,Princeton University,,princeton-university,United States,US,6,60.8,56.4,84.8,61.1,43.3,44.3,65.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,8,Columbia University,,columbia-university,United States,US,7,60.4,70.7,67.4,56.2,47.6,69.9,32.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,9,University of Chicago,,university-of-chicago,United States,US,8,57.3,65.5,83.9,50.9,39.8,50.5,40.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,10,University of Oxford,,university-of-oxford,United Kingdom,GB,2,56.4,56.2,57.6,48.8,49.8,68.5,41.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,11,Yale University,,yale-university,United States,US,9,54.6,48.6,44.9,58.5,56.3,62.0,37.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,12,Cornell University,,cornell-university,United States,US,10,52.6,42.3,51.1,54.3,49.9,59.5,38.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,13,"University of California, Los Angeles",,university-of-california-los-angeles,United States,US,11,52.2,27.2,42.6,56.9,49.2,75.1,31.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,14,"University of California, San Diego",,university-of-california-san-diego,United States,US,12,50.0,15.1,35.8,60.2,54.6,65.1,37.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,15,University of Pennsylvania,,university-of-pennsylvania,United States,US,13,49.0,32.9,34.3,57.1,46.9,68.6,28.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,16,University of Washington,,university-of-washington,United States,US,14,48.7,24.4,31.7,53.9,51.6,72.5,28.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,17,University of Wisconsin - Madison,,university-of-wisconsin-madison,United States,US,15,46.4,36.5,35.4,51.9,40.2,66.1,25.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,18,The Johns Hopkins University,,johns-hopkins-university,United States,US,16-17,46.0,43.6,32.1,42.0,49.4,64.0,27.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,18,"University of California, San Francisco",,university-of-california-san-francisco,United States,US,16-17,46.0,0.0,40.1,53.4,51.8,60.7,33.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,20,The University of Tokyo,,the-university-of-tokyo,Japan,JP,1,45.9,33.3,14.1,42.0,52.0,80.4,34.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,21,University College London,,university-college-london,United Kingdom,GB,3,44.4,32.9,32.1,39.4,44.6,67.0,31.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,22,University of Michigan - Ann Arbor,,university-of-michigan-ann-arbor,United States,US,18,44.2,36.5,0.0,59.8,43.4,79.8,26.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,23,Swiss Federal Institute of Technology Zurich,,eth-zurich,Switzerland,CH,1,43.4,34.1,36.1,36.3,43.6,53.6,47.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,24,Kyoto University,,kyoto-university,Japan,JP,2,43.1,33.7,34.7,38.1,36.0,67.6,31.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,25,University of Illinois at Urbana-Champaign,,university-of-illinois-at-urbana-champaign,United States,US,19,42.6,35.4,36.5,42.6,37.1,58.6,27.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,26,The Imperial College of Science,,imperial-college-london,United Kingdom,GB,4,41.9,17.7,37.2,41.4,36.9,62.3,33.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,27,University of Toronto,,university-of-toronto,Canada,CA,1,41.8,23.8,19.2,38.8,38.3,80.3,27.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,28,University of Minnesota,,university-of-minnesota-twin-cities,United States,US,20,40.6,30.6,16.2,50.4,36.1,66.6,23.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,29,Northwestern University,,northwestern-university,United States,US,21,38.4,18.5,18.9,48.3,35.9,59.7,28.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,30,Washington University in St. Louis,,washington-university-in-st-louis,United States,US,22,38.1,21.3,25.9,38.8,41.0,54.8,26.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,31,New York University,,new-york-university,United States,US,23,37.8,32.4,24.4,40.7,36.2,54.4,22.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,32,"University of California, Santa Barbara",,university-of-california-santa-barbara,United States,US,24-25,37.1,16.0,35.1,42.0,33.3,42.6,37.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,32,University of Colorado at Boulder,,university-of-colorado-at-boulder,United States,US,24-25,37.1,14.1,30.7,38.8,41.7,44.7,33.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,34,Rockefeller University,,rockefeller-university,United States,US,26,36.7,19.2,58.4,28.8,42.3,21.0,35.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,35,Duke University,,duke-university,United States,US,27,35.3,17.7,0.0,45.8,42.2,62.0,24.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,36,University of British Columbia,,university-of-british-columbia,Canada,CA,2,34.7,17.7,18.9,32.2,30.8,65.7,23.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,36,"University of Maryland, College Park",,university-of-maryland-college-park,United States,US,28,34.7,22.0,19.9,41.4,29.0,53.6,26.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,38,The University of Texas at Austin,,the-university-of-texas-at-austin,United States,US,29,34.5,18.5,16.6,46.1,28.4,54.4,24.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,39,Pierre and Marie Curie University - Paris 6,,pierre-and-marie-curie-university-paris-6,France,FR,1,34.2,34.8,23.5,24.9,28.8,59.9,21.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,40,University of Copenhagen,,university-of-copenhagen,Denmark,DK,1,33.4,26.1,24.1,26.0,26.0,56.4,32.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,41,University of North Carolina at Chapel Hill,,university-of-north-carolina-at-chapel-hill,United States,US,30,33.3,10.7,16.2,39.4,27.7,60.6,23.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,42,Karolinska Institute,,karolinska-institute,Sweden,SE,1,33.2,26.1,27.2,31.4,20.5,49.9,38.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,43,Pennsylvania State University - University Park,,pennsylvania-state-university-university-park,United States,US,31,32.6,11.9,0.0,46.6,37.4,56.1,23.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,44,The University of Manchester,,the-university-of-manchester,United Kingdom,GB,5,32.4,23.2,18.9,27.9,28.0,59.1,23.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,45,University of Paris Sud (Paris 11),,university-of-paris-sud-paris-11,France,FR,2,32.3,31.7,46.0,12.5,20.8,49.9,23.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,46,"University of California, Davis",,university-of-california-davis,United States,US,32-34,32.0,0.0,0.0,47.2,31.7,63.0,26.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,46,"University of California, Irvine",,university-of-california-irvine,United States,US,32-34,32.0,0.0,29.3,36.7,26.3,49.3,26.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,46,University of Southern California,,university-of-southern-california,United States,US,32-34,32.0,0.0,26.7,38.8,26.3,53.1,20.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,49,The University of Texas Southwestern Medical Center at Dallas,,the-university-of-texas-southwestern-medical-center-at-dallas,United States,US,35,31.8,20.6,33.1,30.5,29.9,38.4,23.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,50,Utrecht University,,utrecht-university,Netherlands,NL,1,31.7,26.1,20.9,27.9,30.4,48.2,26.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,51,University of Zurich,,university-of-zurich,Switzerland,CH,2,31.2,10.7,26.7,26.4,28.7,50.6,27.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,52,University of Munich,,university-of-munich,Germany,DE,1,31.1,31.5,22.8,16.1,26.3,54.5,30.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,53,Vanderbilt University,,vanderbilt-university,United States,US,36,31.0,17.7,29.5,31.4,20.2,50.8,19.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,54,Rutgers,,rutgers-the-state-university-of-new-jersey-new-brunswick,United States,US,37,30.9,13.1,19.9,40.1,27.9,43.7,23.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,54,The University of Edinburgh,,the-university-of-edinburgh,United Kingdom,GB,6,30.9,19.2,16.6,26.0,34.2,51.3,23.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,56,Technical University Munich,,technical-university-of-munich,Germany,DE,2,30.7,39.2,23.5,24.9,19.5,46.5,29.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,56,University of Pittsburgh,,university-of-pittsburgh,United States,US,38,30.7,21.3,0.0,42.0,23.4,63.1,19.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,58,Carnegie Mellon University,,carnegie-mellon-university,United States,US,39,30.2,32.9,32.7,30.5,15.2,34.2,34.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,59,The Australian National University,,the-australian-national-university,Australia,AU,1,29.6,15.1,12.6,36.0,27.8,43.8,31.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,59,The Ohio State University - Columbus,,the-ohio-state-university-columbus,United States,US,40,29.6,15.1,0.0,41.7,22.8,62.0,19.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,61,McGill University,,mcgill-university,Canada,CA,3,29.5,31.1,0.0,32.2,22.9,59.6,25.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,62,University of Melbourne,,the-university-of-melbourne,Australia,AU,2,29.3,19.9,14.1,22.8,18.7,63.1,27.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,63,King's College London,,kings-college-london,United Kingdom,GB,7,29.1,14.1,23.0,31.4,16.7,50.7,25.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,63,University of Heidelberg,,heidelberg-university,Germany,DE,3,29.1,16.9,27.0,17.6,23.0,50.6,28.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,65,Brown University,,brown-university,United States,US,41,29.0,16.0,13.6,31.4,29.6,41.9,32.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,66,University of Bristol,,university-of-bristol,United Kingdom,GB,8,28.9,9.2,17.8,28.8,29.1,47.3,25.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,66,Uppsala University,,uppsala-university,Sweden,SE,2,28.9,22.0,32.1,14.4,19.9,49.5,26.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,68,University of Florida,,university-of-florida,United States,US,42,28.8,19.2,0.0,36.7,20.6,63.9,17.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,69,Purdue University - West Lafayette,,purdue-university-west-lafayette,United States,US,43,28.6,16.0,16.6,29.7,22.4,51.8,20.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,70,Leiden University,,leiden-university,Netherlands,NL,2,28.4,21.3,15.4,27.9,19.9,47.8,32.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,71,Ecole Normale Superieure - Paris,,ecole-normale-superieure-paris,France,FR,3,28.3,50.8,24.4,12.5,18.7,27.9,56.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,72,The Hebrew University of Jerusalem,,the-hebrew-university-of-jerusalem,Israel,IL,1,28.1,31.5,19.9,24.9,20.8,41.6,26.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,72,University of Helsinki,,university-of-helsinki,Finland,FI,1,28.1,16.0,17.8,22.8,20.6,52.7,28.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,74,Moscow State University,,moscow-state-university,Russia,RU,1,27.9,46.8,34.1,0.0,9.6,52.4,31.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,75,Osaka University,,osaka-university,Japan,JP,3,27.7,10.7,0.0,26.9,27.9,60.2,27.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,75,University of Oslo,,university-of-oslo,Norway,NO,1,27.7,22.0,33.3,17.6,13.5,46.6,24.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,77,Boston University,,boston-university,United States,US,44,27.3,13.1,11.5,29.7,24.7,50.0,19.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,78,University of Arizona,,university-of-arizona,United States,US,45,26.8,0.0,0.0,29.7,37.5,52.1,21.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,79,Nagoya University,,nagoya-university,Japan,JP,4,26.4,24.4,14.1,16.1,24.3,48.1,26.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,79,Stockholm University,,stockholm-university,Sweden,SE,3,26.4,25.0,29.5,16.1,20.4,37.5,24.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,81,Arizona State University - Tempe,,arizona-state-university,United States,US,46,26.1,0.0,19.9,24.9,26.9,44.3,21.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,82,University of Rochester,,university-of-rochester,United States,US,47-48,25.8,0.0,11.5,30.5,27.0,46.6,19.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,82,University of Utah,,university-of-utah,United States,US,47-48,25.8,28.2,8.9,26.9,20.6,43.3,21.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,84,Tohoku University,,tohoku-university,Japan,JP,5,25.7,16.0,0.0,21.6,20.8,60.3,27.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,84,University of Nottingham,,university-of-nottingham,United Kingdom,GB,9,25.7,13.1,19.9,23.9,16.1,47.6,20.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,86,Michigan State University,,michigan-state-university,United States,US,49,25.5,10.7,0.0,37.4,19.1,52.4,18.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,86,University of Basel,,university-of-basel,Switzerland,CH,3,25.5,22.0,17.0,22.8,19.4,36.2,34.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,88,McMaster University,,mcmaster-university,Canada,CA,4,25.2,14.1,18.9,22.8,14.8,47.3,22.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,88,The University of Sheffield,,the-university-of-sheffield,United Kingdom,GB,10,25.2,19.9,14.1,21.0,21.3,44.3,22.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,90,Ghent University,,ghent-university,Belgium,BE,1,25.1,7.5,15.4,17.6,15.1,54.4,30.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,90,Indiana University Bloomington,,indiana-university-bloomington,United States,US,50,25.1,11.9,22.7,24.9,18.5,39.9,19.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,92,University of Sydney,,university-of-sydney,Australia,AU,3,25.0,16.9,0.0,20.4,18.4,61.4,25.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,93,University of Bonn,,university-of-bonn,Germany,DE,4-5,24.9,16.9,19.9,14.4,23.3,42.5,24.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,93,University of Goettingen,,university-of-goettingen,Germany,DE,4-5,24.9,32.9,19.9,14.4,17.2,40.7,24.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,95,Texas A&M University - College Station,,texas-a-m-university,United States,US,51,24.8,0.0,0.0,34.5,21.0,54.0,21.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,96,University of Virginia,,university-of-virginia,United States,US,52,24.5,0.0,0.0,34.5,26.8,47.5,19.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,97,Case Western Reserve University,,case-western-reserve-university,United States,US,53,24.3,34.5,11.5,21.6,14.3,41.9,22.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,98,Aarhus University,,aarhus-university,Denmark,DK,2,24.2,13.1,18.9,7.2,23.5,48.4,25.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,99,Rice University,,rice-university,United States,US,54,24.0,18.5,21.8,21.6,18.8,30.2,29.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,99,University of Birmingham,,university-of-birmingham,United Kingdom,GB,11,24.0,21.3,10.9,21.6,16.2,46.4,20.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,Baylor College of Medicine,,baylor-college-of-medicine,United States,US,55-69,,0.0,0.0,19.0,32.1,41.0,20.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,Catholic University of Leuven,,ku-leuven,Belgium,BE,2-4,,0.0,0.0,21.6,15.0,53.8,25.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,Catholic University of Louvain,,catholic-university-of-louvain,Belgium,BE,2-4,,11.9,13.6,17.6,13.8,41.9,28.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,Emory University,,emory-university,United States,US,55-69,,0.0,0.0,30.5,24.1,50.5,18.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,Georgia Institute of Technology,,georgia-institute-of-technology,United States,US,55-69,,14.1,0.0,26.0,23.8,45.2,27.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,Lund University,,lund-university,Sweden,SE,4,,25.0,0.0,24.9,17.0,50.1,21.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,Mayo Medical School,,mayo-clinic-alix-school-of-medicine,United States,US,55-69,,0.0,0.0,24.9,16.1,48.0,24.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,National Taiwan University,,national-taiwan-university,China-Taiwan,TW,1,,13.1,0.0,16.1,11.6,59.6,19.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,National University of Singapore,,national-university-of-singapore,Singapore,SG,1,,0.0,0.0,10.2,14.6,59.1,27.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,North Carolina State University - Raleigh,,north-carolina-state-university-raleigh,United States,US,55-69,,0.0,0.0,27.9,15.9,42.9,19.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,Oregon State University,,oregon-state-university,United States,US,55-69,,13.1,0.0,26.9,24.7,36.5,23.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,Seoul National University,,seoul-national-university,South Korea,KR,1,,0.0,0.0,7.2,13.1,66.5,20.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,Swiss Federal Institute of Technology of Lausanne,,swiss-federal-institute-of-technology-lausanne,Switzerland,CH,4-5,,0.0,0.0,23.9,20.1,40.4,34.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,Technion-Israel Institute of Technology,,technion-israel-institute-of-technology,Israel,IL,2-4,,16.0,23.0,16.1,14.0,36.9,21.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,Tel Aviv University,,tel-aviv-university,Israel,IL,2-4,,0.0,0.0,23.9,15.9,50.9,25.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,The University of Georgia,,the-university-of-georgia,United States,US,55-69,,0.0,0.0,26.9,19.8,44.2,18.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,The University of Queensland,,the-university-of-queensland,Australia,AU,4-5,,14.1,0.0,12.5,24.0,57.3,25.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,The University of Western Australia,,the-university-of-western-australia,Australia,AU,4-5,,15.1,14.1,21.6,13.1,42.6,26.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,Tokyo Institute of Technology,,tokyo-institute-of-technology,Japan,JP,6,,14.1,0.0,21.6,22.8,44.4,29.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,Tufts University,,tufts-university,United States,US,55-69,,16.0,16.6,22.8,13.0,37.4,25.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University Libre Bruxelles,,universit-libre-de-bruxelles-ulb,Belgium,BE,2-4,,18.5,18.9,12.5,13.1,32.0,25.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Alberta,,university-of-alberta,Canada,CA,5-6,,13.1,0.0,20.4,21.3,56.9,21.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Amsterdam,,university-of-amsterdam,Netherlands,NL,3-6,,7.5,0.0,19.0,20.9,51.9,26.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,"University of California, Riverside",,university-of-california-riverside,United States,US,55-69,,0.0,0.0,27.9,32.0,30.8,31.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,"University of California, Santa Cruz",,university-of-california-santa-cruz,United States,US,55-69,,14.1,0.0,27.9,26.6,34.4,27.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Frankfurt,,goethe-university-frankfurt,Germany,DE,6-10,,34.1,8.9,19.0,16.6,39.6,23.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Freiburg,,university-of-freiburg,Germany,DE,6-10,,21.3,20.9,16.1,18.0,37.4,22.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Geneva,,university-of-geneva,Switzerland,CH,4-5,,25.0,0.0,20.4,24.9,37.2,24.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Groningen,,university-of-groningen,Netherlands,NL,3-6,,0.0,19.9,17.6,16.3,46.2,26.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Hawaii at Manoa,,university-of-hawaii-at-manoa,United States,US,55-69,,0.0,0.0,26.0,27.9,37.6,18.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Iowa,,university-of-iowa,United States,US,55-69,,0.0,0.0,33.0,23.6,46.7,19.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Leeds,,university-of-leeds,United Kingdom,GB,12-14,,19.2,0.0,14.4,22.8,44.0,19.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Liverpool,,university-of-liverpool,United Kingdom,GB,12-14,,19.9,15.4,12.5,17.6,40.3,20.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Massachusetts Amherst,,university-of-massachusetts-amherst,United States,US,55-69,,15.1,0.0,33.0,17.5,36.0,22.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Massachusetts Chan Medical School,,university-of-massachusetts-medical-school-worcester,United States,US,55-69,,0.0,19.9,14.4,26.7,28.2,21.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Miami,,university-of-miami,United States,US,55-69,,0.0,0.0,23.9,20.7,43.2,16.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Milan,,university-of-milan,Italy,IT,1-3,,19.2,0.0,19.0,13.2,48.6,19.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Montreal,,university-of-montreal,Canada,CA,5-6,,13.1,0.0,14.4,18.0,53.4,20.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Muenster,,university-of-muenster,Germany,DE,6-10,,21.3,15.4,12.5,15.0,35.8,20.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Paris Diderot (Paris 7),,university-paris-diderot-paris-7,France,FR,4-5,,15.5,13.8,14.4,21.9,42.0,16.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Pisa,,university-of-pisa,Italy,IT,1-3,,16.0,23.5,16.1,4.1,38.9,18.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Roma - La Sapienza,,sapienza-university-of-rome,Italy,IT,1-3,,14.1,15.4,10.2,13.7,50.6,14.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Sao Paulo,,university-of-sao-paulo,Brazil,BR,1,,0.0,0.0,10.2,13.3,76.3,15.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Strasbourg,,university-of-strasbourg,France,FR,4-5,,25.0,22.4,17.6,15.9,36.6,19.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Sussex,,university-of-sussex,United Kingdom,GB,12-14,,0.0,22.7,19.0,15.7,27.1,25.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Tuebingen,,university-of-tuebingen,Germany,DE,6-10,,25.0,0.0,14.4,17.4,42.0,22.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Wageningen,,wageningen-university-research,Netherlands,NL,3-6,,0.0,0.0,28.8,14.3,39.3,30.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,University of Wuerzburg,,university-of-wuerzburg,Germany,DE,6-10,,21.3,8.9,23.3,13.7,35.0,20.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,VU University Amsterdam,,vrije-universiteit-amsterdam,Netherlands,NL,3-6,,0.0,0.0,23.9,13.4,51.8,28.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,101-150,Weizmann Institute of Science,,weizmann-institute-of-science,Israel,IL,2-4,,14.1,16.2,23.9,28.0,29.4,22.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,Cardiff University,,cardiff-university,United Kingdom,GB,15-19,,0.0,16.2,7.2,20.3,42.2,17.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,Colorado State University,,colorado-state-university,United States,US,70-89,,0.0,0.0,27.9,13.8,37.1,20.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,Dartmouth College,,dartmouth-college,United States,US,70-89,,20.6,0.0,22.8,18.1,30.7,22.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,Delft University of Technology,,delft-university-of-technology,Netherlands,NL,7-9,,13.1,0.0,7.2,21.5,40.3,21.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,Erasmus University Rotterdam,,erasmus-university-rotterdam,Netherlands,NL,7-9,,0.0,15.4,21.6,5.2,33.5,25.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,Florida State University,,florida-state-university,United States,US,70-89,,0.0,0.0,20.4,18.4,39.5,19.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,George Mason University,,george-mason-university,United States,US,70-89,,0.0,32.1,10.2,7.1,28.5,17.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,Hokkaido University,,hokkaido-university,Japan,JP,7-9,,0.0,0.0,16.1,16.1,47.7,20.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,Iowa State University,,iowa-state-university,United States,US,70-89,,0.0,0.0,22.8,13.7,42.9,20.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,Joseph Fourier University (Grenoble 1),,joseph-fourier-university-grenoble-1,France,FR,6-7,,0.0,15.4,10.2,19.8,37.9,17.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,Kyushu University,,kyushu-university,Japan,JP,7-9,,0.0,0.0,14.4,17.6,49.7,20.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,Louisiana State University - Baton Rouge,,louisiana-state-university-baton-rouge,United States,US,70-89,,0.0,0.0,19.0,16.0,38.0,15.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,Monash University,,monash-university,Australia,AU,6-7,,0.0,0.0,10.2,16.2,52.4,20.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,Mount Sinai School of Medicine,,icahn-school-of-medicine-at-mount-sinai,United States,US,70-89,,0.0,0.0,19.0,19.3,35.4,17.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,National Autonomous University of Mexico,,national-autonomous-university-of-mexico,Mexico,MX,1,,14.1,0.0,7.2,12.7,50.6,23.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,Oregon Health and Science University,,oregon-health-and-science-university,United States,US,70-89,,0.0,0.0,19.0,19.7,35.4,20.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,Peking University,,peking-university,China,CN,1-2,,0.0,0.0,0.0,13.5,59.0,17.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,Radboud University Nijmegen,,radboud-university-nijmegen,Netherlands,NL,7-9,,0.0,0.0,10.2,19.4,48.5,29.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,State University of New York at Stony Brook,,stony-brook-university,United States,US,70-89,,0.0,0.0,19.0,22.8,37.9,18.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,Technical University of Denmark,,technical-university-of-denmark,Denmark,DK,3,,7.5,12.6,17.6,13.9,36.5,19.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,The Chinese University of Hong Kong,,the-chinese-university-of-hong-kong,China-Hong Kong,HK,1,,0.0,14.1,14.4,6.1,43.1,21.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,The University of Alabama at Birmingham,,university-of-alabama-at-birmingham,United States,US,70-89,,0.0,0.0,16.1,18.5,42.4,15.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,The University of Calgary,,the-university-of-calgary,Canada,CA,7-8,,0.0,0.0,10.2,17.0,46.2,17.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,The University of Connecticut - Storrs,,university-of-connecticut,United States,US,70-89,,13.1,0.0,16.1,13.5,37.0,17.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,The University of Glasgow,,the-university-of-glasgow,United Kingdom,GB,15-19,,10.7,0.0,21.6,15.5,42.8,17.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,The University of Texas Health Science Center at Houston,,the-university-of-texas-health-science-center-at-houston,United States,US,70-89,,0.0,15.4,17.6,16.4,30.4,18.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,The University of Texas M. D. Anderson Cancer Center,,the-university-of-texas-m-d-anderson-cancer-center,United States,US,70-89,,0.0,0.0,21.6,15.6,42.8,27.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,Tsinghua University,,tsinghua-university,China,CN,1-2,,11.9,0.0,0.0,11.8,57.8,17.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,University of Bern,,university-of-bern,Switzerland,CH,6,,14.1,0.0,10.2,20.8,39.1,25.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,University of Buenos Aires,,university-of-buenos-aires,Argentina,AR,1,,18.5,25.2,0.0,6.3,37.9,20.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,University of Cologne,,university-of-cologne,Germany,DE,11-14,,0.0,12.6,7.2,20.8,37.9,19.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,University of Delaware,,university-of-delaware,United States,US,70-89,,11.9,0.0,22.8,13.3,32.8,18.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,University of Durham,,durham-university,United Kingdom,GB,15-19,,0.0,0.0,19.0,18.6,33.3,20.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,University of Hamburg,,university-of-hamburg,Germany,DE,11-14,,14.1,0.0,17.6,16.4,34.3,18.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,University of Illinois at Chicago,,university-of-illinois-at-chicago,United States,US,70-89,,0.0,0.0,26.9,9.6,46.1,17.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,Kiel University,,university-of-kiel,Germany,DE,11-14,,13.1,15.4,10.2,12.2,32.9,17.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,University of Mainz,,university-of-mainz,Germany,DE,11-14,,0.0,8.1,17.6,19.6,38.1,20.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,"University of Maryland, Baltimore",,university-of-maryland-baltimore,United States,US,70-89,,0.0,0.0,22.8,16.5,38.6,17.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,University of Nebraska - Lincoln,,university-of-nebraska-lincoln,United States,US,70-89,,19.9,0.0,16.1,14.8,33.4,15.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,University of New South Wales,,the-university-of-new-south-wales,Australia,AU,6-7,,0.0,0.0,19.0,11.3,52.2,20.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,University of Padua,,university-of-padua,Italy,IT,4,,0.0,0.0,12.5,18.8,48.8,18.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,University of Paris Descartes (Paris 5),,university-of-paris-descartes-paris-5,France,FR,6-7,,13.7,11.9,10.2,16.5,41.1,15.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,University of Southampton,,university-of-southampton,United Kingdom,GB,15-19,,0.0,0.0,19.0,17.9,42.6,18.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,University of Tennessee - Knoxville,,university-of-tennessee-knoxville,United States,US,70-89,,11.9,0.0,21.6,17.0,39.1,14.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,University of Tsukuba,,university-of-tsukuba,Japan,JP,7-9,,0.0,19.9,12.5,8.7,39.1,20.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,University of Vienna,,university-of-vienna,Austria,AT,1,,17.7,0.0,10.2,19.3,37.3,20.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,University of Warwick,,university-of-warwick,United Kingdom,GB,15-19,,0.0,0.0,24.4,14.8,37.5,20.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,University of Waterloo,,university-of-waterloo,Canada,CA,7-8,,0.0,0.0,19.0,10.3,41.7,21.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,Virginia Commonwealth University,,virginia-commonwealth-university,United States,US,70-89,,11.9,14.1,17.6,9.9,34.2,14.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,151-200,Virginia Polytechnic Institute and State University,,virginia-polytechnic-institute-and-state-university,United States,US,70-89,,13.1,0.0,21.6,15.0,40.8,17.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Autonomous University of Madrid,,autonomous-university-of-madrid,Spain,ES,1-4,,0.0,0.0,12.5,14.3,38.6,16.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Brandeis University,,brandeis-university,United States,US,90-111,,21.3,0.0,7.2,18.1,19.8,23.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Chalmers University of Technology,,chalmers-university-of-technology,Sweden,SE,5-9,,0.0,0.0,16.1,11.6,28.4,20.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Charles University in Prague,,charles-university-in-prague,Czech Republic,CZ,1,,13.1,0.0,0.0,12.3,43.1,18.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,City University of New York City College,,the-city-college-of-new-york,United States,US,90-111,,33.7,0.0,10.2,9.7,18.0,20.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Claude Bernard University Lyon 1,,claude-bernard-university-lyon-1,France,FR,8-13,,13.1,0.0,0.0,19.7,40.2,14.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Complutense University of Madrid,,complutense-university-of-madrid,Spain,ES,1-4,,16.9,0.0,0.0,9.0,43.3,11.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Dalhousie University,,dalhousie-university,Canada,CA,9-18,,0.0,0.0,14.4,15.6,34.5,17.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Ecole Polytechnique,,ecole-polytechnique,France,FR,8-13,,19.2,0.0,7.2,9.2,28.6,21.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Fudan University,,fudan-university,China,CN,3-7,,0.0,0.0,0.0,9.2,48.8,17.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Industrial Physics and Chemistry Higher Educational Institution - Paris,,espci-paris,France,FR,8-13,,9.2,18.9,0.0,11.1,16.8,29.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Keio University,,keio-university,Japan,JP,10,,0.0,0.0,10.2,11.8,35.5,16.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Korea Advanced Institute of Science and Technology,,korea-advanced-institute-of-science-and-technology,South Korea,KR,2-4,,0.0,0.0,7.2,15.7,40.5,29.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Korea University,,korea-university,South Korea,KR,2-4,,0.0,0.0,0.0,7.0,48.1,19.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Lancaster University,,lancaster-university,United Kingdom,GB,20-30,,0.0,0.0,17.6,11.9,28.7,19.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Laval University,,laval-university,Canada,CA,9-18,,0.0,0.0,16.1,10.6,39.0,16.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,London School of Economics and Political Science,,london-school-of-economics-and-political-science,United Kingdom,GB,20-30,,16.9,0.0,16.1,,26.0,24.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Macquarie University,,macquarie-university,Australia,AU,8-9,,0.0,0.0,16.1,13.2,29.3,22.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Medical University of Vienna,,medical-university-of-vienna,Austria,AT,2-3,,11.9,15.4,7.2,7.9,33.0,18.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Nanjing University,,nanjing-university,China,CN,3-7,,0.0,0.0,0.0,12.2,45.9,16.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,National and Kapodistrian University of Athens,,national-and-kapodistrian-university-of-athens,Greece,GR,1,,0.0,0.0,12.5,5.1,42.6,19.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,National Cheng Kung University (NCKU),,national-cheng-kung-university-ncku,China-Taiwan,TW,2,,0.0,0.0,10.2,2.1,48.4,19.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Newcastle University,,newcastle-university,United Kingdom,GB,20-30,,0.0,0.0,14.4,17.5,36.8,17.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Norwegian University of Science and Technology,,norwegian-university-of-science-and-technology-ntnu,Norway,NO,2-3,,16.0,0.0,10.2,15.1,36.7,17.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Paul Sabatier University (Toulouse 3),,paul-sabatier-university-toulouse-3,France,FR,8-13,,0.0,6.3,0.0,16.9,38.1,12.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Polytechnic Institute of Milan,,polytechnic-university-of-milan,Italy,IT,5-8,,9.2,15.4,0.0,7.7,30.4,14.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Queen Mary,,queen-mary-university-of-london,United Kingdom,GB,20-30,,20.6,0.0,16.1,16.9,27.0,17.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Queen's University,,queens-university,Canada,CA,9-18,,0.0,0.0,16.1,15.3,36.8,20.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Queen's University Belfast,,queens-university-belfast,United Kingdom,GB,20-30,,19.9,0.0,0.0,14.8,33.3,16.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Rensselaer Polytechnic Institute,,rensselaer-polytechnic-institute,United States,US,90-111,,14.1,0.0,17.6,11.3,25.1,22.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Royal Institute of Technology,,kth-royal-institute-of-technology,Sweden,SE,5-9,,0.0,15.4,0.0,9.2,36.2,22.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,RWTH Aachen University,,rwth-aachen-university,Germany,DE,15-23,,5.3,0.0,7.2,10.3,39.2,18.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Shanghai Jiao Tong University,,shanghai-jiao-tong-university,China,CN,3-7,,0.0,0.0,0.0,7.2,58.1,18.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Simon Fraser University,,simon-fraser-university,Canada,CA,9-18,,0.0,0.0,14.4,9.2,34.7,18.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,State University of Campinas,,university-of-campinas,Brazil,BR,2,,0.0,0.0,7.2,7.8,44.3,19.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,State University of New York at Buffalo,,university-at-buffalo-the-state-university-of-new-york,United States,US,90-111,,0.0,0.0,16.1,7.5,39.5,15.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Swedish University of Agricultural Sciences,,swedish-university-of-agricultural-sciences,Sweden,SE,5-9,,0.0,0.0,12.5,12.1,28.6,22.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Technical University of Berlin,,technical-university-of-berlin,Germany,DE,15-23,,19.9,0.0,16.1,7.7,29.4,16.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,The George Washington University,,the-george-washington-university,United States,US,90-111,,13.1,0.0,12.5,10.8,32.5,16.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,The Hong Kong Polytechnic University,,the-hong-kong-polytechnic-university,China-Hong Kong,HK,2-4,,0.0,0.0,14.4,1.5,39.6,18.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,The Hong Kong University of Science and Technology,,the-hong-kong-university-of-science-and-technology,China-Hong Kong,HK,2-4,,0.0,0.0,16.1,5.7,32.7,23.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,The University of Adelaide,,the-university-of-adelaide,Australia,AU,8-9,,16.9,0.0,10.2,11.1,37.4,22.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,The University of Auckland,,the-university-of-auckland,New Zealand,NZ,1-2,,15.1,0.0,10.2,14.4,36.9,18.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,The University of Hong Kong,,the-university-of-hong-kong,China-Hong Kong,HK,2-4,,0.0,0.0,14.4,10.4,43.9,22.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,The University of New Mexico - Albuquerque,,the-university-of-new-mexico-albuquerque,United States,US,90-111,,0.0,0.0,12.5,18.3,35.8,15.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,The University of Reading,,the-university-of-reading,United Kingdom,GB,20-30,,0.0,0.0,14.4,16.3,27.8,18.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,The University of Texas Health Science Center at San Antonio,,the-university-of-texas-health-science-center-at-san-antonio,United States,US,90-111,,0.0,0.0,22.8,6.9,30.0,17.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Trinity College Dublin,,trinity-college-dublin,Ireland,IE,1,,13.1,14.1,7.2,10.5,30.3,16.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Umea University,,umea-university,Sweden,SE,5-9,,0.0,0.0,14.4,12.8,32.9,17.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Aberdeen,,university-of-aberdeen,United Kingdom,GB,20-30,,0.0,0.0,10.2,15.8,32.9,19.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Antwerp,,university-of-antwerp,Belgium,BE,5-6,,0.0,0.0,12.5,11.7,34.4,25.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Barcelona,,university-of-barcelona,Spain,ES,1-4,,0.0,0.0,7.2,14.0,51.4,15.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Bergen,,university-of-bergen,Norway,NO,2-3,,0.0,0.0,7.2,15.1,36.9,18.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Ruhr University Bochum,,university-of-bochum,Germany,DE,15-23,,0.0,0.0,12.5,12.5,38.9,18.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Bologna,,university-of-bologna,Italy,IT,5-8,,0.0,0.0,10.2,8.6,48.3,15.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Cape Town,,university-of-cape-town,South Africa,ZA,1,,21.3,0.0,10.2,14.2,32.8,17.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Central Florida,,university-of-central-florida,United States,US,90-111,,0.0,0.0,18.4,9.5,30.1,16.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Cincinnati,,university-of-cincinnati,United States,US,90-111,,0.0,0.0,22.8,10.4,40.2,14.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Colorado at Denver,,university-of-colorado-at-denver,United States,US,90-111,,0.0,0.0,17.6,13.6,41.1,16.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Duesseldorf,,heinrich-heine-university-duesseldorf,Germany,DE,15-23,,13.1,0.0,11.4,12.0,31.4,16.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of East Anglia,,university-of-east-anglia,United Kingdom,GB,20-30,,15.1,0.0,16.1,17.4,28.7,21.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Erlangen-Nuremberg,,university-of-erlangen-nuremberg,Germany,DE,15-23,,0.0,0.0,14.4,13.3,40.6,19.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Florence,,university-of-florence,Italy,IT,5-8,,0.0,0.0,16.1,11.4,39.7,15.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Gothenburg,,university-of-gothenburg,Sweden,SE,5-9,,0.0,15.4,7.2,7.6,39.9,17.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Guelph,,university-of-guelph,Canada,CA,9-18,,0.0,0.0,16.1,14.7,33.4,19.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Halle-Wittenberg,,university-of-halle-wittenberg,Germany,DE,15-23,,5.3,8.9,7.2,12.2,28.2,14.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Houston,,university-of-houston,United States,US,90-111,,0.0,0.0,20.4,11.1,34.8,19.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Innsbruck,,university-of-innsbruck,Austria,AT,2-3,,0.0,10.9,7.2,15.1,25.1,23.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Kansas - Lawrence,,university-of-kansas,United States,US,90-111,,13.1,0.0,12.5,12.9,33.1,12.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Kentucky,,university-of-kentucky,United States,US,90-111,,11.9,0.0,7.2,12.1,42.3,14.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Lausanne,,university-of-lausanne,Switzerland,CH,7,,0.0,0.0,12.5,20.7,32.4,19.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Leicester,,university-of-leicester,United Kingdom,GB,20-30,,0.0,0.0,19.0,18.0,33.0,19.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Leipzig,,university-of-leipzig,Germany,DE,15-23,,15.1,15.4,0.0,8.7,35.0,17.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Liege,,university-of-liege,Belgium,BE,5-6,,9.2,0.0,10.2,12.4,30.6,23.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Manitoba,,university-of-manitoba,Canada,CA,9-18,,0.0,0.0,16.1,8.5,35.6,15.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Marburg,,university-of-marburg,Germany,DE,15-23,,15.1,0.0,14.4,14.6,29.9,16.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Medicine and Dentistry New Jersey,,university-of-medicine-and-dentistry-new-jersey,United States,US,90-111,,0.0,0.0,22.8,13.1,32.4,15.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Missouri - Columbia,,university-of-missouri-columbia,United States,US,90-111,,10.7,0.0,7.2,14.3,40.9,14.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Montpellier 2,,university-of-montpellier-2,France,FR,8-13,,11.9,0.0,12.5,15.6,32.4,17.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Notre Dame,,university-of-notre-dame,United States,US,90-111,,14.1,0.0,12.5,13.6,30.3,18.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Oregon,,university-of-oregon,United States,US,90-111,,11.9,0.0,10.2,20.2,26.4,19.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Otago,,university-of-otago,New Zealand,NZ,1-2,,0.0,0.0,10.2,8.3,34.1,24.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Ottawa,,university-of-ottawa,Canada,CA,9-18,,0.0,0.0,7.2,13.2,41.7,17.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Saskatchewan,,university-of-saskatchewan,Canada,CA,9-18,,10.7,0.0,14.4,6.6,33.8,16.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Science and Technology of China,,university-of-science-and-technology-of-china,China,CN,3-7,,0.0,0.0,7.2,12.5,44.5,22.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of South Carolina - Columbia,,university-of-south-carolina-columbia-1,United States,US,90-111,,0.0,0.0,16.1,11.9,34.9,14.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of South Florida,,university-of-south-florida,United States,US,90-111,,0.0,0.0,12.5,9.8,38.4,14.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of St Andrews,,university-of-st-andrews,United Kingdom,GB,20-30,,11.9,0.0,7.2,21.1,29.8,23.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Stuttgart,,university-of-stuttgart,Germany,DE,15-23,,20.6,0.0,10.2,13.6,28.1,15.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of the Mediterranean (Aix-Marseille 2),,university-of-the-mediterranean-aix-marseille-2,France,FR,8-13,,0.0,0.0,14.4,17.1,27.6,13.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Turin,,university-of-turin,Italy,IT,5-8,,18.5,0.0,12.5,9.5,39.7,17.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Valencia,,university-of-valencia,Spain,ES,1-4,,0.0,0.0,7.2,10.1,40.9,13.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Vermont,,university-of-vermont,United States,US,90-111,,15.1,0.0,14.4,8.4,27.9,15.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of Victoria,,university-of-victoria,Canada,CA,9-18,,0.0,0.0,14.4,11.3,31.1,18.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,University of York,,university-of-york,United Kingdom,GB,20-30,,0.0,0.0,17.6,13.0,32.7,19.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Washington State University - Pullman,,washington-state-university,United States,US,90-111,,0.0,0.0,20.4,13.6,31.3,16.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Western University,,western-university,Canada,CA,9-18,,0.0,0.0,8.8,13.5,45.5,18.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Yeshiva University,,yeshiva-university,United States,US,90-111,,0.0,0.0,12.5,16.2,34.6,21.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Yonsei University,,yonsei-university,South Korea,KR,2-4,,0.0,0.0,7.2,10.6,51.8,18.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,201-300,Zhejiang University,,zhejiang-university,China,CN,3-7,,0.0,0.0,0.0,8.5,61.9,16.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Aristotle University of Thessaloniki,,aristotle-university-of-thessaloniki,Greece,GR,2,,0.0,0.0,7.2,3.5,37.5,16.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Autonomous University of Barcelona,,autonomous-university-of-barcelona,Spain,ES,5-7,,0.0,0.0,0.0,7.7,42.4,16.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Bar-Ilan University,,bar-ilan-university,Israel,IL,5-6,,0.0,0.0,12.5,9.0,28.0,14.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Ben-Gurion University of the Negev,,ben-gurion-university-of-the-negev,Israel,IL,5-6,,0.0,0.0,7.2,10.2,35.8,16.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Brigham Young University,,brigham-young-university,United States,US,112-137,,10.7,0.0,12.5,3.7,26.7,11.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,City University of Hong Kong,,city-university-of-hong-kong,China-Hong Kong,HK,5,,0.0,0.0,12.5,0.0,38.2,22.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Clemson University,,clemson-university,United States,US,112-137,,0.0,0.0,12.5,6.0,29.1,14.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Dresden University of Technology,,tu-dresden,Germany,DE,24-33,,0.0,0.0,7.2,11.0,37.3,17.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Drexel University,,drexel-university,United States,US,112-137,,0.0,0.0,7.2,9.6,28.8,14.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Eotvos Lorand University,,eotvos-lorand-university,Hungary,HU,1-2,,16.9,0.0,10.2,9.0,24.2,13.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Federal University of Minas Gerais,,federal-university-of-minas-gerais,Brazil,BR,3-5,,0.0,0.0,7.2,5.8,36.6,16.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Federal University of Rio de Janeiro,,federal-university-of-rio-de-janeiro,Brazil,BR,3-5,,0.0,0.0,0.0,12.3,41.9,19.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Flinders University,,flinders-university,Australia,AU,10-13,,16.9,0.0,7.2,4.0,24.8,19.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Georgetown University,,georgetown-university,United States,US,112-137,,0.0,0.0,12.5,7.2,33.0,17.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Hanyang University,,hanyang-university,South Korea,KR,5-7,,0.0,0.0,0.0,6.2,39.7,17.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Henri Poincare University (Nancy 1),,henri-poincar-university,France,FR,14-18,,13.1,18.9,0.0,10.1,16.7,10.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Hiroshima University,,hiroshima-university,Japan,JP,11-17,,0.0,0.0,7.2,11.6,35.1,17.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Indian Institute of Science,,indian-institute-of-science,India,IN,1,,0.0,0.0,12.5,6.3,34.6,16.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Jagiellonian University,,jagiellonian-university,Poland,PL,1-2,,11.9,0.0,7.2,5.5,31.8,14.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,James Cook University,,james-cook-university,Australia,AU,10-13,,0.0,0.0,10.2,14.1,24.1,21.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Kanazawa University,,kanazawa-university,Japan,JP,11-17,,0.0,0.0,10.2,6.9,27.6,17.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Kansas State University,,kansas-state-university,United States,US,112-137,,0.0,0.0,14.4,8.9,29.7,14.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,King Saud University,,king-saud-university,Saudi Arabia,SA,1,,0.0,0.0,24.4,0.0,21.2,14.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Kobe University,,kobe-university,Japan,JP,11-17,,0.0,0.0,10.2,12.6,32.8,16.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,London School of Hygiene and Tropical Medicine,,london-school-of-hygiene-tropical-medicine,United Kingdom,GB,31-35,,9.2,0.0,0.0,5.5,29.7,28.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Medical University of Graz,,medical-university-of-graz,Austria,AT,4-6,,0.0,10.9,7.2,3.3,21.4,20.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Medical University of Innsbruck,,medical-university-of-innsbruck,Austria,AT,4-6,,0.0,0.0,12.5,5.7,24.6,22.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Medical University of South Carolina,,medical-university-of-south-carolina,United States,US,112-137,,0.0,0.0,14.4,7.3,30.0,19.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Nagasaki University,,nagasaki-university,Japan,JP,11-17,,13.1,0.0,10.2,4.1,24.4,17.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Nanyang Technological University,,nanyang-technological-university,Singapore,SG,2,,0.0,0.0,0.0,6.5,46.5,20.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,National Chiao Tung University,,national-chiao-tung-university,China-Taiwan,TW,3-4,,0.0,0.0,7.2,6.4,38.3,20.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,National Tsing Hua University,,national-tsing-hua-university,China-Taiwan,TW,3-4,,14.1,0.0,0.0,8.9,35.4,21.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Okayama University,,okayama-university,Japan,JP,11-17,,0.0,0.0,7.2,12.0,33.4,17.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Pohang University of Science and Technology,,pohang-university-of-science-and-technology,South Korea,KR,5-7,,0.0,0.0,7.2,9.8,29.3,28.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Polytechnic University of Valencia,,polytechnic-university-of-valencia,Spain,ES,5-7,,0.0,0.0,7.2,11.5,31.4,15.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Saint Louis University,,saint-louis-university,United States,US,112-137,,0.0,12.6,10.2,4.7,24.4,12.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Saint Petersburg State University,,saint-petersburg-state-university,Russia,RU,2,,26.1,0.0,0.0,4.8,29.6,15.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,San Diego State University,,san-diego-state-university,United States,US,112-137,,0.0,0.0,14.4,12.3,27.6,16.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,UNESP,,unesp,Brazil,BR,3-5,,0.0,0.0,0.0,5.4,43.9,19.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Scuola Normale Superiore - Pisa,,scuola-normale-superiore-pisa,Italy,IT,9-13,,0.0,0.0,14.4,5.7,16.4,44.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Shandong University,,shandong-university,China,CN,8-10,,0.0,0.0,0.0,4.0,43.0,12.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Sichuan University,,sichuan-university,China,CN,8-10,,0.0,0.0,0.0,2.1,46.0,12.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,State University of New York at Albany,,university-at-albany-state-university-of-new-york,United States,US,112-137,,0.0,0.0,16.1,5.3,27.3,17.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,SUNY Downstate Health Sciences University,,state-university-of-new-york-health-science-center-at-brooklyn,United States,US,112-137,,0.0,15.4,10.2,5.8,17.2,17.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Stockholm School of Economics,,stockholm-school-of-economics,Sweden,SE,10,,0.0,16.6,0.0,,10.7,39.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Sun Yat-sen University,,sun-yat-sen-university,China,CN,8-10,,0.0,0.0,0.0,3.2,42.3,13.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Sungkyunkwan University,,sungkyunkwan-university,South Korea,KR,5-7,,0.0,0.0,0.0,10.9,43.2,17.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Syracuse University,,syracuse-university,United States,US,112-137,,0.0,0.0,16.1,8.7,24.7,13.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Technical University Darmstadt,,technical-university-darmstadt,Germany,DE,24-33,,16.9,0.0,7.2,7.9,29.3,14.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Temple University,,temple-university,United States,US,112-137,,0.0,0.0,14.4,5.1,30.9,12.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Texas Tech University,,texas-tech-university,United States,US,112-137,,0.0,0.0,10.2,6.6,30.6,14.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,The Open University,,the-open-university,United Kingdom,GB,31-35,,0.0,0.0,12.5,13.8,21.7,12.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,The University of Dundee,,the-university-of-dundee,United Kingdom,GB,31-35,,0.0,0.0,16.1,12.0,27.0,18.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,The University of Montana - Missoula,,university-of-montana-missoula,United States,US,112-137,,7.5,0.0,12.5,11.7,17.1,14.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,The University of Texas at Dallas,,the-university-of-texas-at-dallas,United States,US,112-137,,0.0,0.0,10.2,14.1,25.2,21.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,The University of Texas Medical Branch at Galveston,,the-university-of-texas-medical-branch-at-galveston,United States,US,112-137,,0.0,0.0,17.6,7.8,25.7,15.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Thomas Jefferson University,,thomas-jefferson-university,United States,US,112-137,,0.0,0.0,16.1,4.7,28.2,27.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Tokyo Medical and Dental University,,tokyo-medical-and-dental-university,Japan,JP,11-17,,0.0,0.0,7.2,13.1,25.4,24.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Tulane University,,tulane-university,United States,US,112-137,,0.0,0.0,14.4,10.3,26.5,14.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University College Dublin,,university-college-dublin,Ireland,IE,2,,0.0,0.0,7.2,10.3,35.3,16.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Alaska - Fairbanks,,university-of-alaska-fairbanks,United States,US,112-137,,0.0,0.0,14.4,12.9,21.2,16.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Arkansas at Fayetteville,,university-of-arkansas-at-fayetteville,United States,US,112-137,,0.0,0.0,10.2,10.6,24.9,13.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Bath,,university-of-bath,United Kingdom,GB,31-35,,0.0,0.0,10.2,12.4,29.3,17.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Bielefeld,,bielefeld-university,Germany,DE,24-33,,0.0,0.0,14.4,9.6,24.7,13.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Bordeaux 1,,university-of-bordeaux-1,France,FR,14-18,,7.5,0.0,12.5,13.8,24.5,14.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Bremen,,university-of-bremen,Germany,DE,24-33,,0.0,0.0,0.0,14.5,30.5,14.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Duisburg-Essen,,university-of-duisburg-essen-1,Germany,DE,24-33,,0.0,0.0,7.2,8.8,31.7,14.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Exeter,,university-of-exeter,United Kingdom,GB,31-35,,0.0,0.0,0.0,18.8,28.3,18.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Genova,,university-of-genoa,Italy,IT,9-13,,0.0,0.0,14.4,4.0,32.5,13.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Graz,,university-of-graz,Austria,AT,4-6,,10.7,12.6,0.0,8.7,20.1,18.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Jena,,university-of-jena,Germany,DE,24-33,,0.0,0.0,0.0,11.7,35.2,16.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Karlsruhe,,karlsruhe-institute-of-technology-kit,Germany,DE,24-33,,5.3,0.0,10.2,12.8,30.9,15.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Konstanz,,university-of-konstanz,Germany,DE,24-33,,0.0,0.0,14.4,12.4,23.6,13.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Maastricht,,maastricht-university,Netherlands,NL,10-11,,0.0,0.0,0.0,7.8,39.8,22.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Naples Federico II,,university-of-naples-federico-ii,Italy,IT,9-13,,0.0,0.0,7.2,5.2,42.0,12.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Nevada - Reno,,university-of-nevada-reno,United States,US,112-137,,0.0,0.0,10.2,11.8,24.3,13.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of New Hampshire - Durham,,university-of-new-hampshire,United States,US,112-137,,0.0,0.0,14.4,14.6,21.7,15.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Newcastle,,the-university-of-newcastle-australia,Australia,AU,10-13,,0.0,0.0,10.2,7.6,29.5,20.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Nice Sophia Antipolis,,university-of-nice-sophia-antipolis,France,FR,14-18,,0.0,0.0,7.2,14.2,25.3,11.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Oklahoma - Norman,,university-of-oklahoma-norman,United States,US,112-137,,0.0,0.0,10.2,9.3,29.8,14.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Oulu,,university-of-oulu,Finland,FI,2-3,,13.1,0.0,7.2,7.5,29.7,14.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Palermo,,university-of-palermo,Italy,IT,9-13,,0.0,0.0,12.5,7.3,29.6,12.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Paris Dauphine (Paris 9),,paris-dauphine-university-paris-9,France,FR,14-18,,0.0,26.7,7.2,0.0,11.8,20.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Pompeu Fabra,,pompeu-fabra-university,Spain,ES,5-7,,0.0,0.0,7.2,11.9,22.8,24.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Provence (Aix-Marseille 1),,university-of-provence-aix-marseille-1,France,FR,14-18,,16.0,0.0,7.2,10.1,22.3,11.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Regensburg,,university-of-regensburg,Germany,DE,24-33,,0.0,0.0,7.2,10.1,31.1,14.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Rhode Island,,university-of-rhode-island,United States,US,112-137,,0.0,0.0,20.4,12.1,19.3,16.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Roma - Tor Vergata,,university-of-roma-tor-vergata,Italy,IT,9-13,,0.0,0.0,0.0,9.5,35.0,17.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Southern Denmark,,university-of-southern-denmark,Denmark,DK,4,,0.0,0.0,14.4,9.3,31.1,15.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Szeged,,university-of-szeged,Hungary,HU,1-2,,0.0,15.4,7.2,6.7,24.1,13.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of the Witwatersrand,,university-of-the-witwatersrand,South Africa,ZA,2,,21.3,0.0,0.0,9.9,29.6,15.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Tromso,,university-of-tromso,Norway,NO,4,,0.0,0.0,10.2,8.9,25.3,16.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Turku,,university-of-turku,Finland,FI,2-3,,0.0,0.0,12.5,6.6,33.1,15.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Twente,,university-of-twente,Netherlands,NL,10-11,,0.0,0.0,10.2,6.7,28.9,18.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Ulm,,university-of-ulm,Germany,DE,24-33,,0.0,0.0,7.2,9.5,30.8,14.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Warsaw,,university-of-warsaw,Poland,PL,1-2,,18.5,0.0,0.0,6.9,33.6,16.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,University of Wollongong,,university-of-wollongong,Australia,AU,10-13,,0.0,0.0,12.5,7.3,28.1,19.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Wake Forest University,,wake-forest-university,United States,US,112-137,,0.0,0.0,10.2,7.9,33.5,13.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Waseda University,,waseda-university,Japan,JP,11-17,,0.0,0.0,12.5,10.6,28.8,14.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,301-400,Wayne State University,,wayne-state-university,United States,US,112-137,,0.0,0.0,7.2,9.8,39.2,13.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Aalto University,,aalto-university,Finland,FI,4-6,,0.0,0.0,0.0,5.7,31.1,13.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Auburn University,,auburn-university,United States,US,138-154,,0.0,0.0,7.2,4.2,30.4,13.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Boston College,,boston-college,United States,US,138-154,,0.0,0.0,7.2,10.5,22.7,13.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Brunel University London,,brunel-university,United Kingdom,GB,36-38,,0.0,0.0,10.2,1.5,25.1,13.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Carleton University,,carleton-university,Canada,CA,19-23,,0.0,0.0,14.4,0.0,26.3,15.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Catholic University of Chile,,pontifical-catholic-university-of-chile,Chile,CL,1-2,,0.0,0.0,7.2,9.8,27.8,13.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Catholic University of the Sacred Heart,,catholic-university-of-the-sacred-heart,Italy,IT,14-22,,0.0,0.0,7.2,5.8,29.3,14.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Chang Gung University,,chang-gung-university,China-Taiwan,TW,5-7,,0.0,0.0,7.2,2.6,32.3,19.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Chiba University,,chiba-university,Japan,JP,18-25,,0.0,0.0,0.0,8.0,31.1,15.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,China Agricultural University,,china-agricultural-university,China,CN,11-22,,0.0,0.0,0.0,7.6,36.1,14.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Concordia University,,concordia-university,Canada,CA,19-23,,0.0,0.0,7.2,4.7,25.8,12.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Curtin University of Technology,,curtin-university,Australia,AU,14-17,,0.0,0.0,0.0,12.2,29.5,17.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Dalian University of Technology,,dalian-university-of-technology,China,CN,11-22,,0.0,0.0,0.0,2.1,38.5,16.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Ecole National Superieure Mines - Paris,,mines-paristech,France,FR,19-22,,16.0,25.2,0.0,3.3,8.7,12.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Ecole Normale Superieure - Lyon,,ecole-normale-superieure-lyon,France,FR,19-22,,0.0,0.0,7.2,10.3,20.4,20.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Eindhoven University of Technology,,eindhoven-university-of-technology,Netherlands,NL,12,,0.0,0.0,0.0,6.0,33.5,20.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Federal University of Rio Grande do Sul,,federal-university-of-rio-grande-do-sul,Brazil,BR,6,,0.0,0.0,0.0,2.4,39.5,17.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Gunma University,,gunma-university,Japan,JP,18-25,,0.0,0.0,7.2,7.3,22.2,16.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Hannover Medical School,,hannover-medical-school,Germany,DE,34-39,,0.0,0.0,0.0,7.7,31.6,14.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Harbin Institute of Technology,,harbin-institute-of-technology,China,CN,11-22,,0.0,0.0,0.0,0.0,44.8,13.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Huazhong University of Science and Technology,,huazhong-university-of-science-and-technology,China,CN,11-22,,0.0,0.0,0.0,0.0,43.6,13.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Indian Institute of Technology Kharagpur,,indian-institute-of-technology-kharagpur,India,IN,2,,0.0,0.0,7.2,0.0,29.8,13.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Indiana University-Purdue University at Indianapolis,,indiana-university-purdue-university-at-indianapolis,United States,US,138-154,,0.0,0.0,0.0,6.3,39.1,13.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Istanbul University,,istanbul-university,Türkiye,TR,1,,15.1,0.0,0.0,3.0,33.7,15.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Jilin University,,jilin-university,China,CN,11-22,,0.0,0.0,0.0,5.2,40.9,11.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Kent State University,,kent-state-university,United States,US,138-154,,0.0,0.0,7.2,11.5,23.6,13.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,King Fahd University of Petroleum & Minerals,,king-fahd-university-of-petroleum-minerals,Saudi Arabia,SA,2,,0.0,0.0,21.0,0.0,18.2,12.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Kyung Hee University,,kyung-hee-university,South Korea,KR,8-10,,0.0,0.0,0.0,1.5,34.8,15.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Kyungpook National University,,kyungpook-national-university,South Korea,KR,8-10,,0.0,0.0,0.0,4.0,34.8,15.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,La Trobe University,,la-trobe-university,Australia,AU,14-17,,0.0,0.0,7.2,6.3,25.8,16.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Lanzhou University,,lanzhou-university,China,CN,11-22,,0.0,0.0,0.0,6.4,35.4,16.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Lehigh University,,lehigh-university,United States,US,138-154,,0.0,0.0,12.5,8.3,20.9,17.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Linkoping University,,linkoping-university,Sweden,SE,11,,0.0,0.0,7.2,2.1,32.1,15.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Massey University,,massey-university,New Zealand,NZ,3-5,,0.0,0.0,10.2,4.0,25.9,14.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Medical College of Wisconsin,,medical-college-of-wisconsin,United States,US,138-154,,0.0,0.0,7.2,7.1,28.1,11.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Montana State University - Bozeman,,montana-state-university-bozeman,United States,US,138-154,,0.0,0.0,7.2,10.4,20.3,14.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Nankai University,,nankai-university,China,CN,11-22,,0.0,0.0,0.0,7.9,35.5,13.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,National Central University,,national-central-university,China-Taiwan,TW,5-7,,0.0,0.0,0.0,8.5,31.1,18.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,National Yang Ming University,,national-yang-ming-university,China-Taiwan,TW,5-7,,0.0,0.0,0.0,7.6,29.7,22.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Nihon University,,nihon-university,Japan,JP,18-25,,0.0,0.0,7.2,6.2,27.0,12.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Niigata University,,niigata-university,Japan,JP,18-25,,0.0,0.0,12.5,4.7,25.2,15.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Northeastern University,,northeastern-university-boston,United States,US,138-154,,0.0,0.0,7.2,10.2,26.0,15.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Ohio University,,ohio-university,United States,US,138-154,,15.1,0.0,0.0,9.1,23.0,12.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Osaka Prefecture University,,osaka-prefecture-university,Japan,JP,18-25,,0.0,0.0,10.2,6.8,21.8,10.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Polytechnic University of Turin,,polytechnic-university-of-turin,Italy,IT,14-22,,0.0,0.0,14.4,0.0,28.3,15.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Portland State University,,portland-state-university,United States,US,138-154,,0.0,0.0,10.2,7.6,19.5,13.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Pusan National University,,pusan-national-university,South Korea,KR,8-10,,0.0,0.0,0.0,7.6,34.4,15.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Southeast University,,southeast-university,China,CN,11-22,,0.0,0.0,0.0,4.7,35.9,13.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Swinburne University of Technology,,swinburne-university-of-technology,Australia,AU,14-17,,0.0,0.0,10.2,9.5,18.3,18.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Technical University of Braunschweig,,technical-university-of-braunschweig,Germany,DE,34-39,,14.1,0.0,7.2,6.8,23.4,11.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,The University of Connecticut Health Center,,the-university-of-connecticut-health-center,United States,US,138-154,,0.0,0.0,10.2,8.9,22.1,16.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,The University of Texas at San Antonio,,the-university-of-texas-at-san-antonio,United States,US,138-154,,0.0,0.0,7.2,9.2,21.8,14.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,The University of Tokushima,,the-university-of-tokushima,Japan,JP,18-25,,0.0,0.0,10.2,8.6,23.2,16.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Tianjin University,,tianjin-university,China,CN,11-22,,0.0,0.0,0.0,3.3,34.8,13.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Tokyo University of Agriculture and Technology,,tokyo-university-of-agriculture-and-technology,Japan,JP,18-25,,0.0,0.0,7.2,3.3,23.6,19.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University College Cork,,university-college-cork,Ireland,IE,3,,0.0,0.0,16.1,6.3,22.3,12.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Arkansas at Little Rock,,university-of-arkansas-at-little-rock,United States,US,138-154,,0.0,0.0,7.2,6.0,26.3,19.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Bari,,university-of-bari,Italy,IT,14-22,,0.0,0.0,0.0,7.6,30.7,13.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Bayreuth,,university-of-bayreuth,Germany,DE,34-39,,0.0,0.0,7.2,13.3,24.6,12.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Canterbury,,university-of-canterbury,New Zealand,NZ,3-5,,0.0,0.0,7.2,7.3,24.0,17.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Chile,,university-of-chile,Chile,CL,1-2,,9.2,0.0,0.0,4.5,32.1,14.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Eastern Finland,,university-of-eastern-finland,Finland,FI,4-6,,0.0,0.0,7.2,5.8,30.1,13.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Essex,,university-of-essex,United Kingdom,GB,36-38,,15.1,0.0,7.2,2.6,20.6,16.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Ferrara,,university-of-ferrara,Italy,IT,14-22,,0.0,0.0,10.2,6.9,25.7,16.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Giessen,,university-of-giessen,Germany,DE,34-39,,0.0,0.0,7.2,5.9,30.3,13.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Granada,,university-of-granada,Spain,ES,8-10,,0.0,0.0,0.0,6.1,36.3,11.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Greifswald,,university-of-greifswald,Germany,DE,34-39,,0.0,8.9,7.2,2.6,23.4,11.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Haifa,,university-of-haifa,Israel,IL,7,,0.0,0.0,7.2,6.3,25.8,12.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Hannover,,leibniz-university-hannover,Germany,DE,34-39,,0.0,0.0,7.2,7.3,25.2,11.9
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Jyvaskyla,,university-of-jyvaskyla,Finland,FI,4-6,,0.0,0.0,7.2,6.9,25.6,12.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Kansas Medical Center,,university-of-kansas-medical-center,United States,US,138-154,,0.0,0.0,12.5,6.0,20.2,10.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of KwaZulu-Natal,,university-of-kwazulu-natal,South Africa,ZA,3,,0.0,0.0,7.2,9.6,27.5,13.1
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Lisbon,,university-of-lisbon,Portugal,PT,1-2,,0.0,8.9,0.0,5.7,26.9,12.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Ljubljana,,university-of-ljubljana,Slovenia,SI,1,,0.0,0.0,0.0,6.3,35.8,13.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Milan - Bicocca,,university-of-milano-bicocca,Italy,IT,14-22,,0.0,0.0,0.0,11.3,26.1,22.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Nebraska Medical Center,,university-of-nebraska-medical-center,United States,US,138-154,,0.0,0.0,16.1,5.2,22.8,14.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Parma,,university-of-parma,Italy,IT,14-22,,0.0,0.0,7.2,7.5,26.4,13.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Pavia,,university-of-pavia,Italy,IT,14-22,,0.0,0.0,0.0,8.1,30.5,15.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Perugia,,university-of-perugia,Italy,IT,14-22,,0.0,0.0,7.2,9.3,28.0,14.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Porto,,university-of-porto,Portugal,PT,1-2,,0.0,0.0,0.0,5.2,36.9,16.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Quebec,,university-of-quebec-2,Canada,CA,19-23,,0.0,0.0,0.0,8.2,34.6,15.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Rennes 1,,university-of-rennes-1,France,FR,19-22,,0.0,0.0,7.2,10.8,28.7,11.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Santiago Compostela,,university-of-santiago-compostela,Spain,ES,8-10,,0.0,0.0,0.0,5.6,32.5,12.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Sherbrooke,,university-of-sherbrooke,Canada,CA,19-23,,0.0,0.0,7.2,11.0,25.1,12.4
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Siena,,university-of-siena,Italy,IT,14-22,,0.0,0.0,0.0,8.0,28.3,18.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Surrey,,university-of-surrey,United Kingdom,GB,36-38,,0.0,0.0,7.2,5.0,26.2,15.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Tasmania,,university-of-tasmania,Australia,AU,14-17,,0.0,0.0,7.2,10.3,24.9,18.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Tehran,,university-of-tehran,Iran,IR,1,,14.1,0.0,0.0,0.0,36.9,16.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Versailles,,university-of-versailles-saint-quentin-en-yvelines,France,FR,19-22,,0.0,0.0,7.2,12.9,19.0,11.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Wyoming,,university-of-wyoming,United States,US,138-154,,0.0,0.0,7.2,11.7,22.2,14.8
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,University of Zaragoza,,university-of-zaragoza,Spain,ES,8-10,,0.0,0.0,7.2,1.5,31.8,12.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Utah State University,,utah-state-university,United States,US,138-154,,0.0,0.0,7.2,7.3,23.7,13.7
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Victoria University of Wellington,,victoria-university-of-wellington,New Zealand,NZ,3-5,,13.1,0.0,0.0,8.9,22.4,16.3
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Vienna University of Technology,,vienna-university-of-technology,Austria,AT,7,,0.0,0.0,0.0,10.8,28.9,21.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Vrije University Brussel,,vrije-universiteit-brussel-vub,Belgium,BE,7,,15.1,0.0,0.0,5.4,26.9,22.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Wuhan University,,wuhan-university,China,CN,11-22,,0.0,0.0,0.0,2.1,37.4,10.5
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Xiamen University,,xiamen-university,China,CN,11-22,,0.0,0.0,0.0,7.5,31.3,11.6
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Xian Jiao Tong University,,xian-jiaotong-university,China,CN,11-22,,0.0,0.0,0.0,0.0,39.7,14.2
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,Yamaguchi University,,yamaguchi-university,Japan,JP,18-25,,0.0,0.0,16.1,1.5,21.0,15.0
+arwu,2026-07-19T13:10:53+00:00,overall,2010,401-500,York University,,york-university,Canada,CA,19-23,,0.0,0.0,0.0,10.8,31.4,11.9

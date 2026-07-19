@@ -1,0 +1,21 @@
+{
+  "source": "ntu",
+  "country": null,
+  "coverage": "worldwide",
+  "ranking_year": 2009,
+  "retrieval_method": "public-json",
+  "data_license": "Copyright NTU Ranking; no open redistribution license",
+  "data_attribution": "Performance Ranking of Scientific Papers for World Universities, National Taiwan University, nturanking.csti.tw",
+  "retrieved_at": "2026-07-19T13:10:46+00:00",
+  "records": 2223,
+  "records_by_scope": {
+    "field-agriculture": 290,
+    "field-engineering": 292,
+    "field-life-sciences": 288,
+    "field-medicine": 287,
+    "field-natural-sciences": 291,
+    "field-social-sciences": 295,
+    "overall": 480
+  },
+  "failures": []
+}

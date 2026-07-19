@@ -1,0 +1,26 @@
+{
+  "source": "nature",
+  "country": null,
+  "coverage": "worldwide",
+  "ranking_year": 2017,
+  "retrieval_method": "reader-proxy",
+  "data_license": "CC-BY-NC-SA-4.0 (numerical table data)",
+  "data_attribution": "Nature Index, Springer Nature, nature.com/nature-index",
+  "retrieved_at": "2026-07-19T21:16:44+00:00",
+  "records": 2800,
+  "records_by_scope": {
+    "academic-biological-sciences": 100,
+    "academic-chemistry": 100,
+    "academic-earth-and-environmental": 100,
+    "academic-natural-sciences": 500,
+    "academic-overall": 500,
+    "academic-physical-sciences": 100,
+    "biological-sciences": 100,
+    "chemistry": 100,
+    "earth-and-environmental": 100,
+    "natural-sciences": 500,
+    "overall": 500,
+    "physical-sciences": 100
+  },
+  "failures": []
+}

@@ -1,0 +1,15 @@
+{
+  "source": "scimago",
+  "country": null,
+  "coverage": "worldwide",
+  "ranking_year": 2021,
+  "retrieval_method": "reader-proxy",
+  "data_license": "Provider-controlled; no explicit redistribution license",
+  "data_attribution": "SCImago Institutions Rankings (SIR), scimagoir.com",
+  "retrieved_at": "2026-07-19T14:07:16+00:00",
+  "records": 4126,
+  "records_by_scope": {
+    "overall": 4126
+  },
+  "failures": []
+}
