@@ -21,6 +21,8 @@ countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
 const ROOT = dirname(dirname(dirname(fileURLToPath(import.meta.url))));
 const DATA_ROOT = join(ROOT, "data");
 const OUTPUT_PATH = join(ROOT, "src", "data", "insights.json");
+const DIRECTORY_PATH = join(ROOT, "public", "data", "directory.json");
+const DIRECTORY_FACETS_PATH = join(ROOT, "src", "data", "directory-facets.json");
 
 type Row = Record<string, any>;
 type Snapshot = { source: string; year: number; records: number; path: string; manifestPath: string; manifest: Row };
@@ -42,8 +44,9 @@ const CONSENSUS_PROVIDERS = ["usnews", "times", "qs", "cwur", "ntu", "arwu"] as 
 const TREND_PROVIDERS = ["times", "qs", "cwur", "ntu", "arwu", "nature", "openalex"] as const;
 const UNIVERSE_PROVIDERS = ["times", "qs", "cwur", "scimago"] as const;
 const RANK_COLUMNS: Record<string, string[]> = {
-  usnews: ["ranking"], times: ["rank"], qs: ["rank_display"], cwur: ["ranking"], ntu: ["ranking", "rank_order"], arwu: ["ranking"], nature: ["ranking"], openalex: ["ranking"], scimago: ["ranking"],
+  usnews: ["ranking"], times: ["rank"], qs: ["rank_display"], cwur: ["ranking"], ntu: ["ranking", "rank_order"], arwu: ["ranking"], nature: ["ranking"], openalex: ["ranking"], scimago: ["ranking"], leiden: ["ranking"],
 };
+const DIRECTORY_PROVIDERS = ["usnews", "times", "qs", "cwur", "ntu", "arwu", "scimago", "nature", "openalex", "leiden"] as const;
 const NAME_COLUMNS: Record<string, string[]> = { qs: ["title", "name"] };
 const COUNTRY_COLUMNS: Record<string, string[]> = { times: ["location"], qs: ["country"], usnews: ["country", "country_code"] };
 const NAME_ALIASES: Record<string, string> = {
@@ -69,6 +72,7 @@ const NAME_ALIASES: Record<string, string> = {
   "university of pennsylvania penn": "university of pennsylvania",
   "china university of mining": "china university of mining and technology",
   "china university of mining and technology xuzhou": "china university of mining and technology",
+  "china university of mining and technology cumt": "china university of mining and technology",
   "capital university egypt": "capital university",
   "jinan university china": "jinan university",
   "lincoln university new zealand": "lincoln university",
@@ -85,6 +89,7 @@ const NAME_ALIASES: Record<string, string> = {
   "university of occupational and environmental health japan": "university of occupational and environmental health",
   "american university of beirut aub": "american university of beirut",
   "chinese university of hong kong cuhk": "chinese university of hong kong",
+  "chinese university of hong kong shenzhen cuhksz": "chinese university of hong kong shenzhen",
   "daegu gyeongbuk institute of science and technology dgist": "daegu gyeongbuk institute of science and technology",
   "gebze technical university gtu": "gebze technical university",
   "gwangju institute of science and technology gist": "gwangju institute of science and technology",
@@ -178,6 +183,80 @@ const NAME_ALIASES: Record<string, string> = {
   "goldsmiths university london": "goldsmiths university of london",
   "university kashan": "university of kashan",
   "nova university lisbon": "nova university of lisbon",
+  // Word-order / duplicated-token variants surfaced by the 10-provider institution
+  // directory scan (same institution, differing token order or a repeated token).
+  "parthenope university of naples": "university of naples parthenope",
+  "university mohammed vi polytechnic": "mohammed vi polytechnic university",
+  "university of texas at san antonio health science center": "university of texas health science center at san antonio",
+  "zhaw zurich university of applied sciences": "zurich university of applied sciences",
+  "zurich university of applied sciences zhaw": "zurich university of applied sciences",
+  "university osnabruck": "osnabruck university",
+  "university rovira i virgili": "rovira i virgili university",
+  "university of tun hussein onn malaysia": "tun hussein onn university of malaysia",
+  "putra university malaysia": "university putra malaysia",
+  "university of medicine and pharmacy craiova": "university of medicine and pharmacy of craiova",
+  "university of agricultural sciences and veterinary medicine of cluj napoca": "university of agricultural sciences and veterinary medicine cluj napoca",
+  "university of hassan ii casablanca": "hassan ii university of casablanca",
+  "university of arizona arizona": "university of arizona",
+  "university of utah utah": "university of utah",
+  "university of warwick warwick": "university of warwick",
+  "chalmers university of technology chalmers": "chalmers university of technology",
+  "essex university of": "university of essex",
+  "rwth aachen university rwth aachen": "rwth aachen university",
+  "institute of science tokyo science tokyo": "institute of science tokyo",
+  "university of pittsburgh pittsburgh": "university of pittsburgh",
+  "university of london birkbeck": "birkbeck university of london",
+  "saint louis university saint louis": "saint louis university",
+  "lincoln university lincoln": "lincoln university",
+  "albert einstein college of medicine einstein": "albert einstein college of medicine",
+  "claude bernard lyon 1 university": "claude bernard university lyon 1",
+  "university of medicine and pharmacy carol davila": "carol davila university of medicine and pharmacy",
+  "university mutah": "mutah university",
+  "institute technology of bandung": "bandung institute of technology",
+  // Trailing-acronym / own-city / country / at-of-and-insertion variants (same institution).
+  "universidade federal de ciencias da saude de porto alegre ufcspa": "universidade federal de ciencias da saude de porto alegre",
+  "university of medicine and pharmacy grigore t popa of iasi": "grigore t popa university of medicine and pharmacy",
+  "grigore t popa university of medicine and pharmacy iasi": "grigore t popa university of medicine and pharmacy",
+  "king mongkuts university of technology north bangkok kmutnb": "king mongkuts university of technology north bangkok",
+  "pontificia universidade catolica do rio grande do sul pucrs": "pontificia universidade catolica do rio grande do sul",
+  "pakistan institute of engineering and applied sciences pieas": "pakistan institute of engineering and applied sciences",
+  "postgraduate institute of medical education and research chandigarh": "postgraduate institute of medical education and research",
+  "indian institute of engineering science technology shibpur": "indian institute of engineering science and technology shibpur",
+  "indian association for the cultivation of science iacs": "indian association for the cultivation of science",
+  "university of medicine and pharmacy victor babes": "victor babes university of medicine and pharmacy timisoara",
+  "university of texas southwestern medical center dallas": "university of texas southwestern medical center",
+  "university of texas southwestern medical center ut southwestern medical center": "university of texas southwestern medical center",
+  "university of texas medical branch galveston": "university of texas medical branch",
+  "university of texas medical branch at galveston": "university of texas medical branch",
+  "university of illinois at urbana champaign uiuc": "university of illinois at urbana champaign",
+  "uwe bristol university of the west of england": "university of the west of england",
+  "university of the west of england bristol": "university of the west of england",
+  "international university of health and welfare japan": "international university of health and welfare",
+  "universidade do estado do rio de janeiro uerj": "universidade do estado do rio de janeiro",
+  "universidade federal rural do semi arido ufersa": "universidade federal rural do semi arido",
+  "universiti malaysia pahang al sultan abdullah umpsa": "universiti malaysia pahang al sultan abdullah",
+  "yazd shahid sadoughi university of medical sciences": "shahid sadoughi university of medical sciences",
+  "universidad autonoma del estado de mexico uaemex": "universidad autonoma del estado de mexico",
+  "national university of sciences and technology pakistan": "national university of sciences and technology",
+  "national university of sciences and technology nust": "national university of sciences and technology",
+  "national university of sciences and technology islamabad": "national university of sciences and technology",
+  "university of veterinary and animal sciences lahore": "university of veterinary and animal sciences",
+  "university of petroleum and energy studies upes": "university of petroleum and energy studies",
+  "maulana azad national institute of technology bhopal": "maulana azad national institute of technology",
+  "sardar vallabhbhai national institute of technology surat": "sardar vallabhbhai national institute of technology",
+  "graduate university for advanced studies sokendai": "graduate university for advanced studies",
+  "graduate university for advanced studies japan": "graduate university for advanced studies",
+  "university of north carolina greensboro": "university of north carolina at greensboro",
+  "martin luther university of halle wittenberg": "martin luther university halle wittenberg",
+  "baqiyatallah university of medical sciences bmsu": "baqiyatallah university of medical sciences",
+  "city university of new york cuny": "city university of new york",
+  "university of northern british columbia unbc": "university of northern british columbia",
+  "otto von guericke university of magdeburg": "otto von guericke university magdeburg",
+  "universidad carlos iii de madrid uc3m": "universidad carlos iii de madrid",
+  "university of massachusetts medical school": "university of massachusetts chan medical school",
+  "anhui university of traditional chinese medicine": "anhui university of chinese medicine",
+  "chinese university hong kong": "chinese university of hong kong",
+  "postgraduate institute of medical education and research pgimer chandigarh": "postgraduate institute of medical education and research",
 };
 const COUNTRY_ALIASES: Record<string, string> = {
   brunei: "BN", "china mainland": "CN", "hong kong sar": "HK", kosovo: "XK", macau: "MO", "macau sar": "MO", palestine: "PS", "palestinian territories": "PS", "palestinian territory": "PS", "state of palestine": "PS", turkey: "TR", usa: "US", "united states of america": "US", "united states of america usa": "US", uk: "GB", "united kingdom uk": "GB", "south korea": "KR", russia: "RU", turkiye: "TR", taiwan: "TW", "czech republic": "CZ", xk: "XK",
@@ -349,7 +428,46 @@ function buildScimagoSubjectLeaders(snapshots: Snapshot[]): Row[] {
 
 function uniqueCountryCount(snapshots: Snapshot[]): number { const frame = readColumns(globalSnapshotFor(snapshots, "openalex", 2025).path, new Set(["country_code", "country"])); return new Set(frame.map((row) => rowCountry(row, "openalex")[0]).filter(Boolean)).size; }
 function archiveMetadata(snapshots: Snapshot[], providers: Row[]): Row { const years = snapshots.filter(isGlobal).map((s) => s.year); const scopes = new Set<string>(); for (const s of snapshots) for (const scope of Object.keys(s.manifest.records_by_scope ?? {})) if (scope !== "overall") scopes.add(`${s.source}\u0000${scope}`); const retrieved = snapshots.map((s) => s.manifest.retrieved_at).filter(Boolean).map(String); return { archiveRows: snapshots.reduce((a, s) => a + s.records, 0), globalRows: snapshots.filter(isGlobal).reduce((a, s) => a + s.records, 0), csvFiles: snapshots.length, providers: providers.length, firstYear: Math.min(...years), lastYear: Math.max(...years), countries: uniqueCountryCount(snapshots), subjectViews: scopes.size, failedScopes: snapshots.reduce((a, s) => a + ((s.manifest.failures ?? []) as unknown[]).length, 0), latestRetrieval: retrieved.sort(sortStrings).at(-1) } }
-function buildPayload(): Row { const snapshots = loadSnapshots(); const providers = providerInventory(snapshots); const [consensus, countryFootprint, providerTop100] = buildConsensus(snapshots); const [natureSubjects, subjectMatrix] = buildNatureSubjects(snapshots, consensus); const latest = latestGlobalSnapshots(snapshots); return { meta: archiveMetadata(snapshots, providers), providers, consensus, countryFootprint, providerTop100, rankingUniverse: buildRankingUniverse(snapshots), arwuConcentration: buildArwuConcentration(snapshots), arwuConcentrationTrend: buildArwuConcentrationTrend(snapshots), natureCountryShift: buildNatureCountryShift(snapshots), natureSubjects, subjectMatrix, subjectLeaders: buildSubjectLeaders(snapshots), scimagoSubjectLeaders: buildScimagoSubjectLeaders(snapshots), qsSubjectOutperformers: buildQsSubjectOutperformers(snapshots), countryAtlas: buildCountryAtlas(snapshots, consensus), openAlexGrowth: buildOpenAlexGrowth(snapshots, consensus.slice(0, 40)), openAlexCountryMomentum: buildOpenAlexCountryMomentum(snapshots), leidenScaleImpact: buildLeidenScatter(snapshots), leidenSummary: buildLeidenSummary(snapshots), institutionTrends: buildInstitutionTrends(snapshots, consensus), methodology: { consensusProviders: CONSENSUS_PROVIDERS.map((source) => ({ id: source, label: PROVIDER_META[source].label, year: latest[source].year })), consensusMinimumProviders: 4, consensusDefinition: "Mean within-table percentile across the latest available broad overall editions; it is an analytical index, not a new ranking.", natureWindow: "2016 edition (2015 output) to 2026 edition (2025 output)", openAlexWindow: "Publication years 2016 to 2025" } }; }
-function main(): void { const payload = buildPayload(); mkdirSync(dirname(OUTPUT_PATH), { recursive: true }); writeFileSync(OUTPUT_PATH, JSON.stringify(payload, null, 2) + "\n", "utf8"); console.log(`Wrote ${relative(ROOT, OUTPUT_PATH)} (${(readFileSync(OUTPUT_PATH).byteLength / 1024).toFixed(1)} KiB)`); }
+function buildInstitutionDirectory(snapshots: Snapshot[], consensus: Row[]): Row {
+  const latest = latestGlobalSnapshots(snapshots, DIRECTORY_PROVIDERS);
+  const consensusRankByKey = new Map<string, number>();
+  for (const inst of consensus) consensusRankByKey.set(keyOf(inst.canonical, inst.countryCode), inst.consensusRank);
+  const entities = new Map<string, { names: string[]; countries: string[]; providers: Map<string, { rank: number; display: string; year: number }> }>();
+  const ensure = (key: string) => { if (!entities.has(key)) entities.set(key, { names: [], countries: [], providers: new Map() }); return entities.get(key)!; };
+  for (const source of DIRECTORY_PROVIDERS) {
+    const snapshot = latest[source]; if (!snapshot) continue;
+    const perProvider = new Map<string, { rank: number; display: string; year: number; name: string; code: string | null; label: string }>();
+    for (const row of overallFrame(snapshot)) {
+      const name = rowName(row, source); const [rank, display] = rowRank(row, source);
+      if (!name || rank === null) continue;
+      const [code, label] = rowCountry(row, source);
+      const key = entityKey(name, code);
+      const existing = perProvider.get(key);
+      if (!existing || rank < existing.rank) perProvider.set(key, { rank, display, year: snapshot.year, name, code, label });
+    }
+    for (const [key, rec] of perProvider) { const e = ensure(key); e.names.push(rec.name); if (rec.code) e.countries.push(pairKey(rec.code, rec.label)); e.providers.set(source, { rank: rec.rank, display: rec.display, year: rec.year }); }
+  }
+  const institutions: Row[] = [];
+  for (const [key, e] of entities) {
+    const [canonical, code] = parseKey(key);
+    const country = mostCommon(countItems(e.countries), 1);
+    const [ccode, countryName] = country.length ? country[0][0].split("\u0000") : [code, "Unknown"];
+    const name = e.names.reduce((best, item) => (item.length > best.length || (item.length === best.length && item > best) ? item : best), "").replace(/\s+/g, " ").replace(" *", "").trim();
+    const ranks: Row = {};
+    for (const source of DIRECTORY_PROVIDERS) { const v = e.providers.get(source); if (v) ranks[source] = [Math.trunc(v.rank), v.display, v.year]; }
+    institutions.push({ id: `${slugify(canonical)}-${(code ?? "xx").toLowerCase()}`, name, country: countryName, countryCode: ccode ?? null, providerCount: e.providers.size, consensusRank: consensusRankByKey.get(key) ?? null, ranks });
+  }
+  institutions.sort((a, b) => {
+    const ar = a.consensusRank ?? Number.POSITIVE_INFINITY, br = b.consensusRank ?? Number.POSITIVE_INFINITY;
+    if (ar !== br) return ar - br;
+    if (a.providerCount !== b.providerCount) return b.providerCount - a.providerCount;
+    return sortStrings(a.name.toLowerCase(), b.name.toLowerCase());
+  });
+  const providers = DIRECTORY_PROVIDERS.map((source) => ({ id: source, label: PROVIDER_META[source].label, color: PROVIDER_META[source].color, kind: PROVIDER_META[source].kind, year: latest[source]?.year ?? null }));
+  const countries = [...new Set(institutions.map((i) => String(i.country)))].sort(sortStrings);
+  return { meta: { count: institutions.length, providerCount: providers.length, consensusCount: consensus.length, note: "Latest overall or broad edition per provider; institutions merged by normalized name and country." }, providers, countries, institutions };
+}
+function buildPayload(): { insights: Row; directory: Row } { const snapshots = loadSnapshots(); const providers = providerInventory(snapshots); const [consensus, countryFootprint, providerTop100] = buildConsensus(snapshots); const [natureSubjects, subjectMatrix] = buildNatureSubjects(snapshots, consensus); const latest = latestGlobalSnapshots(snapshots); const insights = { meta: archiveMetadata(snapshots, providers), providers, consensus, countryFootprint, providerTop100, rankingUniverse: buildRankingUniverse(snapshots), arwuConcentration: buildArwuConcentration(snapshots), arwuConcentrationTrend: buildArwuConcentrationTrend(snapshots), natureCountryShift: buildNatureCountryShift(snapshots), natureSubjects, subjectMatrix, subjectLeaders: buildSubjectLeaders(snapshots), scimagoSubjectLeaders: buildScimagoSubjectLeaders(snapshots), qsSubjectOutperformers: buildQsSubjectOutperformers(snapshots), countryAtlas: buildCountryAtlas(snapshots, consensus), openAlexGrowth: buildOpenAlexGrowth(snapshots, consensus.slice(0, 40)), openAlexCountryMomentum: buildOpenAlexCountryMomentum(snapshots), leidenScaleImpact: buildLeidenScatter(snapshots), leidenSummary: buildLeidenSummary(snapshots), institutionTrends: buildInstitutionTrends(snapshots, consensus), methodology: { consensusProviders: CONSENSUS_PROVIDERS.map((source) => ({ id: source, label: PROVIDER_META[source].label, year: latest[source].year })), consensusMinimumProviders: 4, consensusDefinition: "Mean within-table percentile across the latest available broad overall editions; it is an analytical index, not a new ranking.", natureWindow: "2016 edition (2015 output) to 2026 edition (2025 output)", openAlexWindow: "Publication years 2016 to 2025" } }; return { insights, directory: buildInstitutionDirectory(snapshots, consensus) }; }
+function main(): void { const { insights, directory } = buildPayload(); mkdirSync(dirname(OUTPUT_PATH), { recursive: true }); writeFileSync(OUTPUT_PATH, JSON.stringify(insights, null, 2) + "\n", "utf8"); console.log(`Wrote ${relative(ROOT, OUTPUT_PATH)} (${(readFileSync(OUTPUT_PATH).byteLength / 1024).toFixed(1)} KiB)`); const dir = directory as Row; mkdirSync(dirname(DIRECTORY_PATH), { recursive: true }); writeFileSync(DIRECTORY_PATH, JSON.stringify(dir) + "\n", "utf8"); console.log(`Wrote ${relative(ROOT, DIRECTORY_PATH)} (${(readFileSync(DIRECTORY_PATH).byteLength / 1024).toFixed(1)} KiB, ${dir.institutions.length} institutions)`); const facets = { meta: dir.meta, providers: dir.providers, countries: dir.countries }; writeFileSync(DIRECTORY_FACETS_PATH, JSON.stringify(facets, null, 2) + "\n", "utf8"); console.log(`Wrote ${relative(ROOT, DIRECTORY_FACETS_PATH)} (${(readFileSync(DIRECTORY_FACETS_PATH).byteLength / 1024).toFixed(1)} KiB)`); }
 
 main();

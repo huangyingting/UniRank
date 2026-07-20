@@ -121,3 +121,56 @@ test("payload is strict JSON with no NaN or Infinity", () => {
   assert.ok(rendered.length > 1_000_000);
   assert.ok(!/\bNaN\b|\b-?Infinity\b/.test(rendered));
 });
+
+test("institution directory spans every provider and stays query-ready", () => {
+  const directory = JSON.parse(
+    readFileSync(join(ROOT, "public/data/directory.json"), "utf8"),
+  );
+  const facets = JSON.parse(
+    readFileSync(join(ROOT, "src/data/directory-facets.json"), "utf8"),
+  );
+
+  const institutions = directory.institutions as Array<Record<string, any>>;
+  // The directory exposes far more than the six-provider consensus so end users
+  // can find any ranked institution, not just high-consensus ones.
+  assert.ok(institutions.length > 10_000);
+  assert.equal(directory.meta.count, institutions.length);
+  assert.equal(directory.meta.providerCount, 10);
+  assert.equal(directory.meta.consensusCount, 1140);
+
+  // Ten provider snapshots feed the directory (webometrics is excluded — no country).
+  const providerIds = directory.providers.map((provider: Record<string, any>) => provider.id);
+  assert.deepEqual(
+    [...providerIds].sort(),
+    ["arwu", "cwur", "leiden", "nature", "ntu", "openalex", "qs", "scimago", "times", "usnews"],
+  );
+  assert.ok(!providerIds.includes("webometrics"));
+
+  // Facets stay in lock-step with the directory so the finder filters never drift.
+  assert.equal(facets.meta.count, directory.meta.count);
+  assert.deepEqual(facets.providers.map((provider: Record<string, any>) => provider.id), providerIds);
+  assert.ok(facets.countries.length > 150);
+
+  // Every institution carries a valid, non-empty provider fingerprint.
+  assert.ok(
+    institutions.every(
+      (institution) =>
+        institution.providerCount >= 1 &&
+        Object.keys(institution.ranks).length === institution.providerCount,
+    ),
+  );
+  assert.equal(
+    institutions.length,
+    new Set(institutions.map((institution) => institution.id)).size,
+  );
+
+  // The consensus is a strict subset: an institution present in the finder covers
+  // the "can't find it in the explorer" gap (e.g. China University of Mining & Technology).
+  const cumt = institutions.filter(
+    (institution) =>
+      institution.countryCode === "CN" &&
+      /china university of mining and technology/i.test(institution.name),
+  );
+  assert.ok(cumt.length >= 1);
+  assert.ok(cumt.some((institution) => institution.providerCount >= 4));
+});

@@ -315,3 +315,46 @@ export interface InsightsData {
     openAlexWindow: string;
   };
 }
+
+/** A single provider placement in the institution directory: [rank, displayRank, editionYear]. */
+export type DirectoryRank = [number, string, number];
+
+export interface DirectoryInstitution {
+  id: string;
+  name: string;
+  country: string;
+  countryCode: string | null;
+  providerCount: number;
+  consensusRank: number | null;
+  ranks: Partial<Record<string, DirectoryRank>>;
+}
+
+export interface DirectoryProvider {
+  id: string;
+  label: string;
+  color: string;
+  kind: string;
+  year: number | null;
+}
+
+export interface DirectoryMeta {
+  count: number;
+  providerCount: number;
+  consensusCount: number;
+  note: string;
+}
+
+/** Full query-driven directory shipped to `public/data/directory.json` (client-fetched). */
+export interface InstitutionDirectory {
+  meta: DirectoryMeta;
+  providers: DirectoryProvider[];
+  countries: string[];
+  institutions: DirectoryInstitution[];
+}
+
+/** Small build-time facet lists in `src/data/directory-facets.json` for server-rendered filters. */
+export interface DirectoryFacets {
+  meta: DirectoryMeta;
+  providers: DirectoryProvider[];
+  countries: string[];
+}
