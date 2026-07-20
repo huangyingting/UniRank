@@ -174,3 +174,44 @@ test("institution directory spans every provider and stays query-ready", () => {
   assert.ok(cumt.length >= 1);
   assert.ok(cumt.some((institution) => institution.providerCount >= 4));
 });
+
+test("country resolution rescues previously-unknown institutions", () => {
+  const directory = JSON.parse(
+    readFileSync(join(ROOT, "public/data/directory.json"), "utf8"),
+  );
+  const facets = JSON.parse(
+    readFileSync(join(ROOT, "src/data/directory-facets.json"), "utf8"),
+  );
+  const institutions = directory.institutions as Array<Record<string, any>>;
+  const byName = (name: string) =>
+    institutions.filter((institution) => institution.name === name);
+  const soleCode = (name: string) => {
+    const rows = byName(name);
+    assert.equal(rows.length, 1, `${name} should be a single merged row`);
+    return rows[0]!.countryCode;
+  };
+
+  // Provider aliases now resolve labels i18n-iso-countries misses, so these
+  // merge into their coded sibling instead of splitting off as country-less rows.
+  assert.equal(soleCode("Damascus University"), "SY"); // times/qs "Syria"
+  assert.equal(soleCode("University of Prishtina, Prishtina"), "XK"); // SCImago "XKX"
+  assert.equal(soleCode("Technical University of Košice"), "SK"); // cwur "Slovak Republic"
+  assert.equal(soleCode("University for Business and Technology"), "XK");
+
+  // Trans-national entities read "Multinational" (not "Unknown") but carry no code.
+  for (const name of ["Facultad Latinoamericana de Ciencias Sociales", "Laureate International Universities"]) {
+    const row = byName(name)[0]!;
+    assert.equal(row.countryCode, null);
+    assert.equal(row.country, "Multinational");
+  }
+
+  // Every country-less row degrades gracefully — no bare "Unknown" for a place we
+  // can name — and the residue stays tiny.
+  const codeless = institutions.filter((institution) => institution.countryCode === null);
+  assert.ok(codeless.length <= 10, `too many country-less rows: ${codeless.length}`);
+  assert.ok(codeless.every((institution) => typeof institution.country === "string" && institution.country.length > 0));
+
+  // The graceful labels surface as finder facet options.
+  assert.ok(facets.countries.includes("Multinational"));
+  assert.ok(facets.countries.includes("Northern Cyprus"));
+});

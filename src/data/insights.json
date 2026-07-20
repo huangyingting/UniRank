@@ -55249,6 +55249,78 @@
       "consensusRank": 864
     },
     {
+      "id": "comenius-university-in-bratislava-sk",
+      "canonical": "comenius university in bratislava",
+      "name": "Comenius University in Bratislava",
+      "country": "Slovakia",
+      "countryCode": "SK",
+      "score": 43.5,
+      "providerCount": 6,
+      "ranks": [
+        {
+          "provider": "usnews",
+          "providerLabel": "U.S. News",
+          "year": 2026,
+          "rank": 801,
+          "rankDisplay": "=801",
+          "percentileScore": 64.42863494886618,
+          "countryCode": "SK",
+          "country": "Slovakia"
+        },
+        {
+          "provider": "times",
+          "providerLabel": "Times Higher Education",
+          "year": 2026,
+          "rank": 1201,
+          "rankDisplay": "1201–1500",
+          "percentileScore": 45.205479452054796,
+          "countryCode": "SK",
+          "country": "Slovakia"
+        },
+        {
+          "provider": "qs",
+          "providerLabel": "QS",
+          "year": 2027,
+          "rank": 662,
+          "rankDisplay": "=662",
+          "percentileScore": 56.02129075182967,
+          "countryCode": "SK",
+          "country": "Slovakia"
+        },
+        {
+          "provider": "cwur",
+          "providerLabel": "CWUR",
+          "year": 2026,
+          "rank": 748,
+          "rankDisplay": "748",
+          "percentileScore": 62.631315657828914,
+          "countryCode": "SK",
+          "country": "Slovakia"
+        },
+        {
+          "provider": "ntu",
+          "providerLabel": "NTU Ranking",
+          "year": 2025,
+          "rank": 951,
+          "rankDisplay": "951-1000",
+          "percentileScore": 22.63843648208469,
+          "countryCode": "SK",
+          "country": "Slovakia"
+        },
+        {
+          "provider": "arwu",
+          "providerLabel": "ShanghaiRanking",
+          "year": 2025,
+          "rank": 901,
+          "rankDisplay": "901-1000",
+          "percentileScore": 9.909909909909908,
+          "countryCode": "SK",
+          "country": "Slovakia"
+        }
+      ],
+      "consensusRank": 865
+    },
+    {
       "id": "university-of-hyderabad-in",
       "canonical": "university of hyderabad",
       "name": "University of Hyderabad",
@@ -55298,7 +55370,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 865
+      "consensusRank": 866
     },
     {
       "id": "babes-bolyai-university-ro",
@@ -55360,7 +55432,7 @@
           "country": "Romania"
         }
       ],
-      "consensusRank": 866
+      "consensusRank": 867
     },
     {
       "id": "lulea-university-of-technology-se",
@@ -55412,7 +55484,7 @@
           "country": "Sweden"
         }
       ],
-      "consensusRank": 867
+      "consensusRank": 868
     },
     {
       "id": "roma-tre-university-it",
@@ -55464,7 +55536,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 868
+      "consensusRank": 869
     },
     {
       "id": "university-of-greenwich-gb",
@@ -55536,7 +55608,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 869
+      "consensusRank": 870
     },
     {
       "id": "university-of-ioannina-gr",
@@ -55598,7 +55670,7 @@
           "country": "Greece"
         }
       ],
-      "consensusRank": 870
+      "consensusRank": 871
     },
     {
       "id": "university-of-wisconsin-milwaukee-us",
@@ -55660,7 +55732,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 871
+      "consensusRank": 872
     },
     {
       "id": "babol-noshirvani-university-of-technology-ir",
@@ -55712,7 +55784,7 @@
           "country": "Iran"
         }
       ],
-      "consensusRank": 872
+      "consensusRank": 873
     },
     {
       "id": "wuhan-institute-of-technology-cn",
@@ -55764,7 +55836,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 873
+      "consensusRank": 874
     },
     {
       "id": "northern-illinois-university-us",
@@ -55816,7 +55888,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 874
+      "consensusRank": 875
     },
     {
       "id": "xiangtan-university-cn",
@@ -55878,7 +55950,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 875
+      "consensusRank": 876
     },
     {
       "id": "university-of-indonesia-id",
@@ -55930,7 +56002,7 @@
           "country": "Indonesia"
         }
       ],
-      "consensusRank": 876
+      "consensusRank": 877
     },
     {
       "id": "belarusian-state-university-by",
@@ -55982,7 +56054,7 @@
           "country": "Belarus"
         }
       ],
-      "consensusRank": 877
+      "consensusRank": 878
     },
     {
       "id": "gdansk-university-of-technology-pl",
@@ -56044,7 +56116,7 @@
           "country": "Poland"
         }
       ],
-      "consensusRank": 878
+      "consensusRank": 879
     },
     {
       "id": "zhejiang-sci-tech-university-cn",
@@ -56106,7 +56178,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 879
+      "consensusRank": 880
     },
     {
       "id": "jiangxi-normal-university-cn",
@@ -56158,7 +56230,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 880
+      "consensusRank": 881
     },
     {
       "id": "birla-institute-of-technology-and-science-pilani-in",
@@ -56210,7 +56282,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 881
+      "consensusRank": 882
     },
     {
       "id": "catholic-university-of-korea-kr",
@@ -56262,7 +56334,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 882
+      "consensusRank": 883
     },
     {
       "id": "university-of-peshawar-pk",
@@ -56314,7 +56386,7 @@
           "country": "Pakistan"
         }
       ],
-      "consensusRank": 883
+      "consensusRank": 884
     },
     {
       "id": "niigata-university-jp",
@@ -56376,7 +56448,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 884
+      "consensusRank": 885
     },
     {
       "id": "federal-university-of-parana-br",
@@ -56428,7 +56500,7 @@
           "country": "Brazil"
         }
       ],
-      "consensusRank": 885
+      "consensusRank": 886
     },
     {
       "id": "kindai-university-jp",
@@ -56480,7 +56552,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 886
+      "consensusRank": 887
     },
     {
       "id": "university-of-thessaly-gr",
@@ -56542,7 +56614,7 @@
           "country": "Greece"
         }
       ],
-      "consensusRank": 887
+      "consensusRank": 888
     },
     {
       "id": "hebei-university-cn",
@@ -56594,7 +56666,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 888
+      "consensusRank": 889
     },
     {
       "id": "adam-mickiewicz-university-pl",
@@ -56666,7 +56738,7 @@
           "country": "Poland"
         }
       ],
-      "consensusRank": 889
+      "consensusRank": 890
     },
     {
       "id": "ural-federal-university-ru",
@@ -56728,7 +56800,7 @@
           "country": "Russia"
         }
       ],
-      "consensusRank": 890
+      "consensusRank": 891
     },
     {
       "id": "university-of-south-africa-za",
@@ -56790,7 +56862,7 @@
           "country": "South Africa"
         }
       ],
-      "consensusRank": 891
+      "consensusRank": 892
     },
     {
       "id": "xian-university-of-technology-cn",
@@ -56842,7 +56914,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 892
+      "consensusRank": 893
     },
     {
       "id": "university-of-eastern-piedmont-it",
@@ -56894,7 +56966,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 893
+      "consensusRank": 894
     },
     {
       "id": "university-of-latvia-lv",
@@ -56946,7 +57018,7 @@
           "country": "Latvia"
         }
       ],
-      "consensusRank": 894
+      "consensusRank": 895
     },
     {
       "id": "tianjin-university-of-technology-cn",
@@ -56998,7 +57070,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 895
+      "consensusRank": 896
     },
     {
       "id": "ferdowsi-university-of-mashhad-ir",
@@ -57050,7 +57122,7 @@
           "country": "Iran"
         }
       ],
-      "consensusRank": 896
+      "consensusRank": 897
     },
     {
       "id": "university-of-castilla-la-mancha-es",
@@ -57112,7 +57184,7 @@
           "country": "Spain"
         }
       ],
-      "consensusRank": 897
+      "consensusRank": 898
     },
     {
       "id": "yokohama-city-university-jp",
@@ -57184,7 +57256,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 898
+      "consensusRank": 899
     },
     {
       "id": "shahid-beheshti-university-ir",
@@ -57246,7 +57318,7 @@
           "country": "Iran"
         }
       ],
-      "consensusRank": 899
+      "consensusRank": 900
     },
     {
       "id": "university-of-cordoba-es",
@@ -57298,7 +57370,7 @@
           "country": "Spain"
         }
       ],
-      "consensusRank": 900
+      "consensusRank": 901
     },
     {
       "id": "graduate-university-for-advanced-studies-jp",
@@ -57350,7 +57422,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 901
+      "consensusRank": 902
     },
     {
       "id": "national-polytechnic-institute-mx",
@@ -57402,7 +57474,7 @@
           "country": "Mexico"
         }
       ],
-      "consensusRank": 902
+      "consensusRank": 903
     },
     {
       "id": "prince-of-songkla-university-th",
@@ -57454,7 +57526,7 @@
           "country": "Thailand"
         }
       ],
-      "consensusRank": 903
+      "consensusRank": 904
     },
     {
       "id": "university-of-maribor-si",
@@ -57506,7 +57578,7 @@
           "country": "Slovenia"
         }
       ],
-      "consensusRank": 904
+      "consensusRank": 905
     },
     {
       "id": "srm-institute-of-science-and-technology-in",
@@ -57578,7 +57650,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 905
+      "consensusRank": 906
     },
     {
       "id": "university-of-alaska-fairbanks-us",
@@ -57650,7 +57722,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 906
+      "consensusRank": 907
     },
     {
       "id": "university-of-poitiers-fr",
@@ -57702,7 +57774,7 @@
           "country": "France"
         }
       ],
-      "consensusRank": 907
+      "consensusRank": 908
     },
     {
       "id": "university-of-malta-mt",
@@ -57764,7 +57836,7 @@
           "country": "Malta"
         }
       ],
-      "consensusRank": 908
+      "consensusRank": 909
     },
     {
       "id": "istanbul-university-cerrahpasa-tr",
@@ -57816,7 +57888,7 @@
           "country": "Türkiye"
         }
       ],
-      "consensusRank": 909
+      "consensusRank": 910
     },
     {
       "id": "suez-canal-university-eg",
@@ -57868,7 +57940,7 @@
           "country": "Egypt"
         }
       ],
-      "consensusRank": 910
+      "consensusRank": 911
     },
     {
       "id": "jadavpur-university-in",
@@ -57930,7 +58002,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 911
+      "consensusRank": 912
     },
     {
       "id": "goldsmiths-university-of-london-gb",
@@ -57982,7 +58054,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 912
+      "consensusRank": 913
     },
     {
       "id": "nagasaki-university-jp",
@@ -58044,7 +58116,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 913
+      "consensusRank": 914
     },
     {
       "id": "warsaw-university-of-technology-pl",
@@ -58116,7 +58188,7 @@
           "country": "Poland"
         }
       ],
-      "consensusRank": 914
+      "consensusRank": 915
     },
     {
       "id": "alborz-university-of-medical-sciences-ir",
@@ -58168,7 +58240,7 @@
           "country": "Iran"
         }
       ],
-      "consensusRank": 915
+      "consensusRank": 916
     },
     {
       "id": "brno-university-of-technology-cz",
@@ -58230,7 +58302,7 @@
           "country": "Czechia"
         }
       ],
-      "consensusRank": 916
+      "consensusRank": 917
     },
     {
       "id": "cyprus-university-of-technology-cy",
@@ -58292,7 +58364,7 @@
           "country": "Cyprus"
         }
       ],
-      "consensusRank": 917
+      "consensusRank": 918
     },
     {
       "id": "old-dominion-university-us",
@@ -58354,7 +58426,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 918
+      "consensusRank": 919
     },
     {
       "id": "tokyo-university-of-science-jp",
@@ -58416,7 +58488,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 919
+      "consensusRank": 920
     },
     {
       "id": "benha-university-eg",
@@ -58468,7 +58540,7 @@
           "country": "Egypt"
         }
       ],
-      "consensusRank": 920
+      "consensusRank": 921
     },
     {
       "id": "florida-atlantic-university-us",
@@ -58520,7 +58592,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 921
+      "consensusRank": 922
     },
     {
       "id": "university-of-neuchatel-ch",
@@ -58572,7 +58644,7 @@
           "country": "Switzerland"
         }
       ],
-      "consensusRank": 922
+      "consensusRank": 923
     },
     {
       "id": "vietnam-national-university-hanoi-vn",
@@ -58624,7 +58696,7 @@
           "country": "Vietnam"
         }
       ],
-      "consensusRank": 923
+      "consensusRank": 924
     },
     {
       "id": "jazan-university-sa",
@@ -58686,7 +58758,7 @@
           "country": "Saudi Arabia"
         }
       ],
-      "consensusRank": 924
+      "consensusRank": 925
     },
     {
       "id": "sheffield-hallam-university-gb",
@@ -58738,7 +58810,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 925
+      "consensusRank": 926
     },
     {
       "id": "minia-university-eg",
@@ -58790,7 +58862,7 @@
           "country": "Egypt"
         }
       ],
-      "consensusRank": 926
+      "consensusRank": 927
     },
     {
       "id": "national-yunlin-university-of-science-and-technology-tw",
@@ -58842,7 +58914,7 @@
           "country": "Taiwan"
         }
       ],
-      "consensusRank": 927
+      "consensusRank": 928
     },
     {
       "id": "thammasat-university-th",
@@ -58894,7 +58966,7 @@
           "country": "Thailand"
         }
       ],
-      "consensusRank": 928
+      "consensusRank": 929
     },
     {
       "id": "universiti-teknologi-mara-my",
@@ -58946,7 +59018,7 @@
           "country": "Malaysia"
         }
       ],
-      "consensusRank": 929
+      "consensusRank": 930
     },
     {
       "id": "university-of-lahore-pk",
@@ -59018,7 +59090,7 @@
           "country": "Pakistan"
         }
       ],
-      "consensusRank": 930
+      "consensusRank": 931
     },
     {
       "id": "free-university-of-bozen-bolzano-it",
@@ -59088,68 +59160,6 @@
           "percentileScore": 9.909909909909908,
           "countryCode": "IT",
           "country": "Italy"
-        }
-      ],
-      "consensusRank": 931
-    },
-    {
-      "id": "comenius-university-in-bratislava-sk",
-      "canonical": "comenius university in bratislava",
-      "name": "Comenius University in Bratislava",
-      "country": "Slovakia",
-      "countryCode": "SK",
-      "score": 39.6,
-      "providerCount": 5,
-      "ranks": [
-        {
-          "provider": "usnews",
-          "providerLabel": "U.S. News",
-          "year": 2026,
-          "rank": 801,
-          "rankDisplay": "=801",
-          "percentileScore": 64.42863494886618,
-          "countryCode": "SK",
-          "country": "Slovakia"
-        },
-        {
-          "provider": "times",
-          "providerLabel": "Times Higher Education",
-          "year": 2026,
-          "rank": 1201,
-          "rankDisplay": "1201–1500",
-          "percentileScore": 45.205479452054796,
-          "countryCode": "SK",
-          "country": "Slovakia"
-        },
-        {
-          "provider": "qs",
-          "providerLabel": "QS",
-          "year": 2027,
-          "rank": 662,
-          "rankDisplay": "=662",
-          "percentileScore": 56.02129075182967,
-          "countryCode": "SK",
-          "country": "Slovakia"
-        },
-        {
-          "provider": "ntu",
-          "providerLabel": "NTU Ranking",
-          "year": 2025,
-          "rank": 951,
-          "rankDisplay": "951-1000",
-          "percentileScore": 22.63843648208469,
-          "countryCode": "SK",
-          "country": "Slovakia"
-        },
-        {
-          "provider": "arwu",
-          "providerLabel": "ShanghaiRanking",
-          "year": 2025,
-          "rank": 901,
-          "rankDisplay": "901-1000",
-          "percentileScore": 9.909909909909908,
-          "countryCode": "SK",
-          "country": "Slovakia"
         }
       ],
       "consensusRank": 932
