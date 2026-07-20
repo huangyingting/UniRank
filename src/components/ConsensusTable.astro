@@ -1,5 +1,6 @@
 ---
 import type { ConsensusInstitution } from '../data/schema';
+import CustomSelect from './CustomSelect.astro';
 
 interface Props {
   institutions: ConsensusInstitution[];
@@ -37,18 +38,18 @@ const providerShort: Record<string, string> = {
       </label>
       <label>
         <span>Country</span>
-        <select data-country>
+        <CustomSelect data-country aria-label="Filter by country">
           <option value="">All countries</option>
           {countries.map((country) => <option value={country}>{country}</option>)}
-        </select>
+        </CustomSelect>
       </label>
       <label>
         <span>Coverage</span>
-        <select data-coverage>
+        <CustomSelect data-coverage aria-label="Filter by provider coverage">
           <option value="4">4+ providers</option>
           <option value="5">5+ providers</option>
           <option value="6">All 6 providers</option>
-        </select>
+        </CustomSelect>
       </label>
       <p data-result-count aria-live="polite">{shown.length} institutions</p>
     </div>

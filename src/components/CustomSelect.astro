@@ -1,0 +1,475 @@
+---
+/**
+ * CustomSelect
+ *
+ * A styled, accessible replacement for the native <select>. It is built as a
+ * progressive enhancement: a real <select> is rendered as the source of truth
+ * (so it keeps working without JavaScript and existing scripts can still read
+ * `.value`, dispatch `change`, and mutate its <option>s), then it is enhanced
+ * at runtime into a WAI-ARIA listbox with full keyboard support.
+ *
+ * Any extra attributes (data-*, aria-*, id, name, disabled …) are forwarded to
+ * the inner <select>, so drop-in usage is identical to the native element:
+ *
+ *   <CustomSelect data-country>
+ *     <option value="">All countries</option>
+ *     …
+ *   </CustomSelect>
+ */
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'select'> {
+  placeholder?: string;
+}
+
+const { class: className, placeholder, ...rest } = Astro.props;
+---
+
+<custom-select
+  class:list={['custom-select', className]}
+  {...(placeholder ? { 'data-placeholder': placeholder } : {})}
+>
+  <select class="cs-native" {...rest}>
+    <slot />
+  </select>
+</custom-select>
+
+<style is:global>
+  .custom-select {
+    position: relative;
+    display: block;
+  }
+
+  .custom-select[data-enhanced] > .cs-native {
+    display: none;
+  }
+
+  .cs-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    min-height: 44px;
+    padding: 9px 12px 9px 14px;
+    border: 1px solid var(--line-strong);
+    border-radius: 10px;
+    color: var(--ink);
+    background: var(--surface);
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 640;
+    line-height: 1.2;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 140ms ease, box-shadow 140ms ease;
+  }
+
+  .cs-trigger:hover {
+    border-color: var(--muted);
+  }
+
+  .cs-trigger:focus-visible {
+    outline: none;
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgb(23 160 133 / 22%);
+  }
+
+  .custom-select[data-open] .cs-trigger {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgb(23 160 133 / 20%);
+  }
+
+  .cs-trigger:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+
+  .cs-value {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .cs-value[data-placeholder] {
+    color: var(--muted);
+    font-weight: 550;
+  }
+
+  .cs-chevron {
+    flex: none;
+    width: 16px;
+    height: 16px;
+    color: var(--muted);
+    transition: transform 200ms ease;
+  }
+
+  .custom-select[data-open] .cs-chevron {
+    color: var(--teal-dark);
+    transform: rotate(180deg);
+  }
+
+  .cs-menu {
+    position: absolute;
+    z-index: 60;
+    top: calc(100% + 6px);
+    right: 0;
+    left: 0;
+    max-height: 288px;
+    margin: 0;
+    padding: 6px;
+    overflow-y: auto;
+    list-style: none;
+    border: 1px solid var(--line-strong);
+    border-radius: 14px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    scrollbar-width: thin;
+  }
+
+  .cs-menu--up {
+    top: auto;
+    bottom: calc(100% + 6px);
+  }
+
+  .cs-menu[hidden] {
+    display: none;
+  }
+
+  .cs-option {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 32px 9px 11px;
+    border-radius: 9px;
+    color: var(--ink);
+    font-size: 0.8rem;
+    line-height: 1.25;
+    cursor: pointer;
+    scroll-margin: 6px;
+  }
+
+  .cs-option + .cs-option {
+    margin-top: 2px;
+  }
+
+  .cs-option.cs-active {
+    background: rgb(23 160 133 / 12%);
+  }
+
+  .cs-option[aria-selected='true'] {
+    color: var(--teal-dark);
+    font-weight: 700;
+  }
+
+  .cs-option[aria-selected='true']::after {
+    position: absolute;
+    right: 11px;
+    color: var(--teal);
+    content: '✓';
+    font-size: 0.85rem;
+  }
+
+  .cs-option[aria-disabled='true'] {
+    color: var(--muted);
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cs-chevron,
+    .cs-trigger {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  const SVG_NS = 'http://www.w3.org/2000/svg';
+
+  class CustomSelect extends HTMLElement {
+    private native!: HTMLSelectElement;
+    private trigger!: HTMLButtonElement;
+    private valueSpan!: HTMLSpanElement;
+    private menu!: HTMLUListElement;
+    private options: HTMLOptionElement[] = [];
+    private items: HTMLLIElement[] = [];
+    private isOpen = false;
+    private activeIndex = -1;
+    private uid = Math.random().toString(36).slice(2, 8);
+    private typeahead = '';
+    private typeaheadTimer = 0;
+    private observer?: MutationObserver;
+    private readonly onDocPointer = (event: Event): void => {
+      if (!this.contains(event.target as Node)) this.close();
+    };
+
+    connectedCallback(): void {
+      if (this.dataset.enhanced) return;
+      const native = this.querySelector<HTMLSelectElement>('select');
+      if (!native) return;
+      this.native = native;
+
+      const menuId = `cs-menu-${this.uid}`;
+
+      const trigger = document.createElement('button');
+      trigger.type = 'button';
+      trigger.className = 'cs-trigger';
+      trigger.setAttribute('role', 'combobox');
+      trigger.setAttribute('aria-haspopup', 'listbox');
+      trigger.setAttribute('aria-expanded', 'false');
+      trigger.setAttribute('aria-controls', menuId);
+      trigger.disabled = native.disabled;
+
+      const valueSpan = document.createElement('span');
+      valueSpan.className = 'cs-value';
+      valueSpan.id = `cs-value-${this.uid}`;
+      trigger.append(valueSpan, this.buildChevron());
+
+      const menu = document.createElement('ul');
+      menu.className = 'cs-menu';
+      menu.id = menuId;
+      menu.setAttribute('role', 'listbox');
+      menu.hidden = true;
+
+      // Derive an accessible name from a wrapping <label><span>…</span> or an
+      // explicit aria-label on the native control, and keep the current value
+      // in the announced name.
+      const labelSpan = native.closest('label')?.querySelector('span') ?? null;
+      const ariaLabel = native.getAttribute('aria-label');
+      if (labelSpan) {
+        if (!labelSpan.id) labelSpan.id = `cs-label-${this.uid}`;
+        trigger.setAttribute('aria-labelledby', `${labelSpan.id} ${valueSpan.id}`);
+        menu.setAttribute('aria-labelledby', labelSpan.id);
+      } else if (ariaLabel) {
+        trigger.setAttribute('aria-label', ariaLabel);
+        menu.setAttribute('aria-label', ariaLabel);
+      }
+
+      this.trigger = trigger;
+      this.valueSpan = valueSpan;
+      this.menu = menu;
+      this.append(trigger, menu);
+
+      this.buildOptions();
+      this.syncValue();
+
+      trigger.addEventListener('click', () => this.toggle());
+      trigger.addEventListener('keydown', (event) => this.onKeydown(event));
+      menu.addEventListener('click', (event) => {
+        const item = (event.target as HTMLElement).closest<HTMLLIElement>('.cs-option');
+        if (item) this.commit(Number(item.dataset.index));
+      });
+      menu.addEventListener('pointermove', (event) => {
+        const item = (event.target as HTMLElement).closest<HTMLLIElement>('.cs-option');
+        if (item) this.setActive(Number(item.dataset.index), false);
+      });
+
+      // Keep the enhanced UI in sync when the value or options are changed
+      // programmatically (e.g. the provider lens is repopulated on demand).
+      native.addEventListener('change', () => this.syncValue());
+      this.observer = new MutationObserver(() => {
+        this.buildOptions();
+        this.syncValue();
+      });
+      this.observer.observe(native, { childList: true });
+
+      this.dataset.enhanced = 'true';
+    }
+
+    disconnectedCallback(): void {
+      this.observer?.disconnect();
+      document.removeEventListener('pointerdown', this.onDocPointer);
+    }
+
+    private buildChevron(): SVGSVGElement {
+      const svg = document.createElementNS(SVG_NS, 'svg');
+      svg.setAttribute('class', 'cs-chevron');
+      svg.setAttribute('viewBox', '0 0 24 24');
+      svg.setAttribute('aria-hidden', 'true');
+      const path = document.createElementNS(SVG_NS, 'path');
+      path.setAttribute('d', 'M6 9.5 12 15l6-5.5');
+      path.setAttribute('fill', 'none');
+      path.setAttribute('stroke', 'currentColor');
+      path.setAttribute('stroke-width', '2');
+      path.setAttribute('stroke-linecap', 'round');
+      path.setAttribute('stroke-linejoin', 'round');
+      svg.append(path);
+      return svg;
+    }
+
+    private buildOptions(): void {
+      this.options = Array.from(this.native.options);
+      this.items = this.options.map((option, index) => {
+        const item = document.createElement('li');
+        item.className = 'cs-option';
+        item.id = `${this.menu.id}-opt-${index}`;
+        item.dataset.index = String(index);
+        item.setAttribute('role', 'option');
+        item.setAttribute('aria-selected', 'false');
+        if (option.disabled) item.setAttribute('aria-disabled', 'true');
+        const label = document.createElement('span');
+        label.textContent = option.textContent?.trim() ?? '';
+        item.append(label);
+        return item;
+      });
+      this.menu.replaceChildren(...this.items);
+      this.activeIndex = -1;
+    }
+
+    private syncValue(): void {
+      const selected = this.native.options[this.native.selectedIndex] ?? null;
+      const text = selected?.textContent?.trim() ?? '';
+      if (text) {
+        this.valueSpan.textContent = text;
+        this.valueSpan.removeAttribute('data-placeholder');
+      } else {
+        this.valueSpan.textContent = this.dataset.placeholder ?? 'Select…';
+        this.valueSpan.setAttribute('data-placeholder', '');
+      }
+      this.items.forEach((item, index) =>
+        item.setAttribute('aria-selected', String(this.options[index] === selected)),
+      );
+    }
+
+    private toggle(): void {
+      this.isOpen ? this.close() : this.open();
+    }
+
+    private open(): void {
+      if (this.isOpen || this.native.disabled || this.items.length === 0) return;
+      this.isOpen = true;
+      this.setAttribute('data-open', '');
+      this.trigger.setAttribute('aria-expanded', 'true');
+      this.menu.hidden = false;
+
+      const rect = this.trigger.getBoundingClientRect();
+      const spaceBelow = window.innerHeight - rect.bottom;
+      const menuHeight = Math.min(this.menu.scrollHeight + 2, 288);
+      this.menu.classList.toggle(
+        'cs-menu--up',
+        spaceBelow < menuHeight + 12 && rect.top > spaceBelow,
+      );
+
+      const start = this.native.selectedIndex >= 0 ? this.native.selectedIndex : 0;
+      this.setActive(start);
+      document.addEventListener('pointerdown', this.onDocPointer);
+    }
+
+    private close(): void {
+      if (!this.isOpen) return;
+      this.isOpen = false;
+      this.removeAttribute('data-open');
+      this.trigger.setAttribute('aria-expanded', 'false');
+      this.trigger.removeAttribute('aria-activedescendant');
+      this.menu.hidden = true;
+      this.items[this.activeIndex]?.classList.remove('cs-active');
+      this.activeIndex = -1;
+      document.removeEventListener('pointerdown', this.onDocPointer);
+    }
+
+    private setActive(index: number, scroll = true): void {
+      if (index < 0 || index >= this.items.length) return;
+      this.items[this.activeIndex]?.classList.remove('cs-active');
+      this.activeIndex = index;
+      const item = this.items[index];
+      item.classList.add('cs-active');
+      this.trigger.setAttribute('aria-activedescendant', item.id);
+      if (scroll) item.scrollIntoView({ block: 'nearest' });
+    }
+
+    private move(direction: 1 | -1): void {
+      let next = this.activeIndex;
+      for (let step = 0; step < this.items.length; step += 1) {
+        next += direction;
+        if (next < 0 || next >= this.items.length) return;
+        if (!this.options[next].disabled) {
+          this.setActive(next);
+          return;
+        }
+      }
+    }
+
+    private commit(index: number): void {
+      const option = this.options[index];
+      if (!option || option.disabled) return;
+      if (this.native.selectedIndex !== index) {
+        this.native.selectedIndex = index;
+        this.native.dispatchEvent(new Event('input', { bubbles: true }));
+        this.native.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+      this.syncValue();
+      this.close();
+      this.trigger.focus();
+    }
+
+    private typeAhead(char: string): void {
+      window.clearTimeout(this.typeaheadTimer);
+      this.typeahead += char.toLowerCase();
+      this.typeaheadTimer = window.setTimeout(() => {
+        this.typeahead = '';
+      }, 500);
+      const match = this.options.findIndex(
+        (option) =>
+          !option.disabled &&
+          (option.textContent?.trim().toLowerCase().startsWith(this.typeahead) ?? false),
+      );
+      if (match >= 0) this.setActive(match);
+    }
+
+    private onKeydown(event: KeyboardEvent): void {
+      const { key } = event;
+      if (!this.isOpen) {
+        if (key === 'ArrowDown' || key === 'ArrowUp' || key === 'Enter' || key === ' ') {
+          event.preventDefault();
+          this.open();
+        } else if (key.length === 1 && key.trim() !== '') {
+          event.preventDefault();
+          this.open();
+          this.typeAhead(key);
+        }
+        return;
+      }
+      switch (key) {
+        case 'ArrowDown':
+          event.preventDefault();
+          this.move(1);
+          break;
+        case 'ArrowUp':
+          event.preventDefault();
+          this.move(-1);
+          break;
+        case 'Home':
+          event.preventDefault();
+          this.setActive(0);
+          break;
+        case 'End':
+          event.preventDefault();
+          this.setActive(this.items.length - 1);
+          break;
+        case 'Enter':
+        case ' ':
+          event.preventDefault();
+          this.commit(this.activeIndex);
+          break;
+        case 'Escape':
+          event.preventDefault();
+          this.close();
+          break;
+        case 'Tab':
+          this.close();
+          break;
+        default:
+          if (key.length === 1 && key.trim() !== '') {
+            event.preventDefault();
+            this.typeAhead(key);
+          }
+      }
+    }
+  }
+
+  if (!customElements.get('custom-select')) {
+    customElements.define('custom-select', CustomSelect);
+  }
+</script>

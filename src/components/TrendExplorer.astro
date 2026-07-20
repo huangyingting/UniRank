@@ -1,5 +1,6 @@
 ---
 import type { InstitutionTrend } from '../data/schema';
+import CustomSelect from './CustomSelect.astro';
 
 interface Props {
   trends: InstitutionTrend[];
@@ -13,17 +14,17 @@ const serialized = JSON.stringify(trends).replaceAll('<', '\\u003c');
   <div class="controls">
     <label>
       <span>Institution</span>
-      <select data-institution>
+      <CustomSelect data-institution aria-label="Choose an institution">
         {trends.map((trend, index) => (
           <option value={trend.id} selected={index === 0}>
             {trend.name}
           </option>
         ))}
-      </select>
+      </CustomSelect>
     </label>
     <label>
       <span>Provider lens</span>
-      <select data-provider></select>
+      <CustomSelect data-provider placeholder="Select provider" aria-label="Choose a provider lens" />
     </label>
     <div class="trend-summary" data-summary aria-live="polite"></div>
   </div>
