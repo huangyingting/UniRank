@@ -259,8 +259,12 @@ const NAME_ALIASES: Record<string, string> = {
   "postgraduate institute of medical education and research pgimer chandigarh": "postgraduate institute of medical education and research",
 };
 const COUNTRY_ALIASES: Record<string, string> = {
-  brunei: "BN", "china mainland": "CN", "hong kong sar": "HK", kosovo: "XK", macau: "MO", "macau sar": "MO", palestine: "PS", "palestinian territories": "PS", "palestinian territory": "PS", "state of palestine": "PS", turkey: "TR", usa: "US", "united states of america": "US", "united states of america usa": "US", uk: "GB", "united kingdom uk": "GB", "south korea": "KR", russia: "RU", turkiye: "TR", taiwan: "TW", "czech republic": "CZ", xk: "XK",
+  brunei: "BN", "china mainland": "CN", "hong kong sar": "HK", kosovo: "XK", macau: "MO", "macau sar": "MO", palestine: "PS", "palestinian territories": "PS", "palestinian territory": "PS", "state of palestine": "PS", turkey: "TR", usa: "US", "united states of america": "US", "united states of america usa": "US", uk: "GB", "united kingdom uk": "GB", "south korea": "KR", russia: "RU", turkiye: "TR", taiwan: "TW", "czech republic": "CZ", xk: "XK", xkx: "XK", "slovak republic": "SK", syria: "SY", "syrian arab republic": "SY",
 };
+// Provider values that flag a trans-national / multi-country entity rather than a
+// country (e.g. SCImago tags consortia and multi-campus systems "MUL"). These
+// resolve to no ISO code but read as "Multinational" instead of "Unknown".
+const MULTINATIONAL_MARKERS = new Set(["mul", "multinational"]);
 const COUNTRY_DISPLAY: Record<string, string> = { BO: "Bolivia", BN: "Brunei", CN: "China", CZ: "Czechia", GB: "United Kingdom", HK: "Hong Kong", IR: "Iran", KR: "South Korea", MD: "Moldova", MO: "Macau", PS: "Palestine", RU: "Russia", TW: "Taiwan", TZ: "Tanzania", US: "United States", VN: "Vietnam", XK: "Kosovo" };
 const SUBJECT_LABELS: Record<string, string> = { "applied-sciences": "Applied sciences", "biological-sciences": "Biological sciences", chemistry: "Chemistry", "earth-and-environmental": "Earth & environmental sciences", "health-sciences": "Health sciences", "natural-sciences": "Natural sciences", "physical-sciences": "Physical sciences", "social-sciences": "Social sciences" };
 const QS_SUBJECT_LABELS: Record<string, string> = { "art-design": "Art & design", "business-management-studies": "Business & management studies", "civil-structural-engineering": "Civil & structural engineering", "hospitality-leisure-management": "Hospitality & leisure management", "mineral-mining-engineering": "Mineral & mining engineering" };
@@ -291,6 +295,10 @@ function rowValue(row: Row, columns: Iterable<string>): any { for (const c of co
 function lookupAlpha2(value: string): string | undefined { const candidate = value.trim(); if (!candidate) return undefined; const upper = candidate.toUpperCase(); if (upper.length === 2 && (countries.isValid(upper) || upper === "XK")) return upper; if (upper.length === 3) { const a2 = countries.alpha3ToAlpha2(upper); if (a2) return a2.toUpperCase(); } const byName = countries.getAlpha2Code(candidate, "en") ?? countries.getSimpleAlpha2Code(candidate, "en"); return byName?.toUpperCase(); }
 function countryCode(value: any): string | null { if (isMissing(value)) return null; const raw = decodeHtmlEntities(String(value)).trim().replace(/\s+\(([A-Z]{2,3})\)$/, ""); const key = normalizeName(raw); if (COUNTRY_ALIASES[key]) return COUNTRY_ALIASES[key]; return lookupAlpha2(raw) ?? lookupAlpha2(key) ?? null; }
 function countryLabel(code: string | null, fallback: any = null): string { if (code) { if (COUNTRY_DISPLAY[code]) return COUNTRY_DISPLAY[code]; const name = countries.getName(code, "en"); if (name) return String(name); } return String(fallback || "Unknown"); }
+// Best label for a row whose country did not resolve to an ISO code: multi-country
+// entities read "Multinational", a human place name (e.g. "Northern Cyprus") is kept
+// as-is, but a cryptic unresolved 2-3 letter code degrades to "Unknown".
+function fallbackCountryLabel(raw: any): string { if (isMissing(raw)) return "Unknown"; const text = decodeHtmlEntities(String(raw)).trim(); if (MULTINATIONAL_MARKERS.has(normalizeName(text))) return "Multinational"; if (/^[A-Za-z]{2,3}$/.test(text)) return "Unknown"; return text; }
 function readColumns(path: string, wanted: Set<string>): Row[] { return readCsv(path).map((row) => { const out: Row = {}; for (const k of Object.keys(row)) if (wanted.has(k)) out[k] = row[k]; return out; }); }
 function overallFrame(snapshot: Snapshot, source: string | null = null): Row[] { const provider = source ?? snapshot.source; const wanted = new Set(["ranking_scope", "name", "title", "ranking", "ranking_is_tied", "rank", "rank_order", "rank_display", "country", "country_code", "location", "openalex_id", "works_count"]); let frame = readColumns(snapshot.path, wanted); if (frame.length && Object.prototype.hasOwnProperty.call(frame[0], "ranking_scope")) { const scope = provider === "nature" ? "academic-overall" : "overall"; frame = frame.filter((r) => String(r.ranking_scope) === scope); } return frame; }
 function latestGlobalSnapshots(snapshots: Snapshot[], sources: readonly string[] | null = null): Record<string, Snapshot> { const selected = sources ? new Set(sources) : null; const latest: Record<string, Snapshot> = {}; for (const s of snapshots) { if (!isGlobal(s) || (selected && !selected.has(s.source))) continue; const e = latest[s.source]; if (!e || s.year > e.year || (s.year === e.year && s.path.split("/").pop()! > e.path.split("/").pop()!)) latest[s.source] = s; } return latest; }
@@ -303,7 +311,7 @@ function rankDisplayValue(row: Row, source: string, column: string): any {
   return row[column];
 }
 function rowRank(row: Row, source: string): [number | null, string] { if (source === "usnews" && !isMissing(row.ranking)) { const number = rankNumber(row.ranking); if (number !== null) { const display = rankDisplay(row.ranking); const tied = new Set(["1", "true", "yes"]).has(String(row.ranking_is_tied ?? "").toLowerCase()); return [number, tied ? `=${display}` : display]; } } for (const c of RANK_COLUMNS[source]) if (!isMissing(row[c])) { const n = rankNumber(row[c]); if (n !== null) return [n, rankDisplay(rankDisplayValue(row, source, c))]; } return [null, "—"]; }
-function rowCountry(row: Row, source: string): [string | null, string] { const cols = [...(COUNTRY_COLUMNS[source] ?? []), "country_code", "country", "location"]; let fallback: any = null; for (const c of cols) { if (!Object.prototype.hasOwnProperty.call(row, c) || isMissing(row[c])) continue; const v = row[c]; if (fallback === null) fallback = v; const code = countryCode(v); if (code) return [code, countryLabel(code, v)]; } return [null, countryLabel(null, fallback)]; }
+function rowCountry(row: Row, source: string): [string | null, string] { const cols = [...(COUNTRY_COLUMNS[source] ?? []), "country_code", "country", "location"]; let fallback: any = null; for (const c of cols) { if (!Object.prototype.hasOwnProperty.call(row, c) || isMissing(row[c])) continue; const v = row[c]; if (fallback === null) fallback = v; const code = countryCode(v); if (code) return [code, countryLabel(code, v)]; } return [null, fallbackCountryLabel(fallback)]; }
 function identifier(value: any): string | null { if (isMissing(value)) return null; if (typeof value === "number" && Number.isInteger(value)) return String(value); const s = String(value).trim(); return s || null; }
 
 function providerInventory(snapshots: Snapshot[]): Row[] { const bySource = new Map<string, Snapshot[]>(); for (const s of snapshots) { if (!bySource.has(s.source)) bySource.set(s.source, []); bySource.get(s.source)!.push(s); } const inv: Row[] = []; for (const source of Object.keys(PROVIDER_META)) { const items = bySource.get(source) ?? []; const globalItems = items.filter(isGlobal); const base = globalItems.length ? globalItems : items; const years = [...new Set(base.map((i) => i.year))].sort((a, b) => a - b); const scopes = new Set<string>(); for (const item of items) for (const scope of Object.keys(item.manifest.records_by_scope ?? {})) if (scope !== "overall") scopes.add(scope); const latest = [...items].sort((a, b) => a.year - b.year || sortStrings(a.path.split("/").pop()!, b.path.split("/").pop()!)).at(-1)!; const meta = PROVIDER_META[source]; inv.push({ id: source, label: meta.label, kind: meta.kind, color: meta.color, coverage: meta.coverage, firstYear: years[0], lastYear: years[years.length - 1], editions: years.length, files: items.length, records: items.reduce((a, i) => a + i.records, 0), globalRecords: globalItems.reduce((a, i) => a + i.records, 0), subjectViews: scopes.size, license: latest.manifest.data_license ?? null, attribution: latest.manifest.data_attribution ?? null }); } return inv; }
@@ -432,8 +440,8 @@ function buildInstitutionDirectory(snapshots: Snapshot[], consensus: Row[]): Row
   const latest = latestGlobalSnapshots(snapshots, DIRECTORY_PROVIDERS);
   const consensusRankByKey = new Map<string, number>();
   for (const inst of consensus) consensusRankByKey.set(keyOf(inst.canonical, inst.countryCode), inst.consensusRank);
-  const entities = new Map<string, { names: string[]; countries: string[]; providers: Map<string, { rank: number; display: string; year: number }> }>();
-  const ensure = (key: string) => { if (!entities.has(key)) entities.set(key, { names: [], countries: [], providers: new Map() }); return entities.get(key)!; };
+  const entities = new Map<string, { names: string[]; countries: string[]; labels: string[]; providers: Map<string, { rank: number; display: string; year: number }> }>();
+  const ensure = (key: string) => { if (!entities.has(key)) entities.set(key, { names: [], countries: [], labels: [], providers: new Map() }); return entities.get(key)!; };
   for (const source of DIRECTORY_PROVIDERS) {
     const snapshot = latest[source]; if (!snapshot) continue;
     const perProvider = new Map<string, { rank: number; display: string; year: number; name: string; code: string | null; label: string }>();
@@ -445,13 +453,13 @@ function buildInstitutionDirectory(snapshots: Snapshot[], consensus: Row[]): Row
       const existing = perProvider.get(key);
       if (!existing || rank < existing.rank) perProvider.set(key, { rank, display, year: snapshot.year, name, code, label });
     }
-    for (const [key, rec] of perProvider) { const e = ensure(key); e.names.push(rec.name); if (rec.code) e.countries.push(pairKey(rec.code, rec.label)); e.providers.set(source, { rank: rec.rank, display: rec.display, year: rec.year }); }
+    for (const [key, rec] of perProvider) { const e = ensure(key); e.names.push(rec.name); if (rec.code) e.countries.push(pairKey(rec.code, rec.label)); else if (rec.label && rec.label !== "Unknown") e.labels.push(rec.label); e.providers.set(source, { rank: rec.rank, display: rec.display, year: rec.year }); }
   }
   const institutions: Row[] = [];
   for (const [key, e] of entities) {
     const [canonical, code] = parseKey(key);
     const country = mostCommon(countItems(e.countries), 1);
-    const [ccode, countryName] = country.length ? country[0][0].split("\u0000") : [code, "Unknown"];
+    const [ccode, countryName] = country.length ? country[0][0].split("\u0000") : [code, e.labels.length ? mostCommon(countItems(e.labels), 1)[0][0] : "Unknown"];
     const name = e.names.reduce((best, item) => (item.length > best.length || (item.length === best.length && item > best) ? item : best), "").replace(/\s+/g, " ").replace(" *", "").trim();
     const ranks: Row = {};
     for (const source of DIRECTORY_PROVIDERS) { const v = e.providers.get(source); if (v) ranks[source] = [Math.trunc(v.rank), v.display, v.year]; }
