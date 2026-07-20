@@ -30119,6 +30119,68 @@
       "consensusRank": 454
     },
     {
+      "id": "china-university-of-mining-and-technology-cn",
+      "canonical": "china university of mining and technology",
+      "name": "China University of Mining and Technology (Xuzhou)",
+      "country": "China",
+      "countryCode": "CN",
+      "score": 65.6,
+      "providerCount": 5,
+      "ranks": [
+        {
+          "provider": "usnews",
+          "providerLabel": "U.S. News",
+          "year": 2026,
+          "rank": 564,
+          "rankDisplay": "564",
+          "percentileScore": 74.96665184526456,
+          "countryCode": "CN",
+          "country": "China"
+        },
+        {
+          "provider": "qs",
+          "providerLabel": "QS",
+          "year": 2027,
+          "rank": 659,
+          "rankDisplay": "=659",
+          "percentileScore": 56.220891550232864,
+          "countryCode": "CN",
+          "country": "China"
+        },
+        {
+          "provider": "cwur",
+          "providerLabel": "CWUR",
+          "year": 2026,
+          "rank": 511,
+          "rankDisplay": "511",
+          "percentileScore": 74.4872436218109,
+          "countryCode": "CN",
+          "country": "China"
+        },
+        {
+          "provider": "ntu",
+          "providerLabel": "NTU Ranking",
+          "year": 2025,
+          "rank": 465,
+          "rankDisplay": "465",
+          "percentileScore": 62.21498371335505,
+          "countryCode": "CN",
+          "country": "China"
+        },
+        {
+          "provider": "arwu",
+          "providerLabel": "ShanghaiRanking",
+          "year": 2025,
+          "rank": 401,
+          "rankDisplay": "401-500",
+          "percentileScore": 59.95995995995995,
+          "countryCode": "CN",
+          "country": "China"
+        }
+      ],
+      "consensusRank": 455
+    },
+    {
       "id": "university-of-konstanz-de",
       "canonical": "university of konstanz",
       "name": "University of Konstanz",
@@ -30178,7 +30240,7 @@
           "country": "Germany"
         }
       ],
-      "consensusRank": 455
+      "consensusRank": 456
     },
     {
       "id": "polytechnic-university-of-valencia-es",
@@ -30240,7 +30302,7 @@
           "country": "Spain"
         }
       ],
-      "consensusRank": 456
+      "consensusRank": 457
     },
     {
       "id": "waseda-university-jp",
@@ -30312,7 +30374,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 457
+      "consensusRank": 458
     },
     {
       "id": "indian-institute-of-science-in",
@@ -30364,7 +30426,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 458
+      "consensusRank": 459
     },
     {
       "id": "university-of-eastern-finland-fi",
@@ -30436,7 +30498,7 @@
           "country": "Finland"
         }
       ],
-      "consensusRank": 459
+      "consensusRank": 460
     },
     {
       "id": "university-of-siena-it",
@@ -30508,7 +30570,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 460
+      "consensusRank": 461
     },
     {
       "id": "federal-university-of-minas-gerais-br",
@@ -30570,7 +30632,7 @@
           "country": "Brazil"
         }
       ],
-      "consensusRank": 461
+      "consensusRank": 462
     },
     {
       "id": "middle-east-technical-university-tr",
@@ -30632,7 +30694,7 @@
           "country": "Türkiye"
         }
       ],
-      "consensusRank": 462
+      "consensusRank": 463
     },
     {
       "id": "university-of-ulsan-kr",
@@ -30704,7 +30766,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 463
+      "consensusRank": 464
     },
     {
       "id": "sunway-university-my",
@@ -30756,7 +30818,7 @@
           "country": "Malaysia"
         }
       ],
-      "consensusRank": 464
+      "consensusRank": 465
     },
     {
       "id": "university-of-bremen-de",
@@ -30818,7 +30880,7 @@
           "country": "Germany"
         }
       ],
-      "consensusRank": 465
+      "consensusRank": 466
     },
     {
       "id": "loughborough-university-gb",
@@ -30890,7 +30952,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 466
+      "consensusRank": 467
     },
     {
       "id": "murdoch-university-au",
@@ -30962,7 +31024,7 @@
           "country": "Australia"
         }
       ],
-      "consensusRank": 467
+      "consensusRank": 468
     },
     {
       "id": "thomas-jefferson-university-us",
@@ -31014,7 +31076,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 468
+      "consensusRank": 469
     },
     {
       "id": "university-of-minho-pt",
@@ -31076,7 +31138,7 @@
           "country": "Portugal"
         }
       ],
-      "consensusRank": 469
+      "consensusRank": 470
     },
     {
       "id": "kobe-university-jp",
@@ -31148,7 +31210,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 470
+      "consensusRank": 471
     },
     {
       "id": "bogazici-university-tr",
@@ -31210,7 +31272,7 @@
           "country": "Türkiye"
         }
       ],
-      "consensusRank": 471
+      "consensusRank": 472
     },
     {
       "id": "wenzhou-medical-university-cn",
@@ -31262,7 +31324,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 472
+      "consensusRank": 473
     },
     {
       "id": "university-of-palermo-it",
@@ -31324,7 +31386,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 473
+      "consensusRank": 474
     },
     {
       "id": "florida-international-university-us",
@@ -31396,7 +31458,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 474
+      "consensusRank": 475
     },
     {
       "id": "aston-university-gb",
@@ -31458,7 +31520,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 475
+      "consensusRank": 476
     },
     {
       "id": "university-of-perugia-it",
@@ -31510,7 +31572,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 476
+      "consensusRank": 477
     },
     {
       "id": "polytechnic-university-of-turin-it",
@@ -31572,7 +31634,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 477
+      "consensusRank": 478
     },
     {
       "id": "amirkabir-university-of-technology-ir",
@@ -31624,7 +31686,7 @@
           "country": "Iran"
         }
       ],
-      "consensusRank": 478
+      "consensusRank": 479
     },
     {
       "id": "north-china-electric-power-university-cn",
@@ -31676,7 +31738,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 479
+      "consensusRank": 480
     },
     {
       "id": "university-of-southern-queensland-au",
@@ -31748,7 +31810,7 @@
           "country": "Australia"
         }
       ],
-      "consensusRank": 480
+      "consensusRank": 481
     },
     {
       "id": "university-of-ferrara-it",
@@ -31810,7 +31872,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 481
+      "consensusRank": 482
     },
     {
       "id": "king-fahd-university-of-petroleum-and-minerals-sa",
@@ -31862,7 +31924,7 @@
           "country": "Saudi Arabia"
         }
       ],
-      "consensusRank": 482
+      "consensusRank": 483
     },
     {
       "id": "university-of-bayreuth-de",
@@ -31934,7 +31996,7 @@
           "country": "Germany"
         }
       ],
-      "consensusRank": 483
+      "consensusRank": 484
     },
     {
       "id": "university-of-chile-cl",
@@ -31996,7 +32058,7 @@
           "country": "Chile"
         }
       ],
-      "consensusRank": 484
+      "consensusRank": 485
     },
     {
       "id": "university-of-trieste-it",
@@ -32068,7 +32130,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 485
+      "consensusRank": 486
     },
     {
       "id": "hohai-university-cn",
@@ -32130,7 +32192,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 486
+      "consensusRank": 487
     },
     {
       "id": "university-of-luxembourg-lu",
@@ -32202,7 +32264,7 @@
           "country": "Luxembourg"
         }
       ],
-      "consensusRank": 487
+      "consensusRank": 488
     },
     {
       "id": "national-technical-university-of-athens-gr",
@@ -32264,7 +32326,7 @@
           "country": "Greece"
         }
       ],
-      "consensusRank": 488
+      "consensusRank": 489
     },
     {
       "id": "university-of-sharjah-ae",
@@ -32326,7 +32388,7 @@
           "country": "United Arab Emirates"
         }
       ],
-      "consensusRank": 489
+      "consensusRank": 490
     },
     {
       "id": "university-of-canterbury-nz",
@@ -32388,7 +32450,7 @@
           "country": "New Zealand"
         }
       ],
-      "consensusRank": 490
+      "consensusRank": 491
     },
     {
       "id": "university-of-kent-gb",
@@ -32460,7 +32522,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 491
+      "consensusRank": 492
     },
     {
       "id": "zhejiang-normal-university-cn",
@@ -32522,7 +32584,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 492
+      "consensusRank": 493
     },
     {
       "id": "tomsk-state-university-ru",
@@ -32574,7 +32636,7 @@
           "country": "Russia"
         }
       ],
-      "consensusRank": 493
+      "consensusRank": 494
     },
     {
       "id": "university-of-mississippi-us",
@@ -32626,7 +32688,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 494
+      "consensusRank": 495
     },
     {
       "id": "texas-tech-university-us",
@@ -32698,7 +32760,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 495
+      "consensusRank": 496
     },
     {
       "id": "nanjing-normal-university-cn",
@@ -32770,7 +32832,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 496
+      "consensusRank": 497
     },
     {
       "id": "university-of-iceland-is",
@@ -32842,7 +32904,7 @@
           "country": "Iceland"
         }
       ],
-      "consensusRank": 497
+      "consensusRank": 498
     },
     {
       "id": "eotvos-lorand-university-hu",
@@ -32914,7 +32976,7 @@
           "country": "Hungary"
         }
       ],
-      "consensusRank": 498
+      "consensusRank": 499
     },
     {
       "id": "hainan-university-cn",
@@ -32966,7 +33028,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 499
+      "consensusRank": 500
     },
     {
       "id": "shandong-university-of-science-and-technology-cn",
@@ -33018,7 +33080,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 500
+      "consensusRank": 501
     },
     {
       "id": "beijing-jiaotong-university-cn",
@@ -33080,7 +33142,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 501
+      "consensusRank": 502
     },
     {
       "id": "ain-shams-university-eg",
@@ -33142,7 +33204,7 @@
           "country": "Egypt"
         }
       ],
-      "consensusRank": 502
+      "consensusRank": 503
     },
     {
       "id": "yunnan-university-cn",
@@ -33194,7 +33256,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 503
+      "consensusRank": 504
     },
     {
       "id": "saint-louis-university-us",
@@ -33256,7 +33318,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 504
+      "consensusRank": 505
     },
     {
       "id": "humanitas-university-it",
@@ -33318,7 +33380,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 505
+      "consensusRank": 506
     },
     {
       "id": "kunming-university-of-science-and-technology-cn",
@@ -33370,7 +33432,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 506
+      "consensusRank": 507
     },
     {
       "id": "carleton-university-ca",
@@ -33442,7 +33504,7 @@
           "country": "Canada"
         }
       ],
-      "consensusRank": 507
+      "consensusRank": 508
     },
     {
       "id": "yeungnam-university-kr",
@@ -33514,7 +33576,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 508
+      "consensusRank": 509
     },
     {
       "id": "birkbeck-university-of-london-gb",
@@ -33566,7 +33628,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 509
+      "consensusRank": 510
     },
     {
       "id": "auburn-university-us",
@@ -33638,7 +33700,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 510
+      "consensusRank": 511
     },
     {
       "id": "sharif-university-of-technology-ir",
@@ -33710,7 +33772,7 @@
           "country": "Iran"
         }
       ],
-      "consensusRank": 511
+      "consensusRank": 512
     },
     {
       "id": "ewha-womans-university-kr",
@@ -33782,7 +33844,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 512
+      "consensusRank": 513
     },
     {
       "id": "university-of-fribourg-ch",
@@ -33854,7 +33916,7 @@
           "country": "Switzerland"
         }
       ],
-      "consensusRank": 513
+      "consensusRank": 514
     },
     {
       "id": "hasselt-university-be",
@@ -33916,7 +33978,7 @@
           "country": "Belgium"
         }
       ],
-      "consensusRank": 514
+      "consensusRank": 515
     },
     {
       "id": "china-university-of-petroleum-beijing-cn",
@@ -33978,7 +34040,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 515
+      "consensusRank": 516
     },
     {
       "id": "university-of-delhi-in",
@@ -34040,7 +34102,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 516
+      "consensusRank": 517
     },
     {
       "id": "saarland-university-de",
@@ -34112,7 +34174,7 @@
           "country": "Germany"
         }
       ],
-      "consensusRank": 517
+      "consensusRank": 518
     },
     {
       "id": "university-of-udine-it",
@@ -34164,7 +34226,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 518
+      "consensusRank": 519
     },
     {
       "id": "university-of-tabriz-ir",
@@ -34226,7 +34288,7 @@
           "country": "Iran"
         }
       ],
-      "consensusRank": 519
+      "consensusRank": 520
     },
     {
       "id": "university-of-essex-gb",
@@ -34288,7 +34350,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 520
+      "consensusRank": 521
     },
     {
       "id": "university-of-salerno-it",
@@ -34360,7 +34422,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 521
+      "consensusRank": 522
     },
     {
       "id": "iran-university-of-science-and-technology-ir",
@@ -34422,7 +34484,7 @@
           "country": "Iran"
         }
       ],
-      "consensusRank": 522
+      "consensusRank": 523
     },
     {
       "id": "university-of-parma-it",
@@ -34494,7 +34556,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 523
+      "consensusRank": 524
     },
     {
       "id": "comsats-university-islamabad-pk",
@@ -34556,7 +34618,7 @@
           "country": "Pakistan"
         }
       ],
-      "consensusRank": 524
+      "consensusRank": 525
     },
     {
       "id": "university-of-jyvaskyla-fi",
@@ -34628,7 +34690,7 @@
           "country": "Finland"
         }
       ],
-      "consensusRank": 525
+      "consensusRank": 526
     },
     {
       "id": "university-of-vermont-us",
@@ -34690,7 +34752,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 526
+      "consensusRank": 527
     },
     {
       "id": "royal-holloway-university-of-london-gb",
@@ -34742,7 +34804,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 527
+      "consensusRank": 528
     },
     {
       "id": "university-of-canberra-au",
@@ -34804,7 +34866,7 @@
           "country": "Australia"
         }
       ],
-      "consensusRank": 528
+      "consensusRank": 529
     },
     {
       "id": "university-of-california-merced-us",
@@ -34866,7 +34928,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 529
+      "consensusRank": 530
     },
     {
       "id": "concordia-university-ca",
@@ -34938,7 +35000,7 @@
           "country": "Canada"
         }
       ],
-      "consensusRank": 530
+      "consensusRank": 531
     },
     {
       "id": "colorado-school-of-mines-us",
@@ -35010,7 +35072,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 531
+      "consensusRank": 532
     },
     {
       "id": "syracuse-university-us",
@@ -35082,7 +35144,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 532
+      "consensusRank": 533
     },
     {
       "id": "sultan-qaboos-university-om",
@@ -35144,7 +35206,7 @@
           "country": "Oman"
         }
       ],
-      "consensusRank": 533
+      "consensusRank": 534
     },
     {
       "id": "northumbria-university-gb",
@@ -35206,7 +35268,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 534
+      "consensusRank": 535
     },
     {
       "id": "edith-cowan-university-au",
@@ -35278,7 +35340,7 @@
           "country": "Australia"
         }
       ],
-      "consensusRank": 535
+      "consensusRank": 536
     },
     {
       "id": "alexandria-university-eg",
@@ -35350,7 +35412,7 @@
           "country": "Egypt"
         }
       ],
-      "consensusRank": 536
+      "consensusRank": 537
     },
     {
       "id": "liverpool-john-moores-university-gb",
@@ -35422,7 +35484,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 537
+      "consensusRank": 538
     },
     {
       "id": "massey-university-nz",
@@ -35494,7 +35556,7 @@
           "country": "New Zealand"
         }
       ],
-      "consensusRank": 538
+      "consensusRank": 539
     },
     {
       "id": "illinois-institute-of-technology-us",
@@ -35556,7 +35618,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 539
+      "consensusRank": 540
     },
     {
       "id": "panjab-university-in",
@@ -35608,7 +35670,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 540
+      "consensusRank": 541
     },
     {
       "id": "ca-foscari-university-of-venice-it",
@@ -35660,7 +35722,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 541
+      "consensusRank": 542
     },
     {
       "id": "wenzhou-university-cn",
@@ -35722,7 +35784,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 542
+      "consensusRank": 543
     },
     {
       "id": "princess-nourah-bint-abdulrahman-university-sa",
@@ -35794,7 +35856,7 @@
           "country": "Saudi Arabia"
         }
       ],
-      "consensusRank": 543
+      "consensusRank": 544
     },
     {
       "id": "westlake-university-cn",
@@ -35846,7 +35908,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 544
+      "consensusRank": 545
     },
     {
       "id": "university-of-graz-at",
@@ -35908,7 +35970,7 @@
           "country": "Austria"
         }
       ],
-      "consensusRank": 545
+      "consensusRank": 546
     },
     {
       "id": "australian-catholic-university-au",
@@ -35980,7 +36042,7 @@
           "country": "Australia"
         }
       ],
-      "consensusRank": 546
+      "consensusRank": 547
     },
     {
       "id": "university-of-zaragoza-es",
@@ -36042,7 +36104,7 @@
           "country": "Spain"
         }
       ],
-      "consensusRank": 547
+      "consensusRank": 548
     },
     {
       "id": "harbin-engineering-university-cn",
@@ -36114,7 +36176,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 548
+      "consensusRank": 549
     },
     {
       "id": "tianjin-medical-university-cn",
@@ -36166,7 +36228,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 549
+      "consensusRank": 550
     },
     {
       "id": "marche-polytechnic-university-it",
@@ -36228,7 +36290,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 550
+      "consensusRank": 551
     },
     {
       "id": "georgia-state-university-us",
@@ -36300,7 +36362,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 551
+      "consensusRank": 552
     },
     {
       "id": "asia-university-taiwan-tw",
@@ -36362,7 +36424,7 @@
           "country": "Taiwan"
         }
       ],
-      "consensusRank": 552
+      "consensusRank": 553
     },
     {
       "id": "ton-duc-thang-university-vn",
@@ -36414,7 +36476,7 @@
           "country": "Vietnam"
         }
       ],
-      "consensusRank": 553
+      "consensusRank": 554
     },
     {
       "id": "henan-university-cn",
@@ -36476,7 +36538,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 554
+      "consensusRank": 555
     },
     {
       "id": "qingdao-university-of-science-and-technology-cn",
@@ -36528,7 +36590,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 555
+      "consensusRank": 556
     },
     {
       "id": "university-of-salamanca-es",
@@ -36600,7 +36662,7 @@
           "country": "Spain"
         }
       ],
-      "consensusRank": 556
+      "consensusRank": 557
     },
     {
       "id": "istanbul-technical-university-tr",
@@ -36672,7 +36734,7 @@
           "country": "Türkiye"
         }
       ],
-      "consensusRank": 557
+      "consensusRank": 558
     },
     {
       "id": "university-of-zagreb-hr",
@@ -36744,7 +36806,7 @@
           "country": "Croatia"
         }
       ],
-      "consensusRank": 558
+      "consensusRank": 559
     },
     {
       "id": "guizhou-university-cn",
@@ -36796,7 +36858,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 559
+      "consensusRank": 560
     },
     {
       "id": "university-of-plymouth-gb",
@@ -36858,7 +36920,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 560
+      "consensusRank": 561
     },
     {
       "id": "bangor-university-gb",
@@ -36930,7 +36992,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 561
+      "consensusRank": 562
     },
     {
       "id": "dublin-city-university-ie",
@@ -36992,7 +37054,7 @@
           "country": "Ireland"
         }
       ],
-      "consensusRank": 562
+      "consensusRank": 563
     },
     {
       "id": "mansoura-university-eg",
@@ -37064,7 +37126,7 @@
           "country": "Egypt"
         }
       ],
-      "consensusRank": 563
+      "consensusRank": 564
     },
     {
       "id": "bar-ilan-university-il",
@@ -37136,7 +37198,7 @@
           "country": "Israel"
         }
       ],
-      "consensusRank": 564
+      "consensusRank": 565
     },
     {
       "id": "chung-ang-university-kr",
@@ -37198,7 +37260,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 565
+      "consensusRank": 566
     },
     {
       "id": "hacettepe-university-tr",
@@ -37270,7 +37332,7 @@
           "country": "Türkiye"
         }
       ],
-      "consensusRank": 566
+      "consensusRank": 567
     },
     {
       "id": "fujian-agriculture-and-forestry-university-cn",
@@ -37332,7 +37394,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 567
+      "consensusRank": 568
     },
     {
       "id": "polytechnic-university-of-madrid-es",
@@ -37384,7 +37446,7 @@
           "country": "Spain"
         }
       ],
-      "consensusRank": 568
+      "consensusRank": 569
     },
     {
       "id": "west-virginia-university-us",
@@ -37446,7 +37508,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 569
+      "consensusRank": 570
     },
     {
       "id": "university-of-campania-luigi-vanvitelli-it",
@@ -37498,7 +37560,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 570
+      "consensusRank": 571
     },
     {
       "id": "anhui-medical-university-cn",
@@ -37550,7 +37612,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 571
+      "consensusRank": 572
     },
     {
       "id": "prince-sattam-bin-abdulaziz-university-sa",
@@ -37622,7 +37684,7 @@
           "country": "Saudi Arabia"
         }
       ],
-      "consensusRank": 572
+      "consensusRank": 573
     },
     {
       "id": "kansas-state-university-us",
@@ -37694,7 +37756,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 573
+      "consensusRank": 574
     },
     {
       "id": "tilburg-university-nl",
@@ -37766,7 +37828,7 @@
           "country": "Netherlands"
         }
       ],
-      "consensusRank": 574
+      "consensusRank": 575
     },
     {
       "id": "koc-university-tr",
@@ -37838,7 +37900,7 @@
           "country": "Türkiye"
         }
       ],
-      "consensusRank": 575
+      "consensusRank": 576
     },
     {
       "id": "tarbiat-modares-university-ir",
@@ -37900,7 +37962,7 @@
           "country": "Iran"
         }
       ],
-      "consensusRank": 576
+      "consensusRank": 577
     },
     {
       "id": "heriot-watt-university-gb",
@@ -37972,7 +38034,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 577
+      "consensusRank": 578
     },
     {
       "id": "university-of-hull-gb",
@@ -38044,7 +38106,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 578
+      "consensusRank": 579
     },
     {
       "id": "vilnius-university-lt",
@@ -38116,7 +38178,7 @@
           "country": "Lithuania"
         }
       ],
-      "consensusRank": 579
+      "consensusRank": 580
     },
     {
       "id": "indian-institute-of-technology-delhi-in",
@@ -38168,7 +38230,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 580
+      "consensusRank": 581
     },
     {
       "id": "university-of-ibadan-ng",
@@ -38230,7 +38292,7 @@
           "country": "Nigeria"
         }
       ],
-      "consensusRank": 581
+      "consensusRank": 582
     },
     {
       "id": "university-of-szeged-hu",
@@ -38302,7 +38364,7 @@
           "country": "Hungary"
         }
       ],
-      "consensusRank": 582
+      "consensusRank": 583
     },
     {
       "id": "university-of-bradford-gb",
@@ -38354,7 +38416,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 583
+      "consensusRank": 584
     },
     {
       "id": "northeast-normal-university-cn",
@@ -38406,7 +38468,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 584
+      "consensusRank": 585
     },
     {
       "id": "university-of-portsmouth-gb",
@@ -38478,7 +38540,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 585
+      "consensusRank": 586
     },
     {
       "id": "isfahan-university-of-technology-ir",
@@ -38540,7 +38602,7 @@
           "country": "Iran"
         }
       ],
-      "consensusRank": 586
+      "consensusRank": 587
     },
     {
       "id": "oklahoma-state-university-us",
@@ -38602,7 +38664,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 587
+      "consensusRank": 588
     },
     {
       "id": "university-of-modena-and-reggio-emilia-it",
@@ -38674,7 +38736,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 588
+      "consensusRank": 589
     },
     {
       "id": "beijing-forestry-university-cn",
@@ -38736,7 +38798,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 589
+      "consensusRank": 590
     },
     {
       "id": "memorial-university-of-newfoundland-ca",
@@ -38808,7 +38870,7 @@
           "country": "Canada"
         }
       ],
-      "consensusRank": 590
+      "consensusRank": 591
     },
     {
       "id": "charles-darwin-university-au",
@@ -38870,7 +38932,7 @@
           "country": "Australia"
         }
       ],
-      "consensusRank": 591
+      "consensusRank": 592
     },
     {
       "id": "wroclaw-medical-university-pl",
@@ -38922,7 +38984,7 @@
           "country": "Poland"
         }
       ],
-      "consensusRank": 592
+      "consensusRank": 593
     },
     {
       "id": "university-of-huddersfield-gb",
@@ -38974,7 +39036,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 593
+      "consensusRank": 594
     },
     {
       "id": "university-of-rostock-de",
@@ -39026,7 +39088,7 @@
           "country": "Germany"
         }
       ],
-      "consensusRank": 594
+      "consensusRank": 595
     },
     {
       "id": "central-china-normal-university-cn",
@@ -39088,7 +39150,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 595
+      "consensusRank": 596
     },
     {
       "id": "chonnam-national-university-kr",
@@ -39160,7 +39222,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 596
+      "consensusRank": 597
     },
     {
       "id": "moscow-institute-of-physics-and-technology-ru",
@@ -39212,7 +39274,7 @@
           "country": "Russia"
         }
       ],
-      "consensusRank": 597
+      "consensusRank": 598
     },
     {
       "id": "university-of-nebraska-medical-center-us",
@@ -39264,7 +39326,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 598
+      "consensusRank": 599
     },
     {
       "id": "federal-university-of-sao-paulo-br",
@@ -39316,7 +39378,7 @@
           "country": "Brazil"
         }
       ],
-      "consensusRank": 599
+      "consensusRank": 600
     },
     {
       "id": "university-of-jordan-jo",
@@ -39378,7 +39440,7 @@
           "country": "Jordan"
         }
       ],
-      "consensusRank": 600
+      "consensusRank": 601
     },
     {
       "id": "rochester-institute-of-technology-us",
@@ -39430,7 +39492,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 601
+      "consensusRank": 602
     },
     {
       "id": "anhui-university-cn",
@@ -39502,7 +39564,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 602
+      "consensusRank": 603
     },
     {
       "id": "jordan-university-of-science-and-technology-jo",
@@ -39564,7 +39626,7 @@
           "country": "Jordan"
         }
       ],
-      "consensusRank": 603
+      "consensusRank": 604
     },
     {
       "id": "university-of-louisville-us",
@@ -39626,7 +39688,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 604
+      "consensusRank": 605
     },
     {
       "id": "rensselaer-polytechnic-institute-us",
@@ -39698,7 +39760,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 605
+      "consensusRank": 606
     },
     {
       "id": "university-of-messina-it",
@@ -39760,7 +39822,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 606
+      "consensusRank": 607
     },
     {
       "id": "university-of-tennessee-health-science-center-us",
@@ -39812,7 +39874,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 607
+      "consensusRank": 608
     },
     {
       "id": "baylor-university-us",
@@ -39884,7 +39946,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 608
+      "consensusRank": 609
     },
     {
       "id": "taipei-medical-university-tw",
@@ -39946,7 +40008,7 @@
           "country": "Taiwan"
         }
       ],
-      "consensusRank": 609
+      "consensusRank": 610
     },
     {
       "id": "jeonbuk-national-university-kr",
@@ -40008,7 +40070,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 610
+      "consensusRank": 611
     },
     {
       "id": "changan-university-cn",
@@ -40070,7 +40132,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 611
+      "consensusRank": 612
     },
     {
       "id": "chang-gung-university-tw",
@@ -40142,7 +40204,7 @@
           "country": "Taiwan"
         }
       ],
-      "consensusRank": 612
+      "consensusRank": 613
     },
     {
       "id": "keele-university-gb",
@@ -40204,7 +40266,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 613
+      "consensusRank": 614
     },
     {
       "id": "bournemouth-university-gb",
@@ -40266,7 +40328,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 614
+      "consensusRank": 615
     },
     {
       "id": "university-of-agriculture-faisalabad-pk",
@@ -40318,7 +40380,7 @@
           "country": "Pakistan"
         }
       ],
-      "consensusRank": 615
+      "consensusRank": 616
     },
     {
       "id": "istanbul-university-tr",
@@ -40390,7 +40452,7 @@
           "country": "Türkiye"
         }
       ],
-      "consensusRank": 616
+      "consensusRank": 617
     },
     {
       "id": "indian-institute-of-technology-madras-in",
@@ -40442,7 +40504,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 617
+      "consensusRank": 618
     },
     {
       "id": "university-of-la-laguna-es",
@@ -40504,7 +40566,7 @@
           "country": "Spain"
         }
       ],
-      "consensusRank": 618
+      "consensusRank": 619
     },
     {
       "id": "university-of-crete-gr",
@@ -40576,7 +40638,7 @@
           "country": "Greece"
         }
       ],
-      "consensusRank": 619
+      "consensusRank": 620
     },
     {
       "id": "northeast-agricultural-university-cn",
@@ -40628,7 +40690,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 620
+      "consensusRank": 621
     },
     {
       "id": "american-university-us",
@@ -40690,7 +40752,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 621
+      "consensusRank": 622
     },
     {
       "id": "university-of-insubria-it",
@@ -40742,7 +40804,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 622
+      "consensusRank": 623
     },
     {
       "id": "government-college-university-faisalabad-pk",
@@ -40804,7 +40866,7 @@
           "country": "Pakistan"
         }
       ],
-      "consensusRank": 623
+      "consensusRank": 624
     },
     {
       "id": "stevens-institute-of-technology-us",
@@ -40856,7 +40918,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 624
+      "consensusRank": 625
     },
     {
       "id": "ningbo-university-cn",
@@ -40918,7 +40980,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 625
+      "consensusRank": 626
     },
     {
       "id": "education-university-of-hong-kong-hk",
@@ -40980,7 +41042,7 @@
           "country": "Hong Kong"
         }
       ],
-      "consensusRank": 626
+      "consensusRank": 627
     },
     {
       "id": "university-of-clermont-auvergne-fr",
@@ -41032,7 +41094,7 @@
           "country": "France"
         }
       ],
-      "consensusRank": 627
+      "consensusRank": 628
     },
     {
       "id": "university-of-debrecen-hu",
@@ -41094,7 +41156,7 @@
           "country": "Hungary"
         }
       ],
-      "consensusRank": 628
+      "consensusRank": 629
     },
     {
       "id": "victoria-university-au",
@@ -41156,7 +41218,7 @@
           "country": "Australia"
         }
       ],
-      "consensusRank": 629
+      "consensusRank": 630
     },
     {
       "id": "chongqing-medical-university-cn",
@@ -41208,7 +41270,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 630
+      "consensusRank": 631
     },
     {
       "id": "shaanxi-normal-university-cn",
@@ -41270,7 +41332,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 631
+      "consensusRank": 632
     },
     {
       "id": "clemson-university-us",
@@ -41332,7 +41394,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 632
+      "consensusRank": 633
     },
     {
       "id": "lebanese-american-university-lb",
@@ -41394,7 +41456,7 @@
           "country": "Lebanon"
         }
       ],
-      "consensusRank": 633
+      "consensusRank": 634
     },
     {
       "id": "shanxi-university-cn",
@@ -41446,7 +41508,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 634
+      "consensusRank": 635
     },
     {
       "id": "taif-university-sa",
@@ -41518,7 +41580,7 @@
           "country": "Saudi Arabia"
         }
       ],
-      "consensusRank": 635
+      "consensusRank": 636
     },
     {
       "id": "university-of-haifa-il",
@@ -41590,7 +41652,7 @@
           "country": "Israel"
         }
       ],
-      "consensusRank": 636
+      "consensusRank": 637
     },
     {
       "id": "federal-university-of-santa-catarina-br",
@@ -41642,7 +41704,7 @@
           "country": "Brazil"
         }
       ],
-      "consensusRank": 637
+      "consensusRank": 638
     },
     {
       "id": "imam-abdulrahman-bin-faisal-university-sa",
@@ -41694,7 +41756,7 @@
           "country": "Saudi Arabia"
         }
       ],
-      "consensusRank": 638
+      "consensusRank": 639
     },
     {
       "id": "itmo-university-ru",
@@ -41746,7 +41808,7 @@
           "country": "Russia"
         }
       ],
-      "consensusRank": 639
+      "consensusRank": 640
     },
     {
       "id": "hangzhou-normal-university-cn",
@@ -41808,7 +41870,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 640
+      "consensusRank": 641
     },
     {
       "id": "indian-institute-of-technology-indore-in",
@@ -41860,7 +41922,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 641
+      "consensusRank": 642
     },
     {
       "id": "inha-university-kr",
@@ -41932,7 +41994,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 642
+      "consensusRank": 643
     },
     {
       "id": "czech-technical-university-in-prague-cz",
@@ -41994,7 +42056,7 @@
           "country": "Czechia"
         }
       ],
-      "consensusRank": 643
+      "consensusRank": 644
     },
     {
       "id": "university-of-waikato-nz",
@@ -42066,7 +42128,7 @@
           "country": "New Zealand"
         }
       ],
-      "consensusRank": 644
+      "consensusRank": 645
     },
     {
       "id": "university-of-limerick-ie",
@@ -42138,7 +42200,7 @@
           "country": "Ireland"
         }
       ],
-      "consensusRank": 645
+      "consensusRank": 646
     },
     {
       "id": "bilkent-university-tr",
@@ -42200,7 +42262,7 @@
           "country": "Türkiye"
         }
       ],
-      "consensusRank": 646
+      "consensusRank": 647
     },
     {
       "id": "manchester-metropolitan-university-gb",
@@ -42272,7 +42334,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 647
+      "consensusRank": 648
     },
     {
       "id": "university-of-oviedo-es",
@@ -42334,7 +42396,7 @@
           "country": "Spain"
         }
       ],
-      "consensusRank": 648
+      "consensusRank": 649
     },
     {
       "id": "university-of-texas-at-san-antonio-us",
@@ -42396,7 +42458,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 649
+      "consensusRank": 650
     },
     {
       "id": "university-of-bucharest-ro",
@@ -42448,7 +42510,7 @@
           "country": "Romania"
         }
       ],
-      "consensusRank": 650
+      "consensusRank": 651
     },
     {
       "id": "palacky-university-olomouc-cz",
@@ -42520,7 +42582,7 @@
           "country": "Czechia"
         }
       ],
-      "consensusRank": 651
+      "consensusRank": 652
     },
     {
       "id": "auckland-university-of-technology-nz",
@@ -42582,7 +42644,7 @@
           "country": "New Zealand"
         }
       ],
-      "consensusRank": 652
+      "consensusRank": 653
     },
     {
       "id": "missouri-university-of-science-and-technology-us",
@@ -42644,7 +42706,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 653
+      "consensusRank": 654
     },
     {
       "id": "alfaisal-university-sa",
@@ -42706,7 +42768,7 @@
           "country": "Saudi Arabia"
         }
       ],
-      "consensusRank": 654
+      "consensusRank": 655
     },
     {
       "id": "oxford-brookes-university-gb",
@@ -42758,7 +42820,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 655
+      "consensusRank": 656
     },
     {
       "id": "chiba-university-jp",
@@ -42830,7 +42892,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 656
+      "consensusRank": 657
     },
     {
       "id": "nottingham-trent-university-gb",
@@ -42902,7 +42964,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 657
+      "consensusRank": 658
     },
     {
       "id": "aga-khan-university-pk",
@@ -42954,7 +43016,7 @@
           "country": "Pakistan"
         }
       ],
-      "consensusRank": 658
+      "consensusRank": 659
     },
     {
       "id": "kafrelsheikh-university-eg",
@@ -43006,7 +43068,7 @@
           "country": "Egypt"
         }
       ],
-      "consensusRank": 659
+      "consensusRank": 660
     },
     {
       "id": "al-azhar-university-eg",
@@ -43078,7 +43140,7 @@
           "country": "Egypt"
         }
       ],
-      "consensusRank": 660
+      "consensusRank": 661
     },
     {
       "id": "shahid-beheshti-university-of-medical-sciences-ir",
@@ -43130,7 +43192,7 @@
           "country": "Iran"
         }
       ],
-      "consensusRank": 661
+      "consensusRank": 662
     },
     {
       "id": "graz-university-of-technology-at",
@@ -43202,7 +43264,7 @@
           "country": "Austria"
         }
       ],
-      "consensusRank": 662
+      "consensusRank": 663
     },
     {
       "id": "university-of-cyprus-cy",
@@ -43264,7 +43326,7 @@
           "country": "Cyprus"
         }
       ],
-      "consensusRank": 663
+      "consensusRank": 664
     },
     {
       "id": "indian-institute-of-technology-bombay-in",
@@ -43316,7 +43378,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 664
+      "consensusRank": 665
     },
     {
       "id": "agh-university-of-krakow-pl",
@@ -43378,7 +43440,7 @@
           "country": "Poland"
         }
       ],
-      "consensusRank": 665
+      "consensusRank": 666
     },
     {
       "id": "university-of-brighton-gb",
@@ -43440,7 +43502,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 666
+      "consensusRank": 667
     },
     {
       "id": "university-of-dhaka-bd",
@@ -43502,7 +43564,7 @@
           "country": "Bangladesh"
         }
       ],
-      "consensusRank": 667
+      "consensusRank": 668
     },
     {
       "id": "kermanshah-university-of-medical-sciences-ir",
@@ -43554,7 +43616,7 @@
           "country": "Iran"
         }
       ],
-      "consensusRank": 668
+      "consensusRank": 669
     },
     {
       "id": "mississippi-state-university-us",
@@ -43626,7 +43688,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 669
+      "consensusRank": 670
     },
     {
       "id": "northern-arizona-university-us",
@@ -43688,7 +43750,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 670
+      "consensusRank": 671
     },
     {
       "id": "china-pharmaceutical-university-cn",
@@ -43750,7 +43812,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 671
+      "consensusRank": 672
     },
     {
       "id": "harbin-medical-university-cn",
@@ -43802,7 +43864,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 672
+      "consensusRank": 673
     },
     {
       "id": "osaka-metropolitan-university-jp",
@@ -43864,7 +43926,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 673
+      "consensusRank": 674
     },
     {
       "id": "university-of-laquila-it",
@@ -43916,7 +43978,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 674
+      "consensusRank": 675
     },
     {
       "id": "jamia-millia-islamia-in",
@@ -43978,7 +44040,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 675
+      "consensusRank": 676
     },
     {
       "id": "sogang-university-kr",
@@ -44030,7 +44092,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 676
+      "consensusRank": 677
     },
     {
       "id": "university-of-texas-at-arlington-us",
@@ -44082,7 +44144,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 677
+      "consensusRank": 678
     },
     {
       "id": "konkuk-university-kr",
@@ -44154,7 +44216,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 678
+      "consensusRank": 679
     },
     {
       "id": "taiyuan-university-of-technology-cn",
@@ -44206,7 +44268,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 679
+      "consensusRank": 680
     },
     {
       "id": "dalian-maritime-university-cn",
@@ -44258,7 +44320,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 680
+      "consensusRank": 681
     },
     {
       "id": "university-of-vigo-es",
@@ -44320,7 +44382,7 @@
           "country": "Spain"
         }
       ],
-      "consensusRank": 681
+      "consensusRank": 682
     },
     {
       "id": "university-of-massachusetts-boston-us",
@@ -44372,7 +44434,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 682
+      "consensusRank": 683
     },
     {
       "id": "national-sun-yat-sen-university-tw",
@@ -44434,7 +44496,7 @@
           "country": "Taiwan"
         }
       ],
-      "consensusRank": 683
+      "consensusRank": 684
     },
     {
       "id": "indian-institute-of-technology-kharagpur-in",
@@ -44486,7 +44548,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 684
+      "consensusRank": 685
     },
     {
       "id": "hebei-university-of-technology-cn",
@@ -44538,7 +44600,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 685
+      "consensusRank": 686
     },
     {
       "id": "chengdu-university-cn",
@@ -44600,7 +44662,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 686
+      "consensusRank": 687
     },
     {
       "id": "university-of-calabria-it",
@@ -44672,7 +44734,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 687
+      "consensusRank": 688
     },
     {
       "id": "university-of-stirling-gb",
@@ -44744,7 +44806,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 688
+      "consensusRank": 689
     },
     {
       "id": "yanshan-university-cn",
@@ -44806,7 +44868,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 689
+      "consensusRank": 690
     },
     {
       "id": "ulster-university-gb",
@@ -44858,7 +44920,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 690
+      "consensusRank": 691
     },
     {
       "id": "university-of-missouri-kansas-city-us",
@@ -44920,7 +44982,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 691
+      "consensusRank": 692
     },
     {
       "id": "university-of-north-texas-us",
@@ -44982,7 +45044,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 692
+      "consensusRank": 693
     },
     {
       "id": "johannes-kepler-university-linz-at",
@@ -45034,7 +45096,7 @@
           "country": "Austria"
         }
       ],
-      "consensusRank": 693
+      "consensusRank": 694
     },
     {
       "id": "university-of-nevada-las-vegas-us",
@@ -45106,7 +45168,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 694
+      "consensusRank": 695
     },
     {
       "id": "university-of-windsor-ca",
@@ -45168,7 +45230,7 @@
           "country": "Canada"
         }
       ],
-      "consensusRank": 695
+      "consensusRank": 696
     },
     {
       "id": "university-of-wyoming-us",
@@ -45240,7 +45302,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 696
+      "consensusRank": 697
     },
     {
       "id": "shandong-normal-university-cn",
@@ -45292,7 +45354,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 697
+      "consensusRank": 698
     },
     {
       "id": "okayama-university-jp",
@@ -45364,7 +45426,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 698
+      "consensusRank": 699
     },
     {
       "id": "university-of-maryland-baltimore-county-us",
@@ -45436,7 +45498,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 699
+      "consensusRank": 700
     },
     {
       "id": "addis-ababa-university-et",
@@ -45498,7 +45560,7 @@
           "country": "Ethiopia"
         }
       ],
-      "consensusRank": 700
+      "consensusRank": 701
     },
     {
       "id": "singapore-management-university-sg",
@@ -45550,7 +45612,7 @@
           "country": "Singapore"
         }
       ],
-      "consensusRank": 701
+      "consensusRank": 702
     },
     {
       "id": "bond-university-au",
@@ -45612,7 +45674,7 @@
           "country": "Australia"
         }
       ],
-      "consensusRank": 702
+      "consensusRank": 703
     },
     {
       "id": "university-of-nevada-reno-us",
@@ -45674,7 +45736,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 703
+      "consensusRank": 704
     },
     {
       "id": "university-of-cagliari-it",
@@ -45746,7 +45808,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 704
+      "consensusRank": 705
     },
     {
       "id": "hangzhou-dianzi-university-cn",
@@ -45798,7 +45860,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 705
+      "consensusRank": 706
     },
     {
       "id": "university-of-mons-be",
@@ -45860,7 +45922,7 @@
           "country": "Belgium"
         }
       ],
-      "consensusRank": 706
+      "consensusRank": 707
     },
     {
       "id": "edinburgh-napier-university-gb",
@@ -45912,7 +45974,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 707
+      "consensusRank": 708
     },
     {
       "id": "changsha-university-of-science-and-technology-cn",
@@ -45974,7 +46036,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 708
+      "consensusRank": 709
     },
     {
       "id": "anna-university-in",
@@ -46026,7 +46088,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 709
+      "consensusRank": 710
     },
     {
       "id": "national-taiwan-normal-university-tw",
@@ -46078,7 +46140,7 @@
           "country": "Taiwan"
         }
       ],
-      "consensusRank": 710
+      "consensusRank": 711
     },
     {
       "id": "zhejiang-gongshang-university-cn",
@@ -46130,7 +46192,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 711
+      "consensusRank": 712
     },
     {
       "id": "jiangsu-university-of-science-and-technology-cn",
@@ -46192,7 +46254,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 712
+      "consensusRank": 713
     },
     {
       "id": "ajou-university-kr",
@@ -46264,7 +46326,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 713
+      "consensusRank": 714
     },
     {
       "id": "de-montfort-university-gb",
@@ -46316,7 +46378,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 714
+      "consensusRank": 715
     },
     {
       "id": "san-diego-state-university-us",
@@ -46388,7 +46450,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 715
+      "consensusRank": 716
     },
     {
       "id": "makerere-university-ug",
@@ -46450,7 +46512,7 @@
           "country": "Uganda"
         }
       ],
-      "consensusRank": 716
+      "consensusRank": 717
     },
     {
       "id": "chiang-mai-university-th",
@@ -46522,7 +46584,7 @@
           "country": "Thailand"
         }
       ],
-      "consensusRank": 717
+      "consensusRank": 718
     },
     {
       "id": "assiut-university-eg",
@@ -46584,7 +46646,7 @@
           "country": "Egypt"
         }
       ],
-      "consensusRank": 718
+      "consensusRank": 719
     },
     {
       "id": "bielefeld-university-de",
@@ -46646,7 +46708,7 @@
           "country": "Germany"
         }
       ],
-      "consensusRank": 719
+      "consensusRank": 720
     },
     {
       "id": "banaras-hindu-university-in",
@@ -46718,7 +46780,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 720
+      "consensusRank": 721
     },
     {
       "id": "umm-al-qura-university-sa",
@@ -46790,7 +46852,7 @@
           "country": "Saudi Arabia"
         }
       ],
-      "consensusRank": 721
+      "consensusRank": 722
     },
     {
       "id": "gachon-university-kr",
@@ -46862,7 +46924,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 722
+      "consensusRank": 723
     },
     {
       "id": "charles-sturt-university-au",
@@ -46924,7 +46986,7 @@
           "country": "Australia"
         }
       ],
-      "consensusRank": 723
+      "consensusRank": 724
     },
     {
       "id": "nantong-university-cn",
@@ -46976,7 +47038,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 724
+      "consensusRank": 725
     },
     {
       "id": "university-of-lagos-ng",
@@ -47038,7 +47100,7 @@
           "country": "Nigeria"
         }
       ],
-      "consensusRank": 725
+      "consensusRank": 726
     },
     {
       "id": "beijing-technology-and-business-university-cn",
@@ -47090,7 +47152,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 726
+      "consensusRank": 727
     },
     {
       "id": "aligarh-muslim-university-in",
@@ -47152,7 +47214,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 727
+      "consensusRank": 728
     },
     {
       "id": "university-of-wuppertal-de",
@@ -47214,7 +47276,7 @@
           "country": "Germany"
         }
       ],
-      "consensusRank": 728
+      "consensusRank": 729
     },
     {
       "id": "coventry-university-gb",
@@ -47276,7 +47338,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 729
+      "consensusRank": 730
     },
     {
       "id": "dongguk-university-kr",
@@ -47338,7 +47400,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 730
+      "consensusRank": 731
     },
     {
       "id": "university-of-mannheim-de",
@@ -47400,7 +47462,7 @@
           "country": "Germany"
         }
       ],
-      "consensusRank": 731
+      "consensusRank": 732
     },
     {
       "id": "university-of-hohenheim-de",
@@ -47462,7 +47524,7 @@
           "country": "Germany"
         }
       ],
-      "consensusRank": 732
+      "consensusRank": 733
     },
     {
       "id": "university-of-hertfordshire-gb",
@@ -47534,7 +47596,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 733
+      "consensusRank": 734
     },
     {
       "id": "juntendo-university-jp",
@@ -47596,7 +47658,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 734
+      "consensusRank": 735
     },
     {
       "id": "university-of-alcala-es",
@@ -47648,7 +47710,7 @@
           "country": "Spain"
         }
       ],
-      "consensusRank": 735
+      "consensusRank": 736
     },
     {
       "id": "henan-normal-university-cn",
@@ -47700,7 +47762,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 736
+      "consensusRank": 737
     },
     {
       "id": "peter-the-great-st-petersburg-polytechnic-university-ru",
@@ -47762,7 +47824,7 @@
           "country": "Russia"
         }
       ],
-      "consensusRank": 737
+      "consensusRank": 738
     },
     {
       "id": "iran-university-of-medical-sciences-ir",
@@ -47824,7 +47886,7 @@
           "country": "Iran"
         }
       ],
-      "consensusRank": 738
+      "consensusRank": 739
     },
     {
       "id": "worcester-polytechnic-institute-us",
@@ -47876,7 +47938,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 739
+      "consensusRank": 740
     },
     {
       "id": "indian-institute-of-technology-kanpur-in",
@@ -47928,7 +47990,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 740
+      "consensusRank": 741
     },
     {
       "id": "national-taipei-university-of-technology-tw",
@@ -47980,7 +48042,7 @@
           "country": "Taiwan"
         }
       ],
-      "consensusRank": 741
+      "consensusRank": 742
     },
     {
       "id": "national-university-of-science-and-technology-misis-ru",
@@ -48032,7 +48094,7 @@
           "country": "Russia"
         }
       ],
-      "consensusRank": 742
+      "consensusRank": 743
     },
     {
       "id": "lehigh-university-us",
@@ -48104,7 +48166,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 743
+      "consensusRank": 744
     },
     {
       "id": "nanjing-university-of-chinese-medicine-cn",
@@ -48156,7 +48218,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 744
+      "consensusRank": 745
     },
     {
       "id": "utah-state-university-us",
@@ -48218,7 +48280,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 745
+      "consensusRank": 746
     },
     {
       "id": "university-of-salento-it",
@@ -48280,7 +48342,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 746
+      "consensusRank": 747
     },
     {
       "id": "aberystwyth-university-gb",
@@ -48342,7 +48404,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 747
+      "consensusRank": 748
     },
     {
       "id": "jawaharlal-nehru-university-in",
@@ -48404,7 +48466,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 748
+      "consensusRank": 749
     },
     {
       "id": "university-of-concepcion-cl",
@@ -48456,7 +48518,7 @@
           "country": "Chile"
         }
       ],
-      "consensusRank": 749
+      "consensusRank": 750
     },
     {
       "id": "wuhan-university-of-science-and-technology-cn",
@@ -48508,7 +48570,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 750
+      "consensusRank": 751
     },
     {
       "id": "norwegian-university-of-life-sciences-no",
@@ -48580,7 +48642,7 @@
           "country": "Norway"
         }
       ],
-      "consensusRank": 751
+      "consensusRank": 752
     },
     {
       "id": "university-of-alicante-es",
@@ -48652,7 +48714,7 @@
           "country": "Spain"
         }
       ],
-      "consensusRank": 752
+      "consensusRank": 753
     },
     {
       "id": "university-of-lincoln-gb",
@@ -48714,7 +48776,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 753
+      "consensusRank": 754
     },
     {
       "id": "orebro-university-se",
@@ -48776,7 +48838,7 @@
           "country": "Sweden"
         }
       ],
-      "consensusRank": 754
+      "consensusRank": 755
     },
     {
       "id": "southern-cross-university-au",
@@ -48838,7 +48900,7 @@
           "country": "Australia"
         }
       ],
-      "consensusRank": 755
+      "consensusRank": 756
     },
     {
       "id": "university-of-murcia-es",
@@ -48910,7 +48972,7 @@
           "country": "Spain"
         }
       ],
-      "consensusRank": 756
+      "consensusRank": 757
     },
     {
       "id": "chungnam-national-university-kr",
@@ -48982,7 +49044,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 757
+      "consensusRank": 758
     },
     {
       "id": "beijing-university-of-posts-and-telecommunications-cn",
@@ -49034,7 +49096,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 758
+      "consensusRank": 759
     },
     {
       "id": "yildiz-technical-university-tr",
@@ -49086,7 +49148,7 @@
           "country": "Türkiye"
         }
       ],
-      "consensusRank": 759
+      "consensusRank": 760
     },
     {
       "id": "ankara-university-tr",
@@ -49148,7 +49210,7 @@
           "country": "Türkiye"
         }
       ],
-      "consensusRank": 760
+      "consensusRank": 761
     },
     {
       "id": "novosibirsk-state-university-ru",
@@ -49220,7 +49282,7 @@
           "country": "Russia"
         }
       ],
-      "consensusRank": 761
+      "consensusRank": 762
     },
     {
       "id": "new-jersey-institute-of-technology-us",
@@ -49282,7 +49344,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 762
+      "consensusRank": 763
     },
     {
       "id": "shandong-agricultural-university-cn",
@@ -49334,7 +49396,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 763
+      "consensusRank": 764
     },
     {
       "id": "southern-methodist-university-us",
@@ -49396,7 +49458,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 764
+      "consensusRank": 765
     },
     {
       "id": "north-west-university-za",
@@ -49458,7 +49520,7 @@
           "country": "South Africa"
         }
       ],
-      "consensusRank": 765
+      "consensusRank": 766
     },
     {
       "id": "national-taiwan-university-of-science-and-technology-tw",
@@ -49510,7 +49572,7 @@
           "country": "Taiwan"
         }
       ],
-      "consensusRank": 766
+      "consensusRank": 767
     },
     {
       "id": "king-saud-bin-abdulaziz-university-for-health-sciences-sa",
@@ -49562,7 +49624,7 @@
           "country": "Saudi Arabia"
         }
       ],
-      "consensusRank": 767
+      "consensusRank": 768
     },
     {
       "id": "shantou-university-cn",
@@ -49624,7 +49686,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 768
+      "consensusRank": 769
     },
     {
       "id": "university-of-the-punjab-pk",
@@ -49686,7 +49748,7 @@
           "country": "Pakistan"
         }
       ],
-      "consensusRank": 769
+      "consensusRank": 770
     },
     {
       "id": "maynooth-university-ie",
@@ -49748,7 +49810,7 @@
           "country": "Ireland"
         }
       ],
-      "consensusRank": 770
+      "consensusRank": 771
     },
     {
       "id": "university-of-patras-gr",
@@ -49820,7 +49882,7 @@
           "country": "Greece"
         }
       ],
-      "consensusRank": 771
+      "consensusRank": 772
     },
     {
       "id": "king-faisal-university-sa",
@@ -49892,7 +49954,7 @@
           "country": "Saudi Arabia"
         }
       ],
-      "consensusRank": 772
+      "consensusRank": 773
     },
     {
       "id": "university-of-toledo-us",
@@ -49964,7 +50026,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 773
+      "consensusRank": 774
     },
     {
       "id": "university-of-the-balearic-islands-es",
@@ -50016,7 +50078,7 @@
           "country": "Spain"
         }
       ],
-      "consensusRank": 774
+      "consensusRank": 775
     },
     {
       "id": "university-of-pecs-hu",
@@ -50068,7 +50130,7 @@
           "country": "Hungary"
         }
       ],
-      "consensusRank": 775
+      "consensusRank": 776
     },
     {
       "id": "changzhou-university-cn",
@@ -50130,7 +50192,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 776
+      "consensusRank": 777
     },
     {
       "id": "national-central-university-tw",
@@ -50202,7 +50264,7 @@
           "country": "Taiwan"
         }
       ],
-      "consensusRank": 777
+      "consensusRank": 778
     },
     {
       "id": "fujian-normal-university-cn",
@@ -50264,7 +50326,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 778
+      "consensusRank": 779
     },
     {
       "id": "shiraz-university-ir",
@@ -50326,7 +50388,7 @@
           "country": "Iran"
         }
       ],
-      "consensusRank": 779
+      "consensusRank": 780
     },
     {
       "id": "university-of-denver-us",
@@ -50388,7 +50450,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 780
+      "consensusRank": 781
     },
     {
       "id": "sichuan-agricultural-university-cn",
@@ -50440,7 +50502,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 781
+      "consensusRank": 782
     },
     {
       "id": "central-queensland-university-au",
@@ -50492,7 +50554,7 @@
           "country": "Australia"
         }
       ],
-      "consensusRank": 782
+      "consensusRank": 783
     },
     {
       "id": "university-of-new-hampshire-us",
@@ -50554,7 +50616,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 783
+      "consensusRank": 784
     },
     {
       "id": "hubei-university-cn",
@@ -50606,7 +50668,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 784
+      "consensusRank": 785
     },
     {
       "id": "roskilde-university-dk",
@@ -50658,7 +50720,7 @@
           "country": "Denmark"
         }
       ],
-      "consensusRank": 785
+      "consensusRank": 786
     },
     {
       "id": "tanta-university-eg",
@@ -50720,7 +50782,7 @@
           "country": "Egypt"
         }
       ],
-      "consensusRank": 786
+      "consensusRank": 787
     },
     {
       "id": "taibah-university-sa",
@@ -50772,7 +50834,7 @@
           "country": "Saudi Arabia"
         }
       ],
-      "consensusRank": 787
+      "consensusRank": 788
     },
     {
       "id": "augusta-university-us",
@@ -50824,7 +50886,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 788
+      "consensusRank": 789
     },
     {
       "id": "qilu-university-of-technology-cn",
@@ -50876,7 +50938,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 789
+      "consensusRank": 790
     },
     {
       "id": "anglia-ruskin-university-gb",
@@ -50928,7 +50990,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 790
+      "consensusRank": 791
     },
     {
       "id": "indian-institute-of-technology-roorkee-in",
@@ -50980,7 +51042,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 791
+      "consensusRank": 792
     },
     {
       "id": "zagazig-university-eg",
@@ -51052,7 +51114,7 @@
           "country": "Egypt"
         }
       ],
-      "consensusRank": 792
+      "consensusRank": 793
     },
     {
       "id": "university-of-seoul-kr",
@@ -51114,7 +51176,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 793
+      "consensusRank": 794
     },
     {
       "id": "manipal-academy-of-higher-education-in",
@@ -51166,7 +51228,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 794
+      "consensusRank": 795
     },
     {
       "id": "university-of-maine-us",
@@ -51218,7 +51280,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 795
+      "consensusRank": 796
     },
     {
       "id": "university-of-rhode-island-us",
@@ -51290,7 +51352,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 796
+      "consensusRank": 797
     },
     {
       "id": "cranfield-university-gb",
@@ -51342,7 +51404,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 797
+      "consensusRank": 798
     },
     {
       "id": "university-of-brasilia-br",
@@ -51404,7 +51466,7 @@
           "country": "Brazil"
         }
       ],
-      "consensusRank": 798
+      "consensusRank": 799
     },
     {
       "id": "university-of-hyderabad-in",
@@ -51456,7 +51518,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 799
+      "consensusRank": 800
     },
     {
       "id": "babes-bolyai-university-ro",
@@ -51518,7 +51580,7 @@
           "country": "Romania"
         }
       ],
-      "consensusRank": 800
+      "consensusRank": 801
     },
     {
       "id": "lulea-university-of-technology-se",
@@ -51570,7 +51632,7 @@
           "country": "Sweden"
         }
       ],
-      "consensusRank": 801
+      "consensusRank": 802
     },
     {
       "id": "roma-tre-university-it",
@@ -51622,7 +51684,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 802
+      "consensusRank": 803
     },
     {
       "id": "university-of-greenwich-gb",
@@ -51694,7 +51756,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 803
+      "consensusRank": 804
     },
     {
       "id": "university-of-ioannina-gr",
@@ -51756,7 +51818,7 @@
           "country": "Greece"
         }
       ],
-      "consensusRank": 804
+      "consensusRank": 805
     },
     {
       "id": "university-of-wisconsin-milwaukee-us",
@@ -51818,7 +51880,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 805
+      "consensusRank": 806
     },
     {
       "id": "babol-noshirvani-university-of-technology-ir",
@@ -51870,7 +51932,7 @@
           "country": "Iran"
         }
       ],
-      "consensusRank": 806
+      "consensusRank": 807
     },
     {
       "id": "wuhan-institute-of-technology-cn",
@@ -51922,7 +51984,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 807
+      "consensusRank": 808
     },
     {
       "id": "northern-illinois-university-us",
@@ -51974,7 +52036,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 808
+      "consensusRank": 809
     },
     {
       "id": "xiangtan-university-cn",
@@ -52036,7 +52098,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 809
+      "consensusRank": 810
     },
     {
       "id": "university-of-indonesia-id",
@@ -52088,7 +52150,7 @@
           "country": "Indonesia"
         }
       ],
-      "consensusRank": 810
+      "consensusRank": 811
     },
     {
       "id": "belarusian-state-university-by",
@@ -52140,7 +52202,7 @@
           "country": "Belarus"
         }
       ],
-      "consensusRank": 811
+      "consensusRank": 812
     },
     {
       "id": "gdansk-university-of-technology-pl",
@@ -52202,7 +52264,7 @@
           "country": "Poland"
         }
       ],
-      "consensusRank": 812
+      "consensusRank": 813
     },
     {
       "id": "zhejiang-sci-tech-university-cn",
@@ -52264,7 +52326,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 813
+      "consensusRank": 814
     },
     {
       "id": "birla-institute-of-technology-and-science-pilani-in",
@@ -52316,7 +52378,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 814
+      "consensusRank": 815
     },
     {
       "id": "catholic-university-of-korea-kr",
@@ -52368,7 +52430,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 815
+      "consensusRank": 816
     },
     {
       "id": "university-of-peshawar-pk",
@@ -52420,7 +52482,7 @@
           "country": "Pakistan"
         }
       ],
-      "consensusRank": 816
+      "consensusRank": 817
     },
     {
       "id": "niigata-university-jp",
@@ -52482,7 +52544,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 817
+      "consensusRank": 818
     },
     {
       "id": "federal-university-of-parana-br",
@@ -52534,7 +52596,7 @@
           "country": "Brazil"
         }
       ],
-      "consensusRank": 818
+      "consensusRank": 819
     },
     {
       "id": "kindai-university-jp",
@@ -52586,7 +52648,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 819
+      "consensusRank": 820
     },
     {
       "id": "university-of-thessaly-gr",
@@ -52648,7 +52710,7 @@
           "country": "Greece"
         }
       ],
-      "consensusRank": 820
+      "consensusRank": 821
     },
     {
       "id": "hebei-university-cn",
@@ -52700,7 +52762,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 821
+      "consensusRank": 822
     },
     {
       "id": "ural-federal-university-ru",
@@ -52762,7 +52824,7 @@
           "country": "Russia"
         }
       ],
-      "consensusRank": 822
+      "consensusRank": 823
     },
     {
       "id": "university-of-south-africa-za",
@@ -52824,7 +52886,7 @@
           "country": "South Africa"
         }
       ],
-      "consensusRank": 823
+      "consensusRank": 824
     },
     {
       "id": "xian-university-of-technology-cn",
@@ -52876,7 +52938,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 824
+      "consensusRank": 825
     },
     {
       "id": "university-of-latvia-lv",
@@ -52928,7 +52990,7 @@
           "country": "Latvia"
         }
       ],
-      "consensusRank": 825
+      "consensusRank": 826
     },
     {
       "id": "tianjin-university-of-technology-cn",
@@ -52980,7 +53042,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 826
+      "consensusRank": 827
     },
     {
       "id": "ferdowsi-university-of-mashhad-ir",
@@ -53032,7 +53094,7 @@
           "country": "Iran"
         }
       ],
-      "consensusRank": 827
+      "consensusRank": 828
     },
     {
       "id": "university-of-castilla-la-mancha-es",
@@ -53094,7 +53156,7 @@
           "country": "Spain"
         }
       ],
-      "consensusRank": 828
+      "consensusRank": 829
     },
     {
       "id": "yokohama-city-university-jp",
@@ -53166,7 +53228,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 829
+      "consensusRank": 830
     },
     {
       "id": "national-polytechnic-institute-mx",
@@ -53218,7 +53280,7 @@
           "country": "Mexico"
         }
       ],
-      "consensusRank": 830
+      "consensusRank": 831
     },
     {
       "id": "university-of-maribor-si",
@@ -53270,7 +53332,7 @@
           "country": "Slovenia"
         }
       ],
-      "consensusRank": 831
+      "consensusRank": 832
     },
     {
       "id": "srm-institute-of-science-and-technology-in",
@@ -53342,7 +53404,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 832
+      "consensusRank": 833
     },
     {
       "id": "university-of-alaska-fairbanks-us",
@@ -53414,7 +53476,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 833
+      "consensusRank": 834
     },
     {
       "id": "university-of-poitiers-fr",
@@ -53466,7 +53528,7 @@
           "country": "France"
         }
       ],
-      "consensusRank": 834
+      "consensusRank": 835
     },
     {
       "id": "university-of-malta-mt",
@@ -53528,7 +53590,7 @@
           "country": "Malta"
         }
       ],
-      "consensusRank": 835
+      "consensusRank": 836
     },
     {
       "id": "istanbul-university-cerrahpasa-tr",
@@ -53580,7 +53642,7 @@
           "country": "Türkiye"
         }
       ],
-      "consensusRank": 836
+      "consensusRank": 837
     },
     {
       "id": "suez-canal-university-eg",
@@ -53632,7 +53694,7 @@
           "country": "Egypt"
         }
       ],
-      "consensusRank": 837
+      "consensusRank": 838
     },
     {
       "id": "jadavpur-university-in",
@@ -53694,7 +53756,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 838
+      "consensusRank": 839
     },
     {
       "id": "nagasaki-university-jp",
@@ -53756,7 +53818,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 839
+      "consensusRank": 840
     },
     {
       "id": "warsaw-university-of-technology-pl",
@@ -53828,7 +53890,7 @@
           "country": "Poland"
         }
       ],
-      "consensusRank": 840
+      "consensusRank": 841
     },
     {
       "id": "alborz-university-of-medical-sciences-ir",
@@ -53880,7 +53942,7 @@
           "country": "Iran"
         }
       ],
-      "consensusRank": 841
+      "consensusRank": 842
     },
     {
       "id": "brno-university-of-technology-cz",
@@ -53942,7 +54004,7 @@
           "country": "Czechia"
         }
       ],
-      "consensusRank": 842
+      "consensusRank": 843
     },
     {
       "id": "cyprus-university-of-technology-cy",
@@ -54004,7 +54066,7 @@
           "country": "Cyprus"
         }
       ],
-      "consensusRank": 843
+      "consensusRank": 844
     },
     {
       "id": "old-dominion-university-us",
@@ -54066,7 +54128,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 844
+      "consensusRank": 845
     },
     {
       "id": "tokyo-university-of-science-jp",
@@ -54128,7 +54190,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 845
+      "consensusRank": 846
     },
     {
       "id": "benha-university-eg",
@@ -54180,7 +54242,7 @@
           "country": "Egypt"
         }
       ],
-      "consensusRank": 846
+      "consensusRank": 847
     },
     {
       "id": "florida-atlantic-university-us",
@@ -54232,7 +54294,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 847
+      "consensusRank": 848
     },
     {
       "id": "university-of-neuchatel-ch",
@@ -54284,7 +54346,7 @@
           "country": "Switzerland"
         }
       ],
-      "consensusRank": 848
+      "consensusRank": 849
     },
     {
       "id": "vietnam-national-university-hanoi-vn",
@@ -54336,7 +54398,7 @@
           "country": "Vietnam"
         }
       ],
-      "consensusRank": 849
+      "consensusRank": 850
     },
     {
       "id": "jazan-university-sa",
@@ -54398,7 +54460,7 @@
           "country": "Saudi Arabia"
         }
       ],
-      "consensusRank": 850
+      "consensusRank": 851
     },
     {
       "id": "sheffield-hallam-university-gb",
@@ -54450,7 +54512,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 851
+      "consensusRank": 852
     },
     {
       "id": "minia-university-eg",
@@ -54502,7 +54564,7 @@
           "country": "Egypt"
         }
       ],
-      "consensusRank": 852
+      "consensusRank": 853
     },
     {
       "id": "thammasat-university-th",
@@ -54554,7 +54616,7 @@
           "country": "Thailand"
         }
       ],
-      "consensusRank": 853
+      "consensusRank": 854
     },
     {
       "id": "university-of-lahore-pk",
@@ -54626,7 +54688,7 @@
           "country": "Pakistan"
         }
       ],
-      "consensusRank": 854
+      "consensusRank": 855
     },
     {
       "id": "free-university-of-bozen-bolzano-it",
@@ -54698,7 +54760,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 855
+      "consensusRank": 856
     },
     {
       "id": "university-of-memphis-us",
@@ -54750,7 +54812,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 856
+      "consensusRank": 857
     },
     {
       "id": "university-of-split-hr",
@@ -54812,7 +54874,7 @@
           "country": "Croatia"
         }
       ],
-      "consensusRank": 857
+      "consensusRank": 858
     },
     {
       "id": "bahauddin-zakariya-university-pk",
@@ -54874,7 +54936,7 @@
           "country": "Pakistan"
         }
       ],
-      "consensusRank": 858
+      "consensusRank": 859
     },
     {
       "id": "kaohsiung-medical-university-tw",
@@ -54946,7 +55008,7 @@
           "country": "Taiwan"
         }
       ],
-      "consensusRank": 859
+      "consensusRank": 860
     },
     {
       "id": "copenhagen-business-school-dk",
@@ -54998,7 +55060,7 @@
           "country": "Denmark"
         }
       ],
-      "consensusRank": 860
+      "consensusRank": 861
     },
     {
       "id": "middlesex-university-gb",
@@ -55060,7 +55122,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 861
+      "consensusRank": 862
     },
     {
       "id": "beni-suef-university-eg",
@@ -55122,7 +55184,7 @@
           "country": "Egypt"
         }
       ],
-      "consensusRank": 862
+      "consensusRank": 863
     },
     {
       "id": "tokyo-metropolitan-university-jp",
@@ -55184,7 +55246,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 863
+      "consensusRank": 864
     },
     {
       "id": "national-chung-hsing-university-tw",
@@ -55256,7 +55318,7 @@
           "country": "Taiwan"
         }
       ],
-      "consensusRank": 864
+      "consensusRank": 865
     },
     {
       "id": "southwest-university-of-science-and-technology-cn",
@@ -55308,7 +55370,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 865
+      "consensusRank": 866
     },
     {
       "id": "kasetsart-university-th",
@@ -55360,7 +55422,7 @@
           "country": "Thailand"
         }
       ],
-      "consensusRank": 866
+      "consensusRank": 867
     },
     {
       "id": "king-mongkuts-university-of-technology-thonburi-th",
@@ -55412,7 +55474,7 @@
           "country": "Thailand"
         }
       ],
-      "consensusRank": 867
+      "consensusRank": 868
     },
     {
       "id": "kanazawa-university-jp",
@@ -55484,7 +55546,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 868
+      "consensusRank": 869
     },
     {
       "id": "chungbuk-national-university-kr",
@@ -55556,7 +55618,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 869
+      "consensusRank": 870
     },
     {
       "id": "kent-state-university-us",
@@ -55618,7 +55680,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 870
+      "consensusRank": 871
     },
     {
       "id": "shanghai-normal-university-cn",
@@ -55690,7 +55752,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 871
+      "consensusRank": 872
     },
     {
       "id": "university-of-the-sunshine-coast-au",
@@ -55762,7 +55824,7 @@
           "country": "Australia"
         }
       ],
-      "consensusRank": 872
+      "consensusRank": 873
     },
     {
       "id": "budapest-university-of-technology-and-economics-hu",
@@ -55824,7 +55886,7 @@
           "country": "Hungary"
         }
       ],
-      "consensusRank": 873
+      "consensusRank": 874
     },
     {
       "id": "an-najah-national-university-ps",
@@ -55886,7 +55948,7 @@
           "country": "Palestine"
         }
       ],
-      "consensusRank": 874
+      "consensusRank": 875
     },
     {
       "id": "national-institute-of-technology-tiruchirappalli-in",
@@ -55938,7 +56000,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 875
+      "consensusRank": 876
     },
     {
       "id": "university-of-salford-gb",
@@ -55990,7 +56052,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 876
+      "consensusRank": 877
     },
     {
       "id": "university-of-girona-es",
@@ -56042,7 +56104,7 @@
           "country": "Spain"
         }
       ],
-      "consensusRank": 877
+      "consensusRank": 878
     },
     {
       "id": "silesian-university-of-technology-pl",
@@ -56104,7 +56166,7 @@
           "country": "Poland"
         }
       ],
-      "consensusRank": 878
+      "consensusRank": 879
     },
     {
       "id": "kumamoto-university-jp",
@@ -56176,7 +56238,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 879
+      "consensusRank": 880
     },
     {
       "id": "ritsumeikan-university-jp",
@@ -56228,7 +56290,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 880
+      "consensusRank": 881
     },
     {
       "id": "university-of-tabuk-sa",
@@ -56290,7 +56352,7 @@
           "country": "Saudi Arabia"
         }
       ],
-      "consensusRank": 881
+      "consensusRank": 882
     },
     {
       "id": "university-of-foggia-it",
@@ -56342,7 +56404,7 @@
           "country": "Italy"
         }
       ],
-      "consensusRank": 882
+      "consensusRank": 883
     },
     {
       "id": "university-of-malaga-es",
@@ -56394,7 +56456,7 @@
           "country": "Spain"
         }
       ],
-      "consensusRank": 883
+      "consensusRank": 884
     },
     {
       "id": "ohio-university-us",
@@ -56456,7 +56518,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 884
+      "consensusRank": 885
     },
     {
       "id": "university-of-international-business-and-economics-cn",
@@ -56518,7 +56580,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 885
+      "consensusRank": 886
     },
     {
       "id": "university-of-the-free-state-za",
@@ -56580,7 +56642,7 @@
           "country": "South Africa"
         }
       ],
-      "consensusRank": 886
+      "consensusRank": 887
     },
     {
       "id": "yuan-ze-university-tw",
@@ -56632,7 +56694,7 @@
           "country": "Taiwan"
         }
       ],
-      "consensusRank": 887
+      "consensusRank": 888
     },
     {
       "id": "howard-university-us",
@@ -56684,7 +56746,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 888
+      "consensusRank": 889
     },
     {
       "id": "fayoum-university-eg",
@@ -56736,7 +56798,7 @@
           "country": "Egypt"
         }
       ],
-      "consensusRank": 889
+      "consensusRank": 890
     },
     {
       "id": "university-of-gdansk-pl",
@@ -56788,7 +56850,7 @@
           "country": "Poland"
         }
       ],
-      "consensusRank": 890
+      "consensusRank": 891
     },
     {
       "id": "qassim-university-sa",
@@ -56860,7 +56922,7 @@
           "country": "Saudi Arabia"
         }
       ],
-      "consensusRank": 891
+      "consensusRank": 892
     },
     {
       "id": "kuwait-university-kw",
@@ -56922,7 +56984,7 @@
           "country": "Kuwait"
         }
       ],
-      "consensusRank": 892
+      "consensusRank": 893
     },
     {
       "id": "ahmadu-bello-university-ng",
@@ -56974,7 +57036,7 @@
           "country": "Nigeria"
         }
       ],
-      "consensusRank": 893
+      "consensusRank": 894
     },
     {
       "id": "brigham-young-university-us",
@@ -57026,7 +57088,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 894
+      "consensusRank": 895
     },
     {
       "id": "university-of-ghana-gh",
@@ -57098,7 +57160,7 @@
           "country": "Ghana"
         }
       ],
-      "consensusRank": 895
+      "consensusRank": 896
     },
     {
       "id": "new-mexico-state-university-us",
@@ -57150,7 +57212,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 896
+      "consensusRank": 897
     },
     {
       "id": "university-of-hail-sa",
@@ -57202,7 +57264,7 @@
           "country": "Saudi Arabia"
         }
       ],
-      "consensusRank": 897
+      "consensusRank": 898
     },
     {
       "id": "czech-university-of-life-sciences-prague-cz",
@@ -57254,7 +57316,7 @@
           "country": "Czechia"
         }
       ],
-      "consensusRank": 898
+      "consensusRank": 899
     },
     {
       "id": "open-university-gb",
@@ -57306,7 +57368,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 899
+      "consensusRank": 900
     },
     {
       "id": "southwest-petroleum-university-cn",
@@ -57368,7 +57430,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 900
+      "consensusRank": 901
     },
     {
       "id": "guangxi-normal-university-cn",
@@ -57420,7 +57482,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 901
+      "consensusRank": 902
     },
     {
       "id": "loyola-university-chicago-us",
@@ -57482,7 +57544,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 902
+      "consensusRank": 903
     },
     {
       "id": "shinshu-university-jp",
@@ -57554,7 +57616,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 903
+      "consensusRank": 904
     },
     {
       "id": "hunan-agricultural-university-cn",
@@ -57606,7 +57668,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 904
+      "consensusRank": 905
     },
     {
       "id": "kangwon-national-university-kr",
@@ -57678,7 +57740,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 905
+      "consensusRank": 906
     },
     {
       "id": "k-n-toosi-university-of-technology-ir",
@@ -57730,7 +57792,7 @@
           "country": "Iran"
         }
       ],
-      "consensusRank": 906
+      "consensusRank": 907
     },
     {
       "id": "riga-technical-university-lv",
@@ -57782,7 +57844,7 @@
           "country": "Latvia"
         }
       ],
-      "consensusRank": 907
+      "consensusRank": 908
     },
     {
       "id": "university-of-colombo-lk",
@@ -57844,7 +57906,7 @@
           "country": "Sri Lanka"
         }
       ],
-      "consensusRank": 908
+      "consensusRank": 909
     },
     {
       "id": "portland-state-university-us",
@@ -57906,7 +57968,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 909
+      "consensusRank": 910
     },
     {
       "id": "abo-akademi-university-fi",
@@ -57958,7 +58020,7 @@
           "country": "Finland"
         }
       ],
-      "consensusRank": 910
+      "consensusRank": 911
     },
     {
       "id": "federal-university-of-sao-carlos-br",
@@ -58020,7 +58082,7 @@
           "country": "Brazil"
         }
       ],
-      "consensusRank": 911
+      "consensusRank": 912
     },
     {
       "id": "university-of-peradeniya-lk",
@@ -58082,7 +58144,7 @@
           "country": "Sri Lanka"
         }
       ],
-      "consensusRank": 912
+      "consensusRank": 913
     },
     {
       "id": "university-of-texas-rio-grande-valley-us",
@@ -58134,7 +58196,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 913
+      "consensusRank": 914
     },
     {
       "id": "gazi-university-tr",
@@ -58186,7 +58248,7 @@
           "country": "Türkiye"
         }
       ],
-      "consensusRank": 914
+      "consensusRank": 915
     },
     {
       "id": "heilongjiang-university-cn",
@@ -58238,7 +58300,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 915
+      "consensusRank": 916
     },
     {
       "id": "university-of-new-brunswick-ca",
@@ -58300,7 +58362,7 @@
           "country": "Canada"
         }
       ],
-      "consensusRank": 916
+      "consensusRank": 917
     },
     {
       "id": "savitribai-phule-pune-university-in",
@@ -58352,7 +58414,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 917
+      "consensusRank": 918
     },
     {
       "id": "nicolaus-copernicus-university-pl",
@@ -58404,7 +58466,7 @@
           "country": "Poland"
         }
       ],
-      "consensusRank": 918
+      "consensusRank": 919
     },
     {
       "id": "khon-kaen-university-th",
@@ -58466,7 +58528,7 @@
           "country": "Thailand"
         }
       ],
-      "consensusRank": 919
+      "consensusRank": 920
     },
     {
       "id": "zhejiang-chinese-medical-university-cn",
@@ -58518,7 +58580,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 920
+      "consensusRank": 921
     },
     {
       "id": "university-of-westminster-gb",
@@ -58570,7 +58632,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 921
+      "consensusRank": 922
     },
     {
       "id": "university-of-namur-be",
@@ -58632,7 +58694,7 @@
           "country": "Belgium"
         }
       ],
-      "consensusRank": 922
+      "consensusRank": 923
     },
     {
       "id": "bharathiar-university-in",
@@ -58694,7 +58756,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 923
+      "consensusRank": 924
     },
     {
       "id": "hamburg-university-of-technology-de",
@@ -58746,7 +58808,7 @@
           "country": "Germany"
         }
       ],
-      "consensusRank": 924
+      "consensusRank": 925
     },
     {
       "id": "shaanxi-university-of-science-and-technology-cn",
@@ -58798,7 +58860,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 925
+      "consensusRank": 926
     },
     {
       "id": "university-of-regina-ca",
@@ -58870,7 +58932,7 @@
           "country": "Canada"
         }
       ],
-      "consensusRank": 926
+      "consensusRank": 927
     },
     {
       "id": "gifu-university-jp",
@@ -58922,7 +58984,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 927
+      "consensusRank": 928
     },
     {
       "id": "huaqiao-university-cn",
@@ -58984,7 +59046,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 928
+      "consensusRank": 929
     },
     {
       "id": "indian-institute-of-science-education-and-research-pune-in",
@@ -59036,7 +59098,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 929
+      "consensusRank": 930
     },
     {
       "id": "xian-jiaotong-liverpool-university-cn",
@@ -59098,7 +59160,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 930
+      "consensusRank": 931
     },
     {
       "id": "national-university-of-colombia-co",
@@ -59150,7 +59212,7 @@
           "country": "Colombia"
         }
       ],
-      "consensusRank": 931
+      "consensusRank": 932
     },
     {
       "id": "xian-university-of-architecture-and-technology-cn",
@@ -59202,7 +59264,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 932
+      "consensusRank": 933
     },
     {
       "id": "national-chengchi-university-tw",
@@ -59254,7 +59316,7 @@
           "country": "Taiwan"
         }
       ],
-      "consensusRank": 933
+      "consensusRank": 934
     },
     {
       "id": "university-of-notre-dame-australia-au",
@@ -59306,7 +59368,7 @@
           "country": "Australia"
         }
       ],
-      "consensusRank": 934
+      "consensusRank": 935
     },
     {
       "id": "federal-university-of-vicosa-br",
@@ -59358,7 +59420,7 @@
           "country": "Brazil"
         }
       ],
-      "consensusRank": 935
+      "consensusRank": 936
     },
     {
       "id": "university-of-lodz-pl",
@@ -59410,7 +59472,7 @@
           "country": "Poland"
         }
       ],
-      "consensusRank": 936
+      "consensusRank": 937
     },
     {
       "id": "leeds-beckett-university-gb",
@@ -59462,7 +59524,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 937
+      "consensusRank": 938
     },
     {
       "id": "jaume-i-university-es",
@@ -59514,7 +59576,7 @@
           "country": "Spain"
         }
       ],
-      "consensusRank": 938
+      "consensusRank": 939
     },
     {
       "id": "fujita-health-university-jp",
@@ -59566,7 +59628,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 939
+      "consensusRank": 940
     },
     {
       "id": "liaocheng-university-cn",
@@ -59618,7 +59680,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 940
+      "consensusRank": 941
     },
     {
       "id": "michigan-technological-university-us",
@@ -59680,7 +59742,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 941
+      "consensusRank": 942
     },
     {
       "id": "tokyo-medical-university-jp",
@@ -59732,7 +59794,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 942
+      "consensusRank": 943
     },
     {
       "id": "ege-university-tr",
@@ -59804,7 +59866,7 @@
           "country": "Türkiye"
         }
       ],
-      "consensusRank": 943
+      "consensusRank": 944
     },
     {
       "id": "gyeongsang-national-university-kr",
@@ -59876,7 +59938,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 944
+      "consensusRank": 945
     },
     {
       "id": "florida-institute-of-technology-us",
@@ -59928,7 +59990,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 945
+      "consensusRank": 946
     },
     {
       "id": "islamia-university-of-bahawalpur-pk",
@@ -59990,7 +60052,7 @@
           "country": "Pakistan"
         }
       ],
-      "consensusRank": 946
+      "consensusRank": 947
     },
     {
       "id": "university-of-the-aegean-gr",
@@ -60042,7 +60104,7 @@
           "country": "Greece"
         }
       ],
-      "consensusRank": 947
+      "consensusRank": 948
     },
     {
       "id": "shanxi-medical-university-cn",
@@ -60094,7 +60156,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 948
+      "consensusRank": 949
     },
     {
       "id": "tokyo-university-of-agriculture-and-technology-jp",
@@ -60156,7 +60218,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 949
+      "consensusRank": 950
     },
     {
       "id": "henan-polytechnic-university-cn",
@@ -60208,7 +60270,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 950
+      "consensusRank": 951
     },
     {
       "id": "university-of-picardie-jules-verne-fr",
@@ -60260,7 +60322,7 @@
           "country": "France"
         }
       ],
-      "consensusRank": 951
+      "consensusRank": 952
     },
     {
       "id": "university-of-nairobi-ke",
@@ -60322,7 +60384,7 @@
           "country": "Kenya"
         }
       ],
-      "consensusRank": 952
+      "consensusRank": 953
     },
     {
       "id": "kitasato-university-jp",
@@ -60374,7 +60436,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 953
+      "consensusRank": 954
     },
     {
       "id": "university-of-calcutta-in",
@@ -60426,7 +60488,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 954
+      "consensusRank": 955
     },
     {
       "id": "kaunas-university-of-technology-lt",
@@ -60478,7 +60540,7 @@
           "country": "Lithuania"
         }
       ],
-      "consensusRank": 955
+      "consensusRank": 956
     },
     {
       "id": "tokai-university-jp",
@@ -60540,7 +60602,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 956
+      "consensusRank": 957
     },
     {
       "id": "nova-southeastern-university-us",
@@ -60592,7 +60654,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 957
+      "consensusRank": 958
     },
     {
       "id": "federal-university-of-pernambuco-br",
@@ -60644,7 +60706,7 @@
           "country": "Brazil"
         }
       ],
-      "consensusRank": 958
+      "consensusRank": 959
     },
     {
       "id": "university-of-chemistry-and-technology-prague-cz",
@@ -60706,7 +60768,7 @@
           "country": "Czechia"
         }
       ],
-      "consensusRank": 959
+      "consensusRank": 960
     },
     {
       "id": "yokohama-national-university-jp",
@@ -60758,7 +60820,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 960
+      "consensusRank": 961
     },
     {
       "id": "university-of-idaho-us",
@@ -60810,7 +60872,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 961
+      "consensusRank": 962
     },
     {
       "id": "university-of-reims-champagne-ardenne-fr",
@@ -60862,7 +60924,7 @@
           "country": "France"
         }
       ],
-      "consensusRank": 962
+      "consensusRank": 963
     },
     {
       "id": "university-of-south-china-cn",
@@ -60914,7 +60976,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 963
+      "consensusRank": 964
     },
     {
       "id": "ozyegin-university-tr",
@@ -60966,7 +61028,7 @@
           "country": "Türkiye"
         }
       ],
-      "consensusRank": 964
+      "consensusRank": 965
     },
     {
       "id": "skolkovo-institute-of-science-and-technology-ru",
@@ -61018,7 +61080,7 @@
           "country": "Russia"
         }
       ],
-      "consensusRank": 965
+      "consensusRank": 966
     },
     {
       "id": "university-of-augsburg-de",
@@ -61070,7 +61132,7 @@
           "country": "Germany"
         }
       ],
-      "consensusRank": 966
+      "consensusRank": 967
     },
     {
       "id": "university-of-isfahan-ir",
@@ -61122,7 +61184,7 @@
           "country": "Iran"
         }
       ],
-      "consensusRank": 967
+      "consensusRank": 968
     },
     {
       "id": "tribhuvan-university-np",
@@ -61174,7 +61236,7 @@
           "country": "Nepal"
         }
       ],
-      "consensusRank": 968
+      "consensusRank": 969
     },
     {
       "id": "soonchunhyang-university-kr",
@@ -61226,7 +61288,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 969
+      "consensusRank": 970
     },
     {
       "id": "ataturk-university-tr",
@@ -61298,7 +61360,7 @@
           "country": "Türkiye"
         }
       ],
-      "consensusRank": 970
+      "consensusRank": 971
     },
     {
       "id": "university-of-beira-interior-pt",
@@ -61370,7 +61432,7 @@
           "country": "Portugal"
         }
       ],
-      "consensusRank": 971
+      "consensusRank": 972
     },
     {
       "id": "kwame-nkrumah-university-of-science-and-technology-gh",
@@ -61422,7 +61484,7 @@
           "country": "Ghana"
         }
       ],
-      "consensusRank": 972
+      "consensusRank": 973
     },
     {
       "id": "university-of-novi-sad-rs",
@@ -61484,7 +61546,7 @@
           "country": "Serbia"
         }
       ],
-      "consensusRank": 973
+      "consensusRank": 974
     },
     {
       "id": "marmara-university-tr",
@@ -61556,7 +61618,7 @@
           "country": "Türkiye"
         }
       ],
-      "consensusRank": 974
+      "consensusRank": 975
     },
     {
       "id": "university-of-antioquia-co",
@@ -61608,7 +61670,7 @@
           "country": "Colombia"
         }
       ],
-      "consensusRank": 975
+      "consensusRank": 976
     },
     {
       "id": "lebanese-university-lb",
@@ -61660,7 +61722,7 @@
           "country": "Lebanon"
         }
       ],
-      "consensusRank": 976
+      "consensusRank": 977
     },
     {
       "id": "shanghai-university-of-traditional-chinese-medicine-cn",
@@ -61712,7 +61774,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 977
+      "consensusRank": 978
     },
     {
       "id": "erciyes-university-tr",
@@ -61774,7 +61836,7 @@
           "country": "Türkiye"
         }
       ],
-      "consensusRank": 978
+      "consensusRank": 979
     },
     {
       "id": "glasgow-caledonian-university-gb",
@@ -61836,7 +61898,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 979
+      "consensusRank": 980
     },
     {
       "id": "transilvania-university-of-brasov-ro",
@@ -61888,7 +61950,7 @@
           "country": "Romania"
         }
       ],
-      "consensusRank": 980
+      "consensusRank": 981
     },
     {
       "id": "cukurova-university-tr",
@@ -61940,7 +62002,7 @@
           "country": "Türkiye"
         }
       ],
-      "consensusRank": 981
+      "consensusRank": 982
     },
     {
       "id": "indian-institute-of-technology-gandhinagar-in",
@@ -61992,7 +62054,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 982
+      "consensusRank": 983
     },
     {
       "id": "indian-institute-of-technology-indian-school-of-mines-dhanbad-in",
@@ -62044,7 +62106,7 @@
           "country": "India"
         }
       ],
-      "consensusRank": 983
+      "consensusRank": 984
     },
     {
       "id": "selcuk-university-tr",
@@ -62096,7 +62158,7 @@
           "country": "Türkiye"
         }
       ],
-      "consensusRank": 984
+      "consensusRank": 985
     },
     {
       "id": "jiangsu-normal-university-cn",
@@ -62148,7 +62210,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 985
+      "consensusRank": 986
     },
     {
       "id": "dankook-university-kr",
@@ -62200,7 +62262,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 986
+      "consensusRank": 987
     },
     {
       "id": "hallym-university-kr",
@@ -62272,7 +62334,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 987
+      "consensusRank": 988
     },
     {
       "id": "guangzhou-university-of-chinese-medicine-cn",
@@ -62324,7 +62386,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 988
+      "consensusRank": 989
     },
     {
       "id": "pukyong-national-university-kr",
@@ -62386,7 +62448,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 989
+      "consensusRank": 990
     },
     {
       "id": "jeju-national-university-kr",
@@ -62438,7 +62500,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 990
+      "consensusRank": 991
     },
     {
       "id": "rio-de-janeiro-state-university-br",
@@ -62490,7 +62552,7 @@
           "country": "Brazil"
         }
       ],
-      "consensusRank": 991
+      "consensusRank": 992
     },
     {
       "id": "poznan-university-of-life-sciences-pl",
@@ -62542,7 +62604,7 @@
           "country": "Poland"
         }
       ],
-      "consensusRank": 992
+      "consensusRank": 993
     },
     {
       "id": "kyoto-prefectural-university-of-medicine-jp",
@@ -62594,7 +62656,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 993
+      "consensusRank": 994
     },
     {
       "id": "lakehead-university-ca",
@@ -62646,7 +62708,7 @@
           "country": "Canada"
         }
       ],
-      "consensusRank": 994
+      "consensusRank": 995
     },
     {
       "id": "poznan-university-of-technology-pl",
@@ -62698,7 +62760,7 @@
           "country": "Poland"
         }
       ],
-      "consensusRank": 995
+      "consensusRank": 996
     },
     {
       "id": "tokushima-university-jp",
@@ -62760,7 +62822,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 996
+      "consensusRank": 997
     },
     {
       "id": "university-of-baghdad-iq",
@@ -62812,7 +62874,7 @@
           "country": "Iraq"
         }
       ],
-      "consensusRank": 997
+      "consensusRank": 998
     },
     {
       "id": "nippon-medical-school-jp",
@@ -62864,7 +62926,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 998
+      "consensusRank": 999
     },
     {
       "id": "brock-university-ca",
@@ -62926,7 +62988,7 @@
           "country": "Canada"
         }
       ],
-      "consensusRank": 999
+      "consensusRank": 1000
     },
     {
       "id": "ivane-javakhishvili-tbilisi-state-university-ge",
@@ -62988,7 +63050,7 @@
           "country": "Georgia"
         }
       ],
-      "consensusRank": 1000
+      "consensusRank": 1001
     },
     {
       "id": "federal-university-of-santa-maria-br",
@@ -63040,7 +63102,7 @@
           "country": "Brazil"
         }
       ],
-      "consensusRank": 1001
+      "consensusRank": 1002
     },
     {
       "id": "university-of-zambia-zm",
@@ -63092,7 +63154,7 @@
           "country": "Zambia"
         }
       ],
-      "consensusRank": 1002
+      "consensusRank": 1003
     },
     {
       "id": "lodz-university-of-technology-pl",
@@ -63144,7 +63206,7 @@
           "country": "Poland"
         }
       ],
-      "consensusRank": 1003
+      "consensusRank": 1004
     },
     {
       "id": "ilia-state-university-ge",
@@ -63196,7 +63258,7 @@
           "country": "Georgia"
         }
       ],
-      "consensusRank": 1004
+      "consensusRank": 1005
     },
     {
       "id": "british-university-in-egypt-eg",
@@ -63258,7 +63320,7 @@
           "country": "Egypt"
         }
       ],
-      "consensusRank": 1005
+      "consensusRank": 1006
     },
     {
       "id": "fu-jen-catholic-university-tw",
@@ -63310,7 +63372,7 @@
           "country": "Taiwan"
         }
       ],
-      "consensusRank": 1006
+      "consensusRank": 1007
     },
     {
       "id": "tamkang-university-tw",
@@ -63362,7 +63424,7 @@
           "country": "Taiwan"
         }
       ],
-      "consensusRank": 1007
+      "consensusRank": 1008
     },
     {
       "id": "sakarya-university-tr",
@@ -63414,7 +63476,7 @@
           "country": "Türkiye"
         }
       ],
-      "consensusRank": 1008
+      "consensusRank": 1009
     },
     {
       "id": "kagoshima-university-jp",
@@ -63466,7 +63528,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 1009
+      "consensusRank": 1010
     },
     {
       "id": "university-of-cadiz-es",
@@ -63518,7 +63580,7 @@
           "country": "Spain"
         }
       ],
-      "consensusRank": 1010
+      "consensusRank": 1011
     },
     {
       "id": "north-dakota-state-university-us",
@@ -63570,7 +63632,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 1011
+      "consensusRank": 1012
     },
     {
       "id": "national-taiwan-ocean-university-tw",
@@ -63622,7 +63684,7 @@
           "country": "Taiwan"
         }
       ],
-      "consensusRank": 1012
+      "consensusRank": 1013
     },
     {
       "id": "obafemi-awolowo-university-ng",
@@ -63674,7 +63736,7 @@
           "country": "Nigeria"
         }
       ],
-      "consensusRank": 1013
+      "consensusRank": 1014
     },
     {
       "id": "kookmin-university-kr",
@@ -63726,7 +63788,7 @@
           "country": "South Korea"
         }
       ],
-      "consensusRank": 1014
+      "consensusRank": 1015
     },
     {
       "id": "chung-yuan-christian-university-tw",
@@ -63778,7 +63840,7 @@
           "country": "Taiwan"
         }
       ],
-      "consensusRank": 1015
+      "consensusRank": 1016
     },
     {
       "id": "university-of-rijeka-hr",
@@ -63830,7 +63892,7 @@
           "country": "Croatia"
         }
       ],
-      "consensusRank": 1016
+      "consensusRank": 1017
     },
     {
       "id": "yangtze-university-cn",
@@ -63882,7 +63944,7 @@
           "country": "China"
         }
       ],
-      "consensusRank": 1017
+      "consensusRank": 1018
     },
     {
       "id": "gunma-university-jp",
@@ -63934,7 +63996,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 1018
+      "consensusRank": 1019
     },
     {
       "id": "kurume-university-jp",
@@ -63986,7 +64048,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 1019
+      "consensusRank": 1020
     },
     {
       "id": "clarkson-university-us",
@@ -64048,7 +64110,7 @@
           "country": "United States"
         }
       ],
-      "consensusRank": 1020
+      "consensusRank": 1021
     },
     {
       "id": "national-chung-cheng-university-tw",
@@ -64100,7 +64162,7 @@
           "country": "Taiwan"
         }
       ],
-      "consensusRank": 1021
+      "consensusRank": 1022
     },
     {
       "id": "polytechnic-institute-of-porto-pt",
@@ -64152,7 +64214,7 @@
           "country": "Portugal"
         }
       ],
-      "consensusRank": 1022
+      "consensusRank": 1023
     },
     {
       "id": "malmo-university-se",
@@ -64204,7 +64266,7 @@
           "country": "Sweden"
         }
       ],
-      "consensusRank": 1023
+      "consensusRank": 1024
     },
     {
       "id": "suranaree-university-of-technology-th",
@@ -64256,7 +64318,7 @@
           "country": "Thailand"
         }
       ],
-      "consensusRank": 1024
+      "consensusRank": 1025
     },
     {
       "id": "hanoi-university-of-science-and-technology-vn",
@@ -64308,7 +64370,7 @@
           "country": "Vietnam"
         }
       ],
-      "consensusRank": 1025
+      "consensusRank": 1026
     },
     {
       "id": "karadeniz-technical-university-tr",
@@ -64360,7 +64422,7 @@
           "country": "Türkiye"
         }
       ],
-      "consensusRank": 1026
+      "consensusRank": 1027
     },
     {
       "id": "tunghai-university-tw",
@@ -64412,7 +64474,7 @@
           "country": "Taiwan"
         }
       ],
-      "consensusRank": 1027
+      "consensusRank": 1028
     },
     {
       "id": "southern-federal-university-ru",
@@ -64464,7 +64526,7 @@
           "country": "Russia"
         }
       ],
-      "consensusRank": 1028
+      "consensusRank": 1029
     },
     {
       "id": "university-of-evora-pt",
@@ -64516,7 +64578,7 @@
           "country": "Portugal"
         }
       ],
-      "consensusRank": 1029
+      "consensusRank": 1030
     },
     {
       "id": "university-of-karachi-pk",
@@ -64568,7 +64630,7 @@
           "country": "Pakistan"
         }
       ],
-      "consensusRank": 1030
+      "consensusRank": 1031
     },
     {
       "id": "teikyo-university-jp",
@@ -64620,7 +64682,7 @@
           "country": "Japan"
         }
       ],
-      "consensusRank": 1031
+      "consensusRank": 1032
     },
     {
       "id": "university-of-central-lancashire-gb",
@@ -64672,7 +64734,7 @@
           "country": "United Kingdom"
         }
       ],
-      "consensusRank": 1032
+      "consensusRank": 1033
     },
     {
       "id": "university-of-ostrava-cz",
@@ -64724,7 +64786,7 @@
           "country": "Czechia"
         }
       ],
-      "consensusRank": 1033
+      "consensusRank": 1034
     },
     {
       "id": "feng-chia-university-tw",
@@ -64776,7 +64838,7 @@
           "country": "Taiwan"
         }
       ],
-      "consensusRank": 1034
+      "consensusRank": 1035
     },
     {
       "id": "national-dong-hwa-university-tw",
@@ -64828,7 +64890,7 @@
           "country": "Taiwan"
         }
       ],
-      "consensusRank": 1035
+      "consensusRank": 1036
     }
   ],
   "countryFootprint": [

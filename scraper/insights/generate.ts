@@ -67,6 +67,8 @@ const NAME_ALIASES: Record<string, string> = {
   "imperial college london icl": "imperial college london",
   "johns hopkins university jhu": "johns hopkins university",
   "university of pennsylvania penn": "university of pennsylvania",
+  "china university of mining": "china university of mining and technology",
+  "china university of mining and technology xuzhou": "china university of mining and technology",
 };
 const COUNTRY_ALIASES: Record<string, string> = {
   brunei: "BN", "china mainland": "CN", "hong kong sar": "HK", kosovo: "XK", macau: "MO", "macau sar": "MO", palestine: "PS", "palestinian territories": "PS", "palestinian territory": "PS", "state of palestine": "PS", turkey: "TR", usa: "US", "united states of america": "US", "united states of america usa": "US", uk: "GB", "united kingdom uk": "GB", "south korea": "KR", russia: "RU", turkiye: "TR", taiwan: "TW", "czech republic": "CZ", xk: "XK",
