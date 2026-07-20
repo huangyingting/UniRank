@@ -75925,6 +75925,2592 @@
       ]
     }
   ],
+  "scimagoSubjectLeaders": [
+    {
+      "subject": "agricultural-biological-sciences",
+      "label": "Agricultural & biological sciences",
+      "provider": "scimago",
+      "providerLabel": "SCImago SIR",
+      "year": 2026,
+      "totalRanked": 3571,
+      "countries": [
+        {
+          "countryCode": "CN",
+          "country": "China",
+          "count": 571
+        },
+        {
+          "countryCode": "US",
+          "country": "United States",
+          "count": 340
+        },
+        {
+          "countryCode": "IN",
+          "country": "India",
+          "count": 242
+        },
+        {
+          "countryCode": "BR",
+          "country": "Brazil",
+          "count": 132
+        },
+        {
+          "countryCode": "TR",
+          "country": "Türkiye",
+          "count": 120
+        },
+        {
+          "countryCode": "IR",
+          "country": "Iran",
+          "count": 109
+        },
+        {
+          "countryCode": "JP",
+          "country": "Japan",
+          "count": 99
+        },
+        {
+          "countryCode": "GB",
+          "country": "United Kingdom",
+          "count": 89
+        }
+      ],
+      "institutions": [
+        {
+          "rank": 1,
+          "rankDisplay": "1",
+          "name": "University of Chinese Academy of Sciences",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 2,
+          "rankDisplay": "2",
+          "name": "China Agricultural University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 3,
+          "rankDisplay": "3",
+          "name": "Northwest A and F University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 4,
+          "rankDisplay": "4",
+          "name": "Zhejiang University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 5,
+          "rankDisplay": "5",
+          "name": "Huazhong Agricultural University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 6,
+          "rankDisplay": "6",
+          "name": "Wageningen University and Research Centre",
+          "country": "Netherlands",
+          "countryCode": "NL"
+        },
+        {
+          "rank": 7,
+          "rankDisplay": "7",
+          "name": "Nanjing Agricultural University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 8,
+          "rankDisplay": "8",
+          "name": "Bukhara State Pedagogical Institute",
+          "country": "Uzbekistan",
+          "countryCode": "UZ"
+        },
+        {
+          "rank": 9,
+          "rankDisplay": "9",
+          "name": "Jiangnan University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 10,
+          "rankDisplay": "10",
+          "name": "South China Agricultural University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 11,
+          "rankDisplay": "11",
+          "name": "Universidade de Sao Paulo",
+          "country": "Brazil",
+          "countryCode": "BR"
+        },
+        {
+          "rank": 12,
+          "rankDisplay": "12",
+          "name": "University of Florida",
+          "country": "United States",
+          "countryCode": "US"
+        }
+      ]
+    },
+    {
+      "subject": "arts-humanities",
+      "label": "Arts & humanities",
+      "provider": "scimago",
+      "providerLabel": "SCImago SIR",
+      "year": 2026,
+      "totalRanked": 2482,
+      "countries": [
+        {
+          "countryCode": "US",
+          "country": "United States",
+          "count": 424
+        },
+        {
+          "countryCode": "CN",
+          "country": "China",
+          "count": 232
+        },
+        {
+          "countryCode": "GB",
+          "country": "United Kingdom",
+          "count": 118
+        },
+        {
+          "countryCode": "TR",
+          "country": "Türkiye",
+          "count": 92
+        },
+        {
+          "countryCode": "FR",
+          "country": "France",
+          "count": 89
+        },
+        {
+          "countryCode": "RU",
+          "country": "Russia",
+          "count": 81
+        },
+        {
+          "countryCode": "DE",
+          "country": "Germany",
+          "count": 79
+        },
+        {
+          "countryCode": "BR",
+          "country": "Brazil",
+          "count": 71
+        }
+      ],
+      "institutions": [
+        {
+          "rank": 1,
+          "rankDisplay": "1",
+          "name": "University of Oxford",
+          "country": "United Kingdom",
+          "countryCode": "GB"
+        },
+        {
+          "rank": 2,
+          "rankDisplay": "2",
+          "name": "Harvard University",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 3,
+          "rankDisplay": "3",
+          "name": "University of Cambridge",
+          "country": "United Kingdom",
+          "countryCode": "GB"
+        },
+        {
+          "rank": 4,
+          "rankDisplay": "4",
+          "name": "University College London",
+          "country": "United Kingdom",
+          "countryCode": "GB"
+        },
+        {
+          "rank": 5,
+          "rankDisplay": "5",
+          "name": "Stanford University",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 6,
+          "rankDisplay": "6",
+          "name": "University of Toronto",
+          "country": "Canada",
+          "countryCode": "CA"
+        },
+        {
+          "rank": 7,
+          "rankDisplay": "7",
+          "name": "Universidad Complutense de Madrid",
+          "country": "Spain",
+          "countryCode": "ES"
+        },
+        {
+          "rank": 8,
+          "rankDisplay": "8",
+          "name": "University of Amsterdam",
+          "country": "Netherlands",
+          "countryCode": "NL"
+        },
+        {
+          "rank": 9,
+          "rankDisplay": "9",
+          "name": "University of Washington",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 10,
+          "rankDisplay": "10",
+          "name": "University of Melbourne",
+          "country": "Australia",
+          "countryCode": "AU"
+        },
+        {
+          "rank": 11,
+          "rankDisplay": "11",
+          "name": "Massachusetts Institute of Technology",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 12,
+          "rankDisplay": "12",
+          "name": "University of California, Berkeley",
+          "country": "United States",
+          "countryCode": "US"
+        }
+      ]
+    },
+    {
+      "subject": "biochemistry-genetics-molecular-biology",
+      "label": "Biochemistry, genetics & molecular biology",
+      "provider": "scimago",
+      "providerLabel": "SCImago SIR",
+      "year": 2026,
+      "totalRanked": 3398,
+      "countries": [
+        {
+          "countryCode": "CN",
+          "country": "China",
+          "count": 542
+        },
+        {
+          "countryCode": "US",
+          "country": "United States",
+          "count": 324
+        },
+        {
+          "countryCode": "IN",
+          "country": "India",
+          "count": 281
+        },
+        {
+          "countryCode": "JP",
+          "country": "Japan",
+          "count": 146
+        },
+        {
+          "countryCode": "TR",
+          "country": "Türkiye",
+          "count": 112
+        },
+        {
+          "countryCode": "IR",
+          "country": "Iran",
+          "count": 110
+        },
+        {
+          "countryCode": "BR",
+          "country": "Brazil",
+          "count": 101
+        },
+        {
+          "countryCode": "FR",
+          "country": "France",
+          "count": 98
+        }
+      ],
+      "institutions": [
+        {
+          "rank": 1,
+          "rankDisplay": "1",
+          "name": "Harvard University",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 2,
+          "rankDisplay": "2",
+          "name": "Harvard Medical School",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 3,
+          "rankDisplay": "3",
+          "name": "University of Chinese Academy of Sciences",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 4,
+          "rankDisplay": "4",
+          "name": "Zhejiang University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 5,
+          "rankDisplay": "5",
+          "name": "Shanghai Jiao Tong University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 6,
+          "rankDisplay": "6",
+          "name": "Peking University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 7,
+          "rankDisplay": "7",
+          "name": "Stanford University",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 8,
+          "rankDisplay": "8",
+          "name": "Fudan University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 9,
+          "rankDisplay": "9",
+          "name": "Massachusetts Institute of Technology",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 10,
+          "rankDisplay": "10",
+          "name": "Sun Yat-Sen University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 11,
+          "rankDisplay": "11",
+          "name": "Sichuan University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 12,
+          "rankDisplay": "12",
+          "name": "Tsinghua University",
+          "country": "China",
+          "countryCode": "CN"
+        }
+      ]
+    },
+    {
+      "subject": "business-management-accounting",
+      "label": "Business, management & accounting",
+      "provider": "scimago",
+      "providerLabel": "SCImago SIR",
+      "year": 2026,
+      "totalRanked": 3053,
+      "countries": [
+        {
+          "countryCode": "US",
+          "country": "United States",
+          "count": 397
+        },
+        {
+          "countryCode": "CN",
+          "country": "China",
+          "count": 375
+        },
+        {
+          "countryCode": "IN",
+          "country": "India",
+          "count": 208
+        },
+        {
+          "countryCode": "GB",
+          "country": "United Kingdom",
+          "count": 113
+        },
+        {
+          "countryCode": "TR",
+          "country": "Türkiye",
+          "count": 105
+        },
+        {
+          "countryCode": "FR",
+          "country": "France",
+          "count": 102
+        },
+        {
+          "countryCode": "DE",
+          "country": "Germany",
+          "count": 92
+        },
+        {
+          "countryCode": "IT",
+          "country": "Italy",
+          "count": 71
+        }
+      ],
+      "institutions": [
+        {
+          "rank": 1,
+          "rankDisplay": "1",
+          "name": "Hong Kong Polytechnic University",
+          "country": "Hong Kong",
+          "countryCode": "HK"
+        },
+        {
+          "rank": 2,
+          "rankDisplay": "2",
+          "name": "Tsinghua University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 3,
+          "rankDisplay": "3",
+          "name": "Zhejiang University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 4,
+          "rankDisplay": "4",
+          "name": "Tongji University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 5,
+          "rankDisplay": "5",
+          "name": "Shanghai Jiao Tong University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 6,
+          "rankDisplay": "6",
+          "name": "University of Johannesburg",
+          "country": "South Africa",
+          "countryCode": "ZA"
+        },
+        {
+          "rank": 7,
+          "rankDisplay": "7",
+          "name": "Harbin Institute of Technology",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 8,
+          "rankDisplay": "8",
+          "name": "Xi'an Jiaotong University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 9,
+          "rankDisplay": "9",
+          "name": "Royal Melbourne Institute of Technology",
+          "country": "Australia",
+          "countryCode": "AU"
+        },
+        {
+          "rank": 10,
+          "rankDisplay": "10",
+          "name": "The University of Queensland",
+          "country": "Australia",
+          "countryCode": "AU"
+        },
+        {
+          "rank": 11,
+          "rankDisplay": "11",
+          "name": "Monash University, Melbourne",
+          "country": "Australia",
+          "countryCode": "AU"
+        },
+        {
+          "rank": 12,
+          "rankDisplay": "12",
+          "name": "Sun Yat-Sen University",
+          "country": "China",
+          "countryCode": "CN"
+        }
+      ]
+    },
+    {
+      "subject": "chemistry",
+      "label": "Chemistry",
+      "provider": "scimago",
+      "providerLabel": "SCImago SIR",
+      "year": 2026,
+      "totalRanked": 3447,
+      "countries": [
+        {
+          "countryCode": "CN",
+          "country": "China",
+          "count": 625
+        },
+        {
+          "countryCode": "IN",
+          "country": "India",
+          "count": 352
+        },
+        {
+          "countryCode": "US",
+          "country": "United States",
+          "count": 285
+        },
+        {
+          "countryCode": "JP",
+          "country": "Japan",
+          "count": 129
+        },
+        {
+          "countryCode": "IR",
+          "country": "Iran",
+          "count": 119
+        },
+        {
+          "countryCode": "TR",
+          "country": "Türkiye",
+          "count": 117
+        },
+        {
+          "countryCode": "FR",
+          "country": "France",
+          "count": 100
+        },
+        {
+          "countryCode": "BR",
+          "country": "Brazil",
+          "count": 90
+        }
+      ],
+      "institutions": [
+        {
+          "rank": 1,
+          "rankDisplay": "1",
+          "name": "University of Chinese Academy of Sciences",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 2,
+          "rankDisplay": "2",
+          "name": "Tsinghua University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 3,
+          "rankDisplay": "3",
+          "name": "Peking University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 4,
+          "rankDisplay": "4",
+          "name": "Zhejiang University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 5,
+          "rankDisplay": "5",
+          "name": "Namal University",
+          "country": "Pakistan",
+          "countryCode": "PK"
+        },
+        {
+          "rank": 6,
+          "rankDisplay": "6",
+          "name": "Harvard University",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 7,
+          "rankDisplay": "7",
+          "name": "Sichuan University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 8,
+          "rankDisplay": "8",
+          "name": "Shanghai Jiao Tong University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 9,
+          "rankDisplay": "9",
+          "name": "Tianjin University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 10,
+          "rankDisplay": "10",
+          "name": "Massachusetts Institute of Technology",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 11,
+          "rankDisplay": "11",
+          "name": "University of Science and Technology of China",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 12,
+          "rankDisplay": "12",
+          "name": "Harvard Medical School",
+          "country": "United States",
+          "countryCode": "US"
+        }
+      ]
+    },
+    {
+      "subject": "computer-science",
+      "label": "Computer science",
+      "provider": "scimago",
+      "providerLabel": "SCImago SIR",
+      "year": 2026,
+      "totalRanked": 3476,
+      "countries": [
+        {
+          "countryCode": "CN",
+          "country": "China",
+          "count": 613
+        },
+        {
+          "countryCode": "IN",
+          "country": "India",
+          "count": 342
+        },
+        {
+          "countryCode": "US",
+          "country": "United States",
+          "count": 301
+        },
+        {
+          "countryCode": "FR",
+          "country": "France",
+          "count": 109
+        },
+        {
+          "countryCode": "GB",
+          "country": "United Kingdom",
+          "count": 102
+        },
+        {
+          "countryCode": "JP",
+          "country": "Japan",
+          "count": 100
+        },
+        {
+          "countryCode": "TR",
+          "country": "Türkiye",
+          "count": 98
+        },
+        {
+          "countryCode": "DE",
+          "country": "Germany",
+          "count": 94
+        }
+      ],
+      "institutions": [
+        {
+          "rank": 1,
+          "rankDisplay": "1",
+          "name": "Tsinghua University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 2,
+          "rankDisplay": "2",
+          "name": "Zhejiang University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 3,
+          "rankDisplay": "3",
+          "name": "University of Chinese Academy of Sciences",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 4,
+          "rankDisplay": "4",
+          "name": "Shanghai Jiao Tong University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 5,
+          "rankDisplay": "5",
+          "name": "University of Electronic Science and Technology of China",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 6,
+          "rankDisplay": "6",
+          "name": "Harbin Institute of Technology",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 7,
+          "rankDisplay": "7",
+          "name": "BeiHang University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 8,
+          "rankDisplay": "8",
+          "name": "Southeast University, Nanjing",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 9,
+          "rankDisplay": "9",
+          "name": "Peking University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 10,
+          "rankDisplay": "10",
+          "name": "Beijing University of Posts and Telecommunications",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 11,
+          "rankDisplay": "11",
+          "name": "Huazhong University of Science and Technology",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 12,
+          "rankDisplay": "12",
+          "name": "Nanyang Technological University",
+          "country": "Singapore",
+          "countryCode": "SG"
+        }
+      ]
+    },
+    {
+      "subject": "dentistry",
+      "label": "Dentistry",
+      "provider": "scimago",
+      "providerLabel": "SCImago SIR",
+      "year": 2026,
+      "totalRanked": 795,
+      "countries": [
+        {
+          "countryCode": "US",
+          "country": "United States",
+          "count": 91
+        },
+        {
+          "countryCode": "CN",
+          "country": "China",
+          "count": 61
+        },
+        {
+          "countryCode": "TR",
+          "country": "Türkiye",
+          "count": 58
+        },
+        {
+          "countryCode": "BR",
+          "country": "Brazil",
+          "count": 57
+        },
+        {
+          "countryCode": "IT",
+          "country": "Italy",
+          "count": 40
+        },
+        {
+          "countryCode": "JP",
+          "country": "Japan",
+          "count": 31
+        },
+        {
+          "countryCode": "EG",
+          "country": "Egypt",
+          "count": 30
+        },
+        {
+          "countryCode": "DE",
+          "country": "Germany",
+          "count": 30
+        }
+      ],
+      "institutions": [
+        {
+          "rank": 1,
+          "rankDisplay": "1",
+          "name": "Universidade de Sao Paulo",
+          "country": "Brazil",
+          "countryCode": "BR"
+        },
+        {
+          "rank": 2,
+          "rankDisplay": "2",
+          "name": "Sichuan University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 3,
+          "rankDisplay": "3",
+          "name": "Peking University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 4,
+          "rankDisplay": "4",
+          "name": "Peking University Health Science Center",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 5,
+          "rankDisplay": "5",
+          "name": "Saveetha Institute of Medical and Technical Sciences",
+          "country": "India",
+          "countryCode": "IN"
+        },
+        {
+          "rank": 6,
+          "rankDisplay": "6",
+          "name": "University of Michigan, Ann Arbor",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 7,
+          "rankDisplay": "7",
+          "name": "Shanghai Jiao Tong University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 8,
+          "rankDisplay": "8",
+          "name": "Universidade Estadual de Campinas",
+          "country": "Brazil",
+          "countryCode": "BR"
+        },
+        {
+          "rank": 9,
+          "rankDisplay": "9",
+          "name": "Universidade Estadual Paulista Julio de Mesquita Filho",
+          "country": "Brazil",
+          "countryCode": "BR"
+        },
+        {
+          "rank": 10,
+          "rankDisplay": "10",
+          "name": "Universitat Bern",
+          "country": "Switzerland",
+          "countryCode": "CH"
+        },
+        {
+          "rank": 11,
+          "rankDisplay": "11",
+          "name": "The University of Hong Kong",
+          "country": "Hong Kong",
+          "countryCode": "HK"
+        },
+        {
+          "rank": 12,
+          "rankDisplay": "12",
+          "name": "Harvard University",
+          "country": "United States",
+          "countryCode": "US"
+        }
+      ]
+    },
+    {
+      "subject": "earth-planetary-sciences",
+      "label": "Earth & planetary sciences",
+      "provider": "scimago",
+      "providerLabel": "SCImago SIR",
+      "year": 2026,
+      "totalRanked": 3163,
+      "countries": [
+        {
+          "countryCode": "CN",
+          "country": "China",
+          "count": 485
+        },
+        {
+          "countryCode": "US",
+          "country": "United States",
+          "count": 314
+        },
+        {
+          "countryCode": "IN",
+          "country": "India",
+          "count": 272
+        },
+        {
+          "countryCode": "RU",
+          "country": "Russia",
+          "count": 101
+        },
+        {
+          "countryCode": "BR",
+          "country": "Brazil",
+          "count": 97
+        },
+        {
+          "countryCode": "JP",
+          "country": "Japan",
+          "count": 96
+        },
+        {
+          "countryCode": "FR",
+          "country": "France",
+          "count": 95
+        },
+        {
+          "countryCode": "TR",
+          "country": "Türkiye",
+          "count": 94
+        }
+      ],
+      "institutions": [
+        {
+          "rank": 1,
+          "rankDisplay": "1",
+          "name": "University of Chinese Academy of Sciences",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 2,
+          "rankDisplay": "2",
+          "name": "China University of Geosciences",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 3,
+          "rankDisplay": "3",
+          "name": "Wuhan University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 4,
+          "rankDisplay": "4",
+          "name": "Eastern University, Sri Lanka",
+          "country": "Sri Lanka",
+          "countryCode": "LK"
+        },
+        {
+          "rank": 5,
+          "rankDisplay": "5",
+          "name": "China University of Mining and Technology",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 6,
+          "rankDisplay": "6",
+          "name": "Xidian University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 7,
+          "rankDisplay": "7",
+          "name": "Tsinghua University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 8,
+          "rankDisplay": "8",
+          "name": "ILMA University",
+          "country": "Pakistan",
+          "countryCode": "PK"
+        },
+        {
+          "rank": 9,
+          "rankDisplay": "9",
+          "name": "Central South University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 10,
+          "rankDisplay": "10",
+          "name": "PLA Naval Aviation University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 11,
+          "rankDisplay": "11",
+          "name": "Peking University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 12,
+          "rankDisplay": "12",
+          "name": "China University of Petroleum",
+          "country": "China",
+          "countryCode": "CN"
+        }
+      ]
+    },
+    {
+      "subject": "economics-econometrics-finance",
+      "label": "Economics, econometrics & finance",
+      "provider": "scimago",
+      "providerLabel": "SCImago SIR",
+      "year": 2026,
+      "totalRanked": 2504,
+      "countries": [
+        {
+          "countryCode": "US",
+          "country": "United States",
+          "count": 332
+        },
+        {
+          "countryCode": "CN",
+          "country": "China",
+          "count": 309
+        },
+        {
+          "countryCode": "IN",
+          "country": "India",
+          "count": 149
+        },
+        {
+          "countryCode": "GB",
+          "country": "United Kingdom",
+          "count": 95
+        },
+        {
+          "countryCode": "FR",
+          "country": "France",
+          "count": 86
+        },
+        {
+          "countryCode": "TR",
+          "country": "Türkiye",
+          "count": 86
+        },
+        {
+          "countryCode": "DE",
+          "country": "Germany",
+          "count": 78
+        },
+        {
+          "countryCode": "IT",
+          "country": "Italy",
+          "count": 66
+        }
+      ],
+      "institutions": [
+        {
+          "rank": 1,
+          "rankDisplay": "1",
+          "name": "Peking University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 2,
+          "rankDisplay": "2",
+          "name": "Tsinghua University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 3,
+          "rankDisplay": "3",
+          "name": "Harvard University",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 4,
+          "rankDisplay": "4",
+          "name": "University of Oxford",
+          "country": "United Kingdom",
+          "countryCode": "GB"
+        },
+        {
+          "rank": 5,
+          "rankDisplay": "5",
+          "name": "Renmin University of China",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 6,
+          "rankDisplay": "6",
+          "name": "University of Chicago",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 7,
+          "rankDisplay": "7",
+          "name": "London School of Economics and Political Science",
+          "country": "United Kingdom",
+          "countryCode": "GB"
+        },
+        {
+          "rank": 8,
+          "rankDisplay": "8",
+          "name": "Southwestern University of Finance and Economics",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 9,
+          "rankDisplay": "9",
+          "name": "HSE University",
+          "country": "Russia",
+          "countryCode": "RU"
+        },
+        {
+          "rank": 10,
+          "rankDisplay": "10",
+          "name": "Xiamen University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 11,
+          "rankDisplay": "11",
+          "name": "Zhejiang University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 12,
+          "rankDisplay": "12",
+          "name": "University College London",
+          "country": "United Kingdom",
+          "countryCode": "GB"
+        }
+      ]
+    },
+    {
+      "subject": "energy",
+      "label": "Energy",
+      "provider": "scimago",
+      "providerLabel": "SCImago SIR",
+      "year": 2026,
+      "totalRanked": 3354,
+      "countries": [
+        {
+          "countryCode": "CN",
+          "country": "China",
+          "count": 547
+        },
+        {
+          "countryCode": "IN",
+          "country": "India",
+          "count": 354
+        },
+        {
+          "countryCode": "US",
+          "country": "United States",
+          "count": 220
+        },
+        {
+          "countryCode": "TR",
+          "country": "Türkiye",
+          "count": 119
+        },
+        {
+          "countryCode": "FR",
+          "country": "France",
+          "count": 103
+        },
+        {
+          "countryCode": "RU",
+          "country": "Russia",
+          "count": 91
+        },
+        {
+          "countryCode": "GB",
+          "country": "United Kingdom",
+          "count": 91
+        },
+        {
+          "countryCode": "IR",
+          "country": "Iran",
+          "count": 89
+        }
+      ],
+      "institutions": [
+        {
+          "rank": 1,
+          "rankDisplay": "1",
+          "name": "Tsinghua University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 2,
+          "rankDisplay": "2",
+          "name": "Xi'an Jiaotong University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 3,
+          "rankDisplay": "3",
+          "name": "Zhejiang University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 4,
+          "rankDisplay": "4",
+          "name": "University of Chinese Academy of Sciences",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 5,
+          "rankDisplay": "5",
+          "name": "North China Electric Power University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 6,
+          "rankDisplay": "6",
+          "name": "Shanghai Jiao Tong University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 7,
+          "rankDisplay": "7",
+          "name": "Huazhong University of Science and Technology",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 8,
+          "rankDisplay": "8",
+          "name": "Eastern University, Sri Lanka",
+          "country": "Sri Lanka",
+          "countryCode": "LK"
+        },
+        {
+          "rank": 9,
+          "rankDisplay": "9",
+          "name": "Tianjin University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 10,
+          "rankDisplay": "10",
+          "name": "Harbin Institute of Technology",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 11,
+          "rankDisplay": "11",
+          "name": "Chongqing University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 12,
+          "rankDisplay": "12",
+          "name": "China University of Mining and Technology",
+          "country": "China",
+          "countryCode": "CN"
+        }
+      ]
+    },
+    {
+      "subject": "engineering",
+      "label": "Engineering",
+      "provider": "scimago",
+      "providerLabel": "SCImago SIR",
+      "year": 2026,
+      "totalRanked": 3572,
+      "countries": [
+        {
+          "countryCode": "CN",
+          "country": "China",
+          "count": 638
+        },
+        {
+          "countryCode": "IN",
+          "country": "India",
+          "count": 371
+        },
+        {
+          "countryCode": "US",
+          "country": "United States",
+          "count": 276
+        },
+        {
+          "countryCode": "TR",
+          "country": "Türkiye",
+          "count": 128
+        },
+        {
+          "countryCode": "FR",
+          "country": "France",
+          "count": 109
+        },
+        {
+          "countryCode": "JP",
+          "country": "Japan",
+          "count": 100
+        },
+        {
+          "countryCode": "GB",
+          "country": "United Kingdom",
+          "count": 94
+        },
+        {
+          "countryCode": "IR",
+          "country": "Iran",
+          "count": 93
+        }
+      ],
+      "institutions": [
+        {
+          "rank": 1,
+          "rankDisplay": "1",
+          "name": "Tsinghua University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 2,
+          "rankDisplay": "2",
+          "name": "Zhejiang University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 3,
+          "rankDisplay": "3",
+          "name": "Shanghai Jiao Tong University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 4,
+          "rankDisplay": "4",
+          "name": "University of Chinese Academy of Sciences",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 5,
+          "rankDisplay": "5",
+          "name": "Harbin Institute of Technology",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 6,
+          "rankDisplay": "6",
+          "name": "Southeast University, Nanjing",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 7,
+          "rankDisplay": "7",
+          "name": "Huazhong University of Science and Technology",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 8,
+          "rankDisplay": "8",
+          "name": "Xi'an Jiaotong University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 9,
+          "rankDisplay": "9",
+          "name": "Tongji University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 10,
+          "rankDisplay": "10",
+          "name": "Tianjin University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 11,
+          "rankDisplay": "11",
+          "name": "Beijing Institute of Technology",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 12,
+          "rankDisplay": "12",
+          "name": "Central South University",
+          "country": "China",
+          "countryCode": "CN"
+        }
+      ]
+    },
+    {
+      "subject": "environmental-science",
+      "label": "Environmental science",
+      "provider": "scimago",
+      "providerLabel": "SCImago SIR",
+      "year": 2026,
+      "totalRanked": 3983,
+      "countries": [
+        {
+          "countryCode": "CN",
+          "country": "China",
+          "count": 623
+        },
+        {
+          "countryCode": "IN",
+          "country": "India",
+          "count": 363
+        },
+        {
+          "countryCode": "US",
+          "country": "United States",
+          "count": 319
+        },
+        {
+          "countryCode": "BR",
+          "country": "Brazil",
+          "count": 138
+        },
+        {
+          "countryCode": "IR",
+          "country": "Iran",
+          "count": 119
+        },
+        {
+          "countryCode": "TR",
+          "country": "Türkiye",
+          "count": 118
+        },
+        {
+          "countryCode": "FR",
+          "country": "France",
+          "count": 113
+        },
+        {
+          "countryCode": "GB",
+          "country": "United Kingdom",
+          "count": 109
+        }
+      ],
+      "institutions": [
+        {
+          "rank": 1,
+          "rankDisplay": "1",
+          "name": "University of Chinese Academy of Sciences",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 2,
+          "rankDisplay": "2",
+          "name": "Tsinghua University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 3,
+          "rankDisplay": "3",
+          "name": "Zhejiang University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 4,
+          "rankDisplay": "4",
+          "name": "KCG College of Technology",
+          "country": "India",
+          "countryCode": "IN"
+        },
+        {
+          "rank": 5,
+          "rankDisplay": "5",
+          "name": "Peking University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 6,
+          "rankDisplay": "6",
+          "name": "Tongji University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 7,
+          "rankDisplay": "7",
+          "name": "Harbin Institute of Technology",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 8,
+          "rankDisplay": "8",
+          "name": "Shanghai Jiao Tong University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 9,
+          "rankDisplay": "9",
+          "name": "Sichuan University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 10,
+          "rankDisplay": "10",
+          "name": "Beijing Normal University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 11,
+          "rankDisplay": "11",
+          "name": "Central South University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 12,
+          "rankDisplay": "12",
+          "name": "Tianjin University",
+          "country": "China",
+          "countryCode": "CN"
+        }
+      ]
+    },
+    {
+      "subject": "mathematics",
+      "label": "Mathematics",
+      "provider": "scimago",
+      "providerLabel": "SCImago SIR",
+      "year": 2026,
+      "totalRanked": 3552,
+      "countries": [
+        {
+          "countryCode": "CN",
+          "country": "China",
+          "count": 624
+        },
+        {
+          "countryCode": "IN",
+          "country": "India",
+          "count": 350
+        },
+        {
+          "countryCode": "US",
+          "country": "United States",
+          "count": 331
+        },
+        {
+          "countryCode": "TR",
+          "country": "Türkiye",
+          "count": 124
+        },
+        {
+          "countryCode": "FR",
+          "country": "France",
+          "count": 117
+        },
+        {
+          "countryCode": "JP",
+          "country": "Japan",
+          "count": 101
+        },
+        {
+          "countryCode": "IR",
+          "country": "Iran",
+          "count": 89
+        },
+        {
+          "countryCode": "GB",
+          "country": "United Kingdom",
+          "count": 85
+        }
+      ],
+      "institutions": [
+        {
+          "rank": 1,
+          "rankDisplay": "1",
+          "name": "Tsinghua University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 2,
+          "rankDisplay": "2",
+          "name": "Zhejiang University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 3,
+          "rankDisplay": "3",
+          "name": "Shanghai Jiao Tong University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 4,
+          "rankDisplay": "4",
+          "name": "Harbin Institute of Technology",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 5,
+          "rankDisplay": "5",
+          "name": "University of Chinese Academy of Sciences",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 6,
+          "rankDisplay": "6",
+          "name": "Beijing Institute of Technology",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 7,
+          "rankDisplay": "7",
+          "name": "Southeast University, Nanjing",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 8,
+          "rankDisplay": "8",
+          "name": "BeiHang University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 9,
+          "rankDisplay": "9",
+          "name": "Huazhong University of Science and Technology",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 10,
+          "rankDisplay": "10",
+          "name": "Xi'an Jiaotong University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 11,
+          "rankDisplay": "11",
+          "name": "Northwestern Polytechnical University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 12,
+          "rankDisplay": "12",
+          "name": "Massachusetts Institute of Technology",
+          "country": "United States",
+          "countryCode": "US"
+        }
+      ]
+    },
+    {
+      "subject": "medicine",
+      "label": "Medicine",
+      "provider": "scimago",
+      "providerLabel": "SCImago SIR",
+      "year": 2026,
+      "totalRanked": 3022,
+      "countries": [
+        {
+          "countryCode": "CN",
+          "country": "China",
+          "count": 415
+        },
+        {
+          "countryCode": "US",
+          "country": "United States",
+          "count": 352
+        },
+        {
+          "countryCode": "IN",
+          "country": "India",
+          "count": 157
+        },
+        {
+          "countryCode": "JP",
+          "country": "Japan",
+          "count": 116
+        },
+        {
+          "countryCode": "TR",
+          "country": "Türkiye",
+          "count": 110
+        },
+        {
+          "countryCode": "GB",
+          "country": "United Kingdom",
+          "count": 110
+        },
+        {
+          "countryCode": "BR",
+          "country": "Brazil",
+          "count": 101
+        },
+        {
+          "countryCode": "IR",
+          "country": "Iran",
+          "count": 94
+        }
+      ],
+      "institutions": [
+        {
+          "rank": 1,
+          "rankDisplay": "1",
+          "name": "Harvard University",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 2,
+          "rankDisplay": "2",
+          "name": "Harvard Medical School",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 3,
+          "rankDisplay": "3",
+          "name": "Johns Hopkins University",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 4,
+          "rankDisplay": "4",
+          "name": "Shanghai Jiao Tong University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 5,
+          "rankDisplay": "5",
+          "name": "Peking University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 6,
+          "rankDisplay": "6",
+          "name": "Zhejiang University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 7,
+          "rankDisplay": "7",
+          "name": "Stanford University",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 8,
+          "rankDisplay": "8",
+          "name": "University of Pennsylvania",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 9,
+          "rankDisplay": "9",
+          "name": "University of Toronto",
+          "country": "Canada",
+          "countryCode": "CA"
+        },
+        {
+          "rank": 10,
+          "rankDisplay": "10",
+          "name": "University of California, San Francisco",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 11,
+          "rankDisplay": "11",
+          "name": "University College London",
+          "country": "United Kingdom",
+          "countryCode": "GB"
+        },
+        {
+          "rank": 12,
+          "rankDisplay": "12",
+          "name": "Fudan University",
+          "country": "China",
+          "countryCode": "CN"
+        }
+      ]
+    },
+    {
+      "subject": "pharmacology-toxicology-pharmaceutics",
+      "label": "Pharmacology, toxicology & pharmaceutics",
+      "provider": "scimago",
+      "providerLabel": "SCImago SIR",
+      "year": 2026,
+      "totalRanked": 2742,
+      "countries": [
+        {
+          "countryCode": "CN",
+          "country": "China",
+          "count": 427
+        },
+        {
+          "countryCode": "US",
+          "country": "United States",
+          "count": 272
+        },
+        {
+          "countryCode": "IN",
+          "country": "India",
+          "count": 231
+        },
+        {
+          "countryCode": "JP",
+          "country": "Japan",
+          "count": 106
+        },
+        {
+          "countryCode": "BR",
+          "country": "Brazil",
+          "count": 91
+        },
+        {
+          "countryCode": "IR",
+          "country": "Iran",
+          "count": 91
+        },
+        {
+          "countryCode": "TR",
+          "country": "Türkiye",
+          "count": 88
+        },
+        {
+          "countryCode": "GB",
+          "country": "United Kingdom",
+          "count": 71
+        }
+      ],
+      "institutions": [
+        {
+          "rank": 1,
+          "rankDisplay": "1",
+          "name": "Chinese Academy of Medical Sciences and Peking Union Medical College",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 2,
+          "rankDisplay": "2",
+          "name": "Zhejiang University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 3,
+          "rankDisplay": "3",
+          "name": "Sichuan University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 4,
+          "rankDisplay": "4",
+          "name": "Shanghai Jiao Tong University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 5,
+          "rankDisplay": "5",
+          "name": "Harvard University",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 6,
+          "rankDisplay": "6",
+          "name": "China Pharmaceutical University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 7,
+          "rankDisplay": "7",
+          "name": "University of Chinese Academy of Sciences",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 8,
+          "rankDisplay": "8",
+          "name": "Fudan University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 9,
+          "rankDisplay": "9",
+          "name": "Peking University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 10,
+          "rankDisplay": "10",
+          "name": "Sun Yat-Sen University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 11,
+          "rankDisplay": "11",
+          "name": "Harvard Medical School",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 12,
+          "rankDisplay": "12",
+          "name": "Huazhong University of Science and Technology",
+          "country": "China",
+          "countryCode": "CN"
+        }
+      ]
+    },
+    {
+      "subject": "physics-astronomy",
+      "label": "Physics & astronomy",
+      "provider": "scimago",
+      "providerLabel": "SCImago SIR",
+      "year": 2026,
+      "totalRanked": 2890,
+      "countries": [
+        {
+          "countryCode": "CN",
+          "country": "China",
+          "count": 525
+        },
+        {
+          "countryCode": "IN",
+          "country": "India",
+          "count": 312
+        },
+        {
+          "countryCode": "US",
+          "country": "United States",
+          "count": 251
+        },
+        {
+          "countryCode": "JP",
+          "country": "Japan",
+          "count": 101
+        },
+        {
+          "countryCode": "FR",
+          "country": "France",
+          "count": 98
+        },
+        {
+          "countryCode": "TR",
+          "country": "Türkiye",
+          "count": 89
+        },
+        {
+          "countryCode": "GB",
+          "country": "United Kingdom",
+          "count": 75
+        },
+        {
+          "countryCode": "RU",
+          "country": "Russia",
+          "count": 69
+        }
+      ],
+      "institutions": [
+        {
+          "rank": 1,
+          "rankDisplay": "1",
+          "name": "University of Chinese Academy of Sciences",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 2,
+          "rankDisplay": "2",
+          "name": "Tsinghua University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 3,
+          "rankDisplay": "3",
+          "name": "Zhejiang University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 4,
+          "rankDisplay": "4",
+          "name": "Stanford University",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 5,
+          "rankDisplay": "5",
+          "name": "Harvard University",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 6,
+          "rankDisplay": "6",
+          "name": "Shanghai Jiao Tong University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 7,
+          "rankDisplay": "7",
+          "name": "Peking University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 8,
+          "rankDisplay": "8",
+          "name": "Massachusetts Institute of Technology",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 9,
+          "rankDisplay": "9",
+          "name": "University of Science and Technology of China",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 10,
+          "rankDisplay": "10",
+          "name": "Huazhong University of Science and Technology",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 11,
+          "rankDisplay": "11",
+          "name": "Harbin Institute of Technology",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 12,
+          "rankDisplay": "12",
+          "name": "Central South University",
+          "country": "China",
+          "countryCode": "CN"
+        }
+      ]
+    },
+    {
+      "subject": "psychology",
+      "label": "Psychology",
+      "provider": "scimago",
+      "providerLabel": "SCImago SIR",
+      "year": 2026,
+      "totalRanked": 2466,
+      "countries": [
+        {
+          "countryCode": "US",
+          "country": "United States",
+          "count": 465
+        },
+        {
+          "countryCode": "CN",
+          "country": "China",
+          "count": 323
+        },
+        {
+          "countryCode": "GB",
+          "country": "United Kingdom",
+          "count": 120
+        },
+        {
+          "countryCode": "TR",
+          "country": "Türkiye",
+          "count": 108
+        },
+        {
+          "countryCode": "DE",
+          "country": "Germany",
+          "count": 81
+        },
+        {
+          "countryCode": "FR",
+          "country": "France",
+          "count": 77
+        },
+        {
+          "countryCode": "ES",
+          "country": "Spain",
+          "count": 73
+        },
+        {
+          "countryCode": "IT",
+          "country": "Italy",
+          "count": 64
+        }
+      ],
+      "institutions": [
+        {
+          "rank": 1,
+          "rankDisplay": "1",
+          "name": "Harvard University",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 2,
+          "rankDisplay": "2",
+          "name": "University College London",
+          "country": "United Kingdom",
+          "countryCode": "GB"
+        },
+        {
+          "rank": 3,
+          "rankDisplay": "3",
+          "name": "Harvard Medical School",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 4,
+          "rankDisplay": "4",
+          "name": "University of Toronto",
+          "country": "Canada",
+          "countryCode": "CA"
+        },
+        {
+          "rank": 5,
+          "rankDisplay": "5",
+          "name": "University of Amsterdam",
+          "country": "Netherlands",
+          "countryCode": "NL"
+        },
+        {
+          "rank": 6,
+          "rankDisplay": "6",
+          "name": "Kings College London",
+          "country": "United Kingdom",
+          "countryCode": "GB"
+        },
+        {
+          "rank": 7,
+          "rankDisplay": "7",
+          "name": "Columbia University",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 8,
+          "rankDisplay": "8",
+          "name": "University of Michigan, Ann Arbor",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 9,
+          "rankDisplay": "9",
+          "name": "Yale University",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 10,
+          "rankDisplay": "10",
+          "name": "University of California, Los Angeles",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 11,
+          "rankDisplay": "11",
+          "name": "Stanford University",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 12,
+          "rankDisplay": "12",
+          "name": "Johns Hopkins University",
+          "country": "United States",
+          "countryCode": "US"
+        }
+      ]
+    },
+    {
+      "subject": "social-sciences",
+      "label": "Social sciences",
+      "provider": "scimago",
+      "providerLabel": "SCImago SIR",
+      "year": 2026,
+      "totalRanked": 3909,
+      "countries": [
+        {
+          "countryCode": "US",
+          "country": "United States",
+          "count": 530
+        },
+        {
+          "countryCode": "CN",
+          "country": "China",
+          "count": 442
+        },
+        {
+          "countryCode": "IN",
+          "country": "India",
+          "count": 219
+        },
+        {
+          "countryCode": "TR",
+          "country": "Türkiye",
+          "count": 137
+        },
+        {
+          "countryCode": "BR",
+          "country": "Brazil",
+          "count": 134
+        },
+        {
+          "countryCode": "GB",
+          "country": "United Kingdom",
+          "count": 125
+        },
+        {
+          "countryCode": "FR",
+          "country": "France",
+          "count": 116
+        },
+        {
+          "countryCode": "DE",
+          "country": "Germany",
+          "count": 95
+        }
+      ],
+      "institutions": [
+        {
+          "rank": 1,
+          "rankDisplay": "1",
+          "name": "University College London",
+          "country": "United Kingdom",
+          "countryCode": "GB"
+        },
+        {
+          "rank": 2,
+          "rankDisplay": "2",
+          "name": "University of Oxford",
+          "country": "United Kingdom",
+          "countryCode": "GB"
+        },
+        {
+          "rank": 3,
+          "rankDisplay": "3",
+          "name": "Tsinghua University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 4,
+          "rankDisplay": "4",
+          "name": "University of Toronto",
+          "country": "Canada",
+          "countryCode": "CA"
+        },
+        {
+          "rank": 5,
+          "rankDisplay": "5",
+          "name": "Harvard University",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 6,
+          "rankDisplay": "6",
+          "name": "University of Cambridge",
+          "country": "United Kingdom",
+          "countryCode": "GB"
+        },
+        {
+          "rank": 7,
+          "rankDisplay": "7",
+          "name": "University of Michigan, Ann Arbor",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 8,
+          "rankDisplay": "8",
+          "name": "University of Amsterdam",
+          "country": "Netherlands",
+          "countryCode": "NL"
+        },
+        {
+          "rank": 9,
+          "rankDisplay": "9",
+          "name": "University of Melbourne",
+          "country": "Australia",
+          "countryCode": "AU"
+        },
+        {
+          "rank": 10,
+          "rankDisplay": "10",
+          "name": "University of Chinese Academy of Sciences",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 11,
+          "rankDisplay": "11",
+          "name": "Stanford University",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 12,
+          "rankDisplay": "12",
+          "name": "Monash University, Melbourne",
+          "country": "Australia",
+          "countryCode": "AU"
+        }
+      ]
+    },
+    {
+      "subject": "veterinary",
+      "label": "Veterinary",
+      "provider": "scimago",
+      "providerLabel": "SCImago SIR",
+      "year": 2026,
+      "totalRanked": 978,
+      "countries": [
+        {
+          "countryCode": "CN",
+          "country": "China",
+          "count": 108
+        },
+        {
+          "countryCode": "US",
+          "country": "United States",
+          "count": 102
+        },
+        {
+          "countryCode": "BR",
+          "country": "Brazil",
+          "count": 78
+        },
+        {
+          "countryCode": "TR",
+          "country": "Türkiye",
+          "count": 38
+        },
+        {
+          "countryCode": "IR",
+          "country": "Iran",
+          "count": 36
+        },
+        {
+          "countryCode": "GB",
+          "country": "United Kingdom",
+          "count": 33
+        },
+        {
+          "countryCode": "EG",
+          "country": "Egypt",
+          "count": 25
+        },
+        {
+          "countryCode": "FR",
+          "country": "France",
+          "count": 25
+        }
+      ],
+      "institutions": [
+        {
+          "rank": 1,
+          "rankDisplay": "1",
+          "name": "University of California, Davis",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 2,
+          "rankDisplay": "2",
+          "name": "Universidade de Sao Paulo",
+          "country": "Brazil",
+          "countryCode": "BR"
+        },
+        {
+          "rank": 3,
+          "rankDisplay": "3",
+          "name": "China Agricultural University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 4,
+          "rankDisplay": "4",
+          "name": "Universidade Estadual Paulista Julio de Mesquita Filho",
+          "country": "Brazil",
+          "countryCode": "BR"
+        },
+        {
+          "rank": 5,
+          "rankDisplay": "5",
+          "name": "University of Florida",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 6,
+          "rankDisplay": "6",
+          "name": "Northwest A and F University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 7,
+          "rankDisplay": "7",
+          "name": "Yangzhou University",
+          "country": "China",
+          "countryCode": "CN"
+        },
+        {
+          "rank": 8,
+          "rankDisplay": "8",
+          "name": "North Carolina State University",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 9,
+          "rankDisplay": "9",
+          "name": "University of Guelph",
+          "country": "Canada",
+          "countryCode": "CA"
+        },
+        {
+          "rank": 10,
+          "rankDisplay": "10",
+          "name": "Royal Veterinary College, University of London",
+          "country": "United Kingdom",
+          "countryCode": "GB"
+        },
+        {
+          "rank": 11,
+          "rankDisplay": "11",
+          "name": "Texas A&M University, College Station",
+          "country": "United States",
+          "countryCode": "US"
+        },
+        {
+          "rank": 12,
+          "rankDisplay": "12",
+          "name": "University of Georgia",
+          "country": "United States",
+          "countryCode": "US"
+        }
+      ]
+    }
+  ],
   "qsSubjectOutperformers": [
     {
       "name": "EHL Hospitality Business School",

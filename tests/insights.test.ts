@@ -78,6 +78,16 @@ test("analytical outputs preserve publisher semantics", () => {
   assert.ok(trendUs.points.at(-1).share < trendUs.points[0].share);
   assert.ok(trendCn.points.at(-1).share > trendCn.points[0].share);
   assert.equal(arwuTrend.countries.every((country: Record<string, any>) => country.points.length === 22), true);
+
+  const scimago = payload.scimagoSubjectLeaders as Array<Record<string, any>>;
+  assert.equal(scimago.length, 19);
+  assert.ok(scimago.every((board) => board.provider === "scimago" && board.year >= 2021));
+  assert.ok(scimago.every((board) => board.institutions.length >= 5 && board.institutions.length <= 12));
+  assert.ok(scimago.every((board) => board.countries.length >= 1 && board.countries.length <= 8));
+  assert.deepEqual(
+    scimago.map((board) => board.label),
+    [...scimago.map((board) => board.label)].sort((a, b) => (a < b ? -1 : a > b ? 1 : 0)),
+  );
 });
 
 test("research metrics match fixed cohorts", () => {

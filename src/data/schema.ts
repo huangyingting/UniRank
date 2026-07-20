@@ -299,6 +299,7 @@ export interface InsightsData {
   natureSubjects: NatureSubject[];
   subjectMatrix: SubjectMatrixRow[];
   subjectLeaders: SubjectLeaderBoard[];
+  scimagoSubjectLeaders: SubjectLeaderBoard[];
   qsSubjectOutperformers: QsSubjectOutperformer[];
   countryAtlas: CountryAtlas;
   openAlexGrowth: OpenAlexGrowth[];

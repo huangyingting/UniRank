@@ -14,11 +14,13 @@ subjectLeaderCountries.forEach((country) => {
   if (country) countryCounts.set(country, (countryCounts.get(country) ?? 0) + 1);
 });
 const split = [...countryCounts.entries()].sort((a, b) => b[1] - a[1]);
+const scimagoYear = insights.scimagoSubjectLeaders[0]?.year ?? 2026;
+const scimagoNote = `SCImago Institutions Rankings ${scimagoYear}, universities only. Bars count how many ranked universities each country contributes to this research area (top eight shown); the leaderboard lists the highest-placed universities. SCImago is a bibliometric measure weighted toward research output and citation impact, so large research-intensive systems dominate—treat it as a research-scale signal, not reputation or teaching quality.`;
 ---
 
 <BaseLayout
   title="Subject lens"
-  description="Compare specialist subject strengths using QS 2026 and Nature Index 2026 academic discipline tables, with transparent limits on what subject rankings can tell you."
+  description="Compare specialist subject strengths using QS 2026, SCImago 2026 research areas, and Nature Index 2026 academic discipline tables, with transparent limits on what subject rankings can tell you."
 >
   <section class="page-hero subject-hero">
     <div class="shell hero-grid">
@@ -89,6 +91,21 @@ const split = [...countryCounts.entries()].sort((a, b) => b[1] - a[1]);
         description="Pick a discipline to compare its highest-placed institutions with the countries that supply the most ranked programs. Every field concentrates differently—some in one system, others spread across many."
       />
       <SubjectExplorer boards={insights.subjectLeaders} />
+    </div>
+  </section>
+
+  <section class="section explorer-section scimago-section">
+    <div class="shell">
+      <SectionHeading
+        eyebrow="Bibliometric field view"
+        title="Nineteen SCImago research areas—covering every discipline."
+        description="SCImago Institutions Rankings score universities by research output and citation impact across broad Scopus areas, including arts, humanities, and social sciences that reputation and journal-set measures underweight. Pick an area to see its highest-placed universities and the systems supplying the most ranked institutions."
+      />
+      <SubjectExplorer
+        boards={insights.scimagoSubjectLeaders}
+        defaultSubject="computer-science"
+        note={scimagoNote}
+      />
     </div>
   </section>
 

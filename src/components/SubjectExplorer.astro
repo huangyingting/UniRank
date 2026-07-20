@@ -4,14 +4,18 @@ import CustomSelect from './CustomSelect.astro';
 
 interface Props {
   boards: SubjectLeaderBoard[];
+  note?: string;
+  defaultSubject?: string;
 }
 
-const { boards } = Astro.props;
-const preferred = boards.findIndex(
-  (board) => board.subject === 'computer-science-information-systems',
-);
+const { boards, note, defaultSubject } = Astro.props;
+const preferredSubject = defaultSubject ?? 'computer-science-information-systems';
+const preferred = boards.findIndex((board) => board.subject === preferredSubject);
 const defaultIndex = preferred >= 0 ? preferred : 0;
 const serialized = JSON.stringify(boards).replaceAll('<', '\\u003c');
+const fineNote =
+  note ??
+  `QS 2026 subject tables. Bars count how many ranked institutions each country contributes to this field (top eight shown); the leaderboard lists the highest-placed institutions. Banded ranks use their lower bound, and a country's presence reflects listing counts, not per-program quality.`;
 ---
 
 <section class="subject-explorer surface" data-subject-explorer>
@@ -45,16 +49,11 @@ const serialized = JSON.stringify(boards).replaceAll('<', '\\u003c');
       <ol data-institutions class="leaders"></ol>
     </div>
   </div>
-  <p class="fine-print">
-    QS 2026 subject tables. Bars count how many ranked institutions each country
-    contributes to this field (top eight shown); the leaderboard lists the
-    highest-placed institutions. Banded ranks use their lower bound, and a
-    country's presence reflects listing counts, not per-program quality.
-  </p>
+  <p class="fine-print">{fineNote}</p>
   <script
-    id="subject-explorer-data"
     type="application/json"
     is:inline
+    data-subject-data
     set:html={serialized}
   ></script>
 </section>
@@ -85,10 +84,9 @@ const serialized = JSON.stringify(boards).replaceAll('<', '\\u003c');
     institutions: LeaderInstitution[];
   }
 
-  const initializeSubjectExplorer = () => {
-    const root = document.querySelector<HTMLElement>('[data-subject-explorer]');
-    const dataElement = document.querySelector<HTMLScriptElement>('#subject-explorer-data');
-    if (!root || !dataElement || root.dataset.initialized === 'true') return;
+  const initializeExplorer = (root: HTMLElement) => {
+    const dataElement = root.querySelector<HTMLScriptElement>('[data-subject-data]');
+    if (!dataElement || root.dataset.initialized === 'true') return;
     root.dataset.initialized = 'true';
     const boards = JSON.parse(dataElement.textContent || '[]') as Board[];
     const subjectSelect = root.querySelector<HTMLSelectElement>('[data-subject]');
@@ -265,8 +263,14 @@ const serialized = JSON.stringify(boards).replaceAll('<', '\\u003c');
     render();
   };
 
-  initializeSubjectExplorer();
-  document.addEventListener('astro:page-load', initializeSubjectExplorer);
+  const initializeSubjectExplorers = () => {
+    document
+      .querySelectorAll<HTMLElement>('[data-subject-explorer]')
+      .forEach((root) => initializeExplorer(root));
+  };
+
+  initializeSubjectExplorers();
+  document.addEventListener('astro:page-load', initializeSubjectExplorers);
 </script>
 
 <style>
