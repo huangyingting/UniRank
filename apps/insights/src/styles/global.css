@@ -1,23 +1,31 @@
 :root {
   color-scheme: light;
-  --ink: #101820;
-  --muted: #647078;
-  --paper: #f2efe8;
+  --ink: #12171d;
+  --muted: #5f6b73;
+  --paper: #f4f1ea;
   --surface: #fffdf8;
-  --line: #d7d4cb;
-  --line-strong: #b9b7af;
-  --teal: #1aa88a;
-  --teal-dark: #0d6c5a;
-  --coral: #f1674b;
-  --violet: #7168e8;
-  --yellow: #f3bd4f;
-  --blue: #197fba;
-  --radius: 18px;
-  --shadow: 0 24px 70px rgb(16 24 32 / 9%);
-  --shell: min(1220px, calc(100vw - 40px));
-  font-family:
-    Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
+  --line: #ded9cf;
+  --line-strong: #bcb9b0;
+  --teal: #17a085;
+  --teal-dark: #0b6151;
+  --coral: #ef6146;
+  --violet: #6c63e6;
+  --yellow: #f2b943;
+  --blue: #1a7cb8;
+  --radius: 20px;
+  --radius-lg: 28px;
+  --shadow: 0 26px 68px -28px rgb(16 24 32 / 22%);
+  --shadow-sm: 0 8px 24px -14px rgb(16 24 32 / 26%);
+  --shell: min(1240px, calc(100vw - 48px));
+  --font-sans:
+    "Inter Variable", ui-sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --font-serif:
+    "Fraunces Variable", ui-serif, Georgia, "Times New Roman", serif;
+  --font-mono: "Space Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-family: var(--font-sans);
+  font-optical-sizing: auto;
+  font-feature-settings: "cv05" 1, "ss01" 1;
 }
 
 * {
@@ -132,9 +140,9 @@ svg {
 
 .brand small {
   color: var(--muted);
-  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
-  font-size: 0.61rem;
-  letter-spacing: 0.08em;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -174,26 +182,32 @@ nav {
 }
 
 nav a {
-  padding: 9px 12px;
+  padding: 9px 14px;
   border-radius: 999px;
   color: #4e5960;
   font-size: 0.84rem;
-  font-weight: 650;
+  font-weight: 640;
   text-decoration: none;
+  transition: color 160ms ease, background 160ms ease;
 }
 
 nav a:hover,
 nav a.active {
   color: var(--ink);
-  background: rgb(255 255 255 / 72%);
+  background: rgb(255 255 255 / 78%);
+  box-shadow: 0 1px 2px rgb(16 24 32 / 6%);
 }
 
 main {
   min-height: 70vh;
 }
 
+:where(section, h2, h3, article)[id] {
+  scroll-margin-top: 100px;
+}
+
 .page-hero {
-  padding: 76px 0 42px;
+  padding: clamp(52px, 7vw, 92px) 0 44px;
 }
 
 .eyebrow {
@@ -202,10 +216,10 @@ main {
   gap: 9px;
   margin: 0 0 18px;
   color: var(--teal-dark);
-  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
-  font-size: 0.73rem;
-  font-weight: 750;
-  letter-spacing: 0.12em;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -230,23 +244,29 @@ h3 {
 }
 
 h1 {
-  max-width: 900px;
-  margin-bottom: 22px;
-  font-size: clamp(3rem, 7vw, 6.7rem);
-  font-weight: 720;
-  letter-spacing: -0.065em;
-  line-height: 0.94;
+  max-width: 15ch;
+  margin-bottom: 24px;
+  font-family: var(--font-serif);
+  font-size: clamp(2.9rem, 6.6vw, 6rem);
+  font-weight: 560;
+  font-variation-settings: "opsz" 144, "SOFT" 0, "WONK" 0;
+  letter-spacing: -0.022em;
+  line-height: 0.98;
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  letter-spacing: -0.045em;
-  line-height: 1.02;
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  font-weight: 540;
+  font-variation-settings: "opsz" 112, "SOFT" 0, "WONK" 0;
+  letter-spacing: -0.015em;
+  line-height: 1.04;
 }
 
 h3 {
-  font-size: 1.15rem;
-  letter-spacing: -0.025em;
+  font-size: 1.16rem;
+  font-weight: 640;
+  letter-spacing: -0.02em;
 }
 
 .lede {
@@ -257,7 +277,7 @@ h3 {
 }
 
 .section {
-  padding: 64px 0;
+  padding: clamp(56px, 6vw, 84px) 0;
 }
 
 .section + .section {
@@ -329,7 +349,7 @@ h3 {
 }
 
 .mono {
-  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-family: var(--font-mono);
 }
 
 .tag {
@@ -377,9 +397,9 @@ td {
 
 th {
   color: var(--muted);
-  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
-  font-size: 0.66rem;
-  letter-spacing: 0.08em;
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -420,9 +440,9 @@ footer {
 
 .footer-label {
   color: #7d898f;
-  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
