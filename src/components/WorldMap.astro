@@ -1,0 +1,608 @@
+---
+import type { CountryAtlas } from '../data/schema';
+
+interface Props {
+  atlas: CountryAtlas;
+  initialMetric?: string;
+}
+
+const { atlas, initialMetric = 'consensusTop100' } = Astro.props;
+const serialized = JSON.stringify({ metrics: atlas.metrics, countries: atlas.countries, initialMetric }).replaceAll(
+  '<',
+  '\\u003c',
+);
+---
+
+<figure class="worldmap surface" data-worldmap>
+  <div class="map-controls" data-metric-buttons role="tablist" aria-label="Choose a country metric">
+    {atlas.metrics.map((metric) => (
+      <button
+        type="button"
+        role="tab"
+        data-metric={metric.id}
+        aria-selected={metric.id === initialMetric ? 'true' : 'false'}
+        class:list={{ active: metric.id === initialMetric }}
+      >
+        {metric.short}
+      </button>
+    ))}
+  </div>
+
+  <p class="map-caption" data-caption></p>
+
+  <div class="map-stage">
+    <div class="map-frame">
+      <svg data-map viewBox="0 0 960 500" role="img" aria-label="World choropleth of the selected university metric">
+        <rect x="0" y="0" width="960" height="500" fill="transparent"></rect>
+      </svg>
+      <div class="map-tooltip" data-tooltip hidden aria-hidden="true"></div>
+    </div>
+
+    <aside class="map-side">
+      <div class="legend" data-legend aria-hidden="true"></div>
+      <div class="ranklist">
+        <span class="ranklist-title mono" data-rank-title></span>
+        <ol data-ranklist></ol>
+      </div>
+    </aside>
+  </div>
+
+  <figcaption class="fine-print" data-note></figcaption>
+
+  <script
+    id="worldmap-data"
+    type="application/json"
+    is:inline
+    set:html={serialized}
+  ></script>
+</figure>
+
+<script>
+  import { geoNaturalEarth1, geoPath } from 'd3-geo';
+  import { feature } from 'topojson-client';
+  import type { Feature, Geometry } from 'geojson';
+  import topology from 'world-atlas/countries-110m.json';
+
+  type Metric = {
+    id: string;
+    label: string;
+    short: string;
+    unit: string;
+    format: 'count' | 'decimal' | 'signed' | 'compact';
+    diverging: boolean;
+    description: string;
+  };
+  type CountryValues = Record<string, number>;
+  type Country = {
+    iso2: string;
+    numericId: string | null;
+    country: string;
+    topInstitution: string | null;
+    values: CountryValues;
+  };
+  type Payload = { metrics: Metric[]; countries: Country[]; initialMetric: string };
+
+  const root = document.querySelector<HTMLElement>('[data-worldmap]');
+  const dataElement = document.querySelector<HTMLScriptElement>('#worldmap-data');
+  if (root && dataElement) {
+    const payload = JSON.parse(dataElement.textContent || '{}') as Payload;
+    const metrics = payload.metrics;
+    const byId = new Map<string, Country>();
+    for (const country of payload.countries) if (country.numericId) byId.set(country.numericId, country);
+
+    const svg = root.querySelector<SVGSVGElement>('[data-map]');
+    const tooltip = root.querySelector<HTMLElement>('[data-tooltip]');
+    const legend = root.querySelector<HTMLElement>('[data-legend]');
+    const caption = root.querySelector<HTMLElement>('[data-caption]');
+    const note = root.querySelector<HTMLElement>('[data-note]');
+    const rankList = root.querySelector<HTMLOListElement>('[data-ranklist]');
+    const rankTitle = root.querySelector<HTMLElement>('[data-rank-title]');
+    const buttons = [...root.querySelectorAll<HTMLButtonElement>('[data-metric]')];
+    const svgNamespace = 'http://www.w3.org/2000/svg';
+
+    const NEUTRAL = '#e4e0d6';
+    const SEQ = ['#e9f5f0', '#c6e7dc', '#98d4c0', '#5fbca0', '#2f9d80', '#127e66', '#08594a'];
+    const POS = ['#d7efe7', '#9dd6c3', '#54b699', '#178a6f'];
+    const NEG = ['#f8ded5', '#f0b09c', '#e17a5f', '#c1462c'];
+
+    const numberFmt = new Intl.NumberFormat('en-US');
+    const compactFmt = new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 });
+    const decimalFmt = new Intl.NumberFormat('en-US', { maximumFractionDigits: 1 });
+
+    const formatValue = (value: number, metric: Metric): string => {
+      if (metric.format === 'compact') return compactFmt.format(value);
+      if (metric.format === 'decimal') return decimalFmt.format(value);
+      if (metric.format === 'signed') return `${value > 0 ? '+' : ''}${decimalFmt.format(value)}`;
+      return numberFmt.format(Math.round(value));
+    };
+
+    const geo = feature(
+      topology as never,
+      (topology as never as { objects: { countries: never } }).objects.countries,
+    ) as unknown as { features: Feature<Geometry>[] };
+    const projection = geoNaturalEarth1().fitExtent(
+      [
+        [8, 8],
+        [952, 492],
+      ],
+      geo as never,
+    );
+    const path = geoPath(projection);
+
+    const svgElement = <K extends keyof SVGElementTagNameMap>(
+      name: K,
+      attributes: Record<string, string | number>,
+    ): SVGElementTagNameMap[K] => {
+      const element = document.createElementNS(svgNamespace, name);
+      for (const [key, value] of Object.entries(attributes)) element.setAttribute(key, String(value));
+      return element;
+    };
+
+    const paths = new Map<string, SVGPathElement>();
+    const graticuleFrame = svgElement('path', {
+      d: path({ type: 'Sphere' } as never) || '',
+      fill: '#f7f4ec',
+      stroke: '#d8d3c8',
+      'stroke-width': 0.6,
+    });
+    svg?.append(graticuleFrame);
+
+    for (const shape of geo.features) {
+      const id = String(shape.id ?? '');
+      const element = svgElement('path', { d: path(shape) || '', fill: NEUTRAL, stroke: '#ffffff', 'stroke-width': 0.4 });
+      element.dataset.id = id;
+      element.setAttribute('tabindex', '-1');
+      svg?.append(element);
+      paths.set(id, element);
+
+      element.addEventListener('pointerenter', () => showTooltip(id));
+      element.addEventListener('pointermove', (event) => moveTooltip(event));
+      element.addEventListener('pointerleave', () => hideTooltip());
+    }
+
+    let activeMetric = metrics.find((m) => m.id === payload.initialMetric) ?? metrics[0];
+
+    type Band = { color: string; from: number | null; to: number | null; label: string };
+    let bands: Band[] = [];
+
+    const sampleRamp = (ramp: string[], count: number): string[] => {
+      if (count <= 1) return [ramp[ramp.length - 1]];
+      const out: string[] = [];
+      for (let index = 0; index < count; index += 1) {
+        const position = (index / (count - 1)) * (ramp.length - 1);
+        out.push(ramp[Math.round(position)]);
+      }
+      return out;
+    };
+
+    const quantiles = (values: number[], parts: number): number[] => {
+      const sorted = [...values].sort((a, b) => a - b);
+      const cuts: number[] = [];
+      for (let index = 1; index < parts; index += 1) {
+        const rank = (sorted.length - 1) * (index / parts);
+        cuts.push(sorted[Math.round(rank)]);
+      }
+      return [...new Set(cuts)];
+    };
+
+    const buildBands = (metric: Metric): Band[] => {
+      const values = payload.countries.map((country) => country.values[metric.id] ?? 0);
+      if (metric.diverging) {
+        const positives = values.filter((value) => value > 0);
+        const negatives = values.filter((value) => value < 0).map((value) => -value);
+        const posCuts = quantiles(positives, 3);
+        const negCuts = quantiles(negatives, 3);
+        const posColors = sampleRamp(POS, posCuts.length + 1);
+        const negColors = sampleRamp(NEG, negCuts.length + 1);
+        const negBands: Band[] = [];
+        const negEdges = [...negCuts];
+        for (let index = negColors.length - 1; index >= 0; index -= 1) {
+          const lower = index === 0 ? null : -negEdges[index - 1];
+          const upper = index === negColors.length - 1 ? 0 : -negEdges[index];
+          negBands.push({ color: negColors[index], from: lower, to: upper, label: '' });
+        }
+        const posBands: Band[] = [];
+        for (let index = 0; index < posColors.length; index += 1) {
+          const lower = index === 0 ? 0 : posCuts[index - 1];
+          const upper = index === posColors.length - 1 ? null : posCuts[index];
+          posBands.push({ color: posColors[index], from: lower, to: upper, label: '' });
+        }
+        return [...negBands, ...posBands];
+      }
+      const positives = values.filter((value) => value > 0);
+      const unique = [...new Set(positives)].sort((a, b) => a - b);
+      const cuts = unique.length <= 6 ? unique.slice(0, -1) : quantiles(positives, 6);
+      const colors = sampleRamp(SEQ, cuts.length + 1);
+      const out: Band[] = [];
+      for (let index = 0; index < colors.length; index += 1) {
+        const lower = index === 0 ? (metric.format === 'count' ? 1 : 0.000001) : cuts[index - 1];
+        const upper = index === colors.length - 1 ? null : cuts[index];
+        out.push({ color: colors[index], from: lower, to: upper, label: '' });
+      }
+      return out;
+    };
+
+    const colorForValue = (value: number, metric: Metric): string => {
+      if (metric.diverging) {
+        if (value === 0) return NEUTRAL;
+      } else if (value <= 0) {
+        return NEUTRAL;
+      }
+      for (const band of bands) {
+        const aboveLower = band.from === null || value >= band.from;
+        const belowUpper = band.to === null || value < band.to;
+        if (aboveLower && belowUpper) return band.color;
+      }
+      return NEUTRAL;
+    };
+
+    const renderLegend = (metric: Metric) => {
+      if (!legend) return;
+      legend.replaceChildren();
+      const heading = document.createElement('span');
+      heading.className = 'legend-title mono';
+      heading.textContent = metric.unit;
+      legend.append(heading);
+      const scale = document.createElement('div');
+      scale.className = 'legend-scale';
+      for (const band of bands) {
+        const swatch = document.createElement('span');
+        swatch.className = 'legend-band';
+        const chip = document.createElement('i');
+        chip.style.background = band.color;
+        const label = document.createElement('b');
+        const low = band.from === null ? '' : formatValue(band.from, metric);
+        const high = band.to === null ? '+' : formatValue(band.to, metric);
+        label.textContent = band.to === null ? `${low}${low ? '+' : ''}` : band.from === null ? `< ${high}` : `${low}`;
+        swatch.append(chip, label);
+        scale.append(swatch);
+      }
+      const nodata = document.createElement('span');
+      nodata.className = 'legend-band';
+      const nochip = document.createElement('i');
+      nochip.style.background = NEUTRAL;
+      const nolabel = document.createElement('b');
+      nolabel.textContent = metric.diverging ? 'no change' : 'none';
+      nodata.append(nochip, nolabel);
+      scale.append(nodata);
+      legend.append(scale);
+    };
+
+    const renderRankList = (metric: Metric) => {
+      if (!rankList || !rankTitle) return;
+      rankTitle.textContent = `Leading systems · ${metric.short}`;
+      const ranked = [...payload.countries]
+        .filter((country) => (metric.diverging ? country.values[metric.id] !== 0 : country.values[metric.id] > 0))
+        .sort((a, b) => Math.abs(b.values[metric.id]) - Math.abs(a.values[metric.id]))
+        .slice(0, 8);
+      rankList.replaceChildren(
+        ...ranked.map((country) => {
+          const item = document.createElement('li');
+          const name = document.createElement('span');
+          name.className = 'rank-country';
+          name.textContent = country.country;
+          const value = document.createElement('b');
+          value.textContent = formatValue(country.values[metric.id], metric);
+          item.append(name, value);
+          item.addEventListener('pointerenter', () => country.numericId && highlight(country.numericId, true));
+          item.addEventListener('pointerleave', () => country.numericId && highlight(country.numericId, false));
+          return item;
+        }),
+      );
+    };
+
+    const paintMap = (metric: Metric) => {
+      bands = buildBands(metric);
+      for (const [id, element] of paths) {
+        const country = byId.get(id);
+        const value = country ? country.values[metric.id] ?? 0 : 0;
+        element.setAttribute('fill', country ? colorForValue(value, metric) : NEUTRAL);
+      }
+    };
+
+    let highlighted: string | null = null;
+    const highlight = (id: string, on: boolean) => {
+      const element = paths.get(id);
+      if (!element) return;
+      if (on) {
+        highlighted = id;
+        element.setAttribute('stroke', '#12171d');
+        element.setAttribute('stroke-width', '1.4');
+        element.parentNode?.append(element);
+      } else {
+        highlighted = null;
+        element.setAttribute('stroke', '#ffffff');
+        element.setAttribute('stroke-width', '0.4');
+      }
+    };
+
+    const showTooltip = (id: string) => {
+      if (!tooltip) return;
+      if (highlighted && highlighted !== id) highlight(highlighted, false);
+      highlight(id, true);
+      const country = byId.get(id);
+      const geoName =
+        geo.features.find((shape) => String(shape.id ?? '') === id)?.properties?.name ?? 'Unknown';
+      const rows = country
+        ? metrics
+            .map((metric) => {
+              const value = country.values[metric.id] ?? 0;
+              const strong = metric.id === activeMetric.id;
+              return `<span class="tt-row${strong ? ' tt-active' : ''}"><i>${metric.short}</i><b>${formatValue(value, metric)}</b></span>`;
+            })
+            .join('')
+        : '<span class="tt-empty">Not in the current archive tables.</span>';
+      const top = country?.topInstitution
+        ? `<span class="tt-top">Top consensus: ${country.topInstitution}</span>`
+        : '';
+      tooltip.innerHTML = `<strong>${country ? country.country : geoName}</strong>${rows}${top}`;
+      tooltip.hidden = false;
+    };
+
+    const moveTooltip = (event: PointerEvent) => {
+      if (!tooltip) return;
+      const frame = tooltip.parentElement?.getBoundingClientRect();
+      if (!frame) return;
+      const x = event.clientX - frame.left;
+      const y = event.clientY - frame.top;
+      const offsetX = x > frame.width - 220 ? x - 220 : x + 16;
+      const offsetY = Math.min(y + 16, frame.height - tooltip.offsetHeight - 8);
+      tooltip.style.transform = `translate(${Math.max(8, offsetX)}px, ${Math.max(8, offsetY)}px)`;
+    };
+
+    const hideTooltip = () => {
+      if (!tooltip) return;
+      tooltip.hidden = true;
+      if (highlighted) highlight(highlighted, false);
+    };
+
+    const activate = (metric: Metric) => {
+      activeMetric = metric;
+      for (const button of buttons) {
+        const selected = button.dataset.metric === metric.id;
+        button.classList.toggle('active', selected);
+        button.setAttribute('aria-selected', selected ? 'true' : 'false');
+      }
+      if (caption) caption.textContent = metric.description;
+      if (note)
+        note.textContent =
+          'Hover a country for its full metric profile. Countries absent from a provider table are shown in neutral grey, not zero. Small territories that the 110m basemap omits (for example Hong Kong, Singapore, Andorra) may not render even when present in the data.';
+      paintMap(metric);
+      renderLegend(metric);
+      renderRankList(metric);
+    };
+
+    for (const button of buttons)
+      button.addEventListener('click', () => {
+        const metric = metrics.find((item) => item.id === button.dataset.metric);
+        if (metric) activate(metric);
+      });
+
+    activate(activeMetric);
+  }
+</script>
+
+<style>
+  .worldmap {
+    padding: 20px;
+  }
+
+  .map-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .map-controls button {
+    padding: 8px 13px;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    background: #fffdf8;
+    color: #4e5960;
+    font-size: 0.72rem;
+    font-weight: 680;
+    transition: color 150ms ease, background 150ms ease, border-color 150ms ease;
+  }
+
+  .map-controls button:hover {
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+
+  .map-controls button.active {
+    color: white;
+    background: var(--ink);
+    border-color: var(--ink);
+  }
+
+  .map-caption {
+    margin: 16px 2px 12px;
+    max-width: 76ch;
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+
+  .map-stage {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.32fr);
+    gap: 18px;
+    align-items: start;
+  }
+
+  .map-frame {
+    position: relative;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: linear-gradient(180deg, #fdfbf6, #f3efe6);
+    overflow: hidden;
+  }
+
+  .map-frame svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .map-frame path {
+    transition: fill 220ms ease;
+    cursor: pointer;
+  }
+
+  .map-tooltip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 210px;
+    padding: 12px 13px;
+    border: 1px solid rgb(16 24 32 / 12%);
+    border-radius: 12px;
+    background: rgb(255 253 248 / 97%);
+    box-shadow: var(--shadow-sm);
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .map-tooltip strong {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 0.82rem;
+  }
+
+  .map-tooltip :global(.tt-row) {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 2px 0;
+    color: var(--muted);
+    font-size: 0.66rem;
+  }
+
+  .map-tooltip :global(.tt-row i) {
+    font-style: normal;
+  }
+
+  .map-tooltip :global(.tt-row b) {
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .map-tooltip :global(.tt-active) {
+    color: var(--teal-dark);
+    font-weight: 700;
+  }
+
+  .map-tooltip :global(.tt-active b) {
+    color: var(--teal-dark);
+  }
+
+  .map-tooltip :global(.tt-top) {
+    display: block;
+    margin-top: 8px;
+    padding-top: 7px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.62rem;
+  }
+
+  .map-tooltip :global(.tt-empty) {
+    color: var(--muted);
+    font-size: 0.66rem;
+  }
+
+  .map-side {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .legend-title,
+  .ranklist-title {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--muted);
+    font-size: 0.58rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .legend-scale {
+    display: grid;
+    gap: 3px;
+  }
+
+  .legend-band {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .legend-band i {
+    display: block;
+    width: 20px;
+    height: 12px;
+    border-radius: 3px;
+  }
+
+  .legend-band b {
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 500;
+  }
+
+  .ranklist ol {
+    display: grid;
+    gap: 2px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: rank;
+  }
+
+  .ranklist li {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 5px 0;
+    border-top: 1px solid var(--line);
+    cursor: default;
+  }
+
+  .ranklist li:first-child {
+    border-top: 0;
+  }
+
+  .rank-country {
+    overflow: hidden;
+    font-size: 0.72rem;
+    font-weight: 620;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .ranklist li b {
+    color: var(--teal-dark);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+  }
+
+  [data-note] {
+    margin: 16px 2px 0;
+  }
+
+  @media (max-width: 820px) {
+    .map-stage {
+      grid-template-columns: 1fr;
+    }
+
+    .map-side {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 26px;
+    }
+
+    .map-side > * {
+      flex: 1 1 200px;
+    }
+  }
+</style>

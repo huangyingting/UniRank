@@ -1,5 +1,6 @@
 ---
 import SectionHeading from '../components/SectionHeading.astro';
+import SubjectExplorer from '../components/SubjectExplorer.astro';
 import SubjectMatrix from '../components/SubjectMatrix.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { insights } from '../lib/data';
@@ -77,6 +78,17 @@ const split = [...countryCounts.entries()].sort((a, b) => b[1] - a[1]);
         showing the largest overall-to-subject rank ratios. It is illustrative,
         not a ranking of “most underrated” universities.
       </p>
+    </div>
+  </section>
+
+  <section class="section explorer-section">
+    <div class="shell">
+      <SectionHeading
+        eyebrow="Explore the field"
+        title="Open any of 60 QS subject tables and see who leads."
+        description="Pick a discipline to compare its highest-placed institutions with the countries that supply the most ranked programs. Every field concentrates differently—some in one system, others spread across many."
+      />
+      <SubjectExplorer boards={insights.subjectLeaders} />
     </div>
   </section>
 

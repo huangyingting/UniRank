@@ -1,0 +1,239 @@
+---
+import BarChart from '../components/BarChart.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import WorldMap from '../components/WorldMap.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { insights } from '../lib/data';
+import { decimal, number } from '../lib/format';
+
+const atlas = insights.countryAtlas;
+const countries = atlas.countries;
+const placementCountries = countries.filter((country) => country.values.consensusTop100 > 0);
+const totalPlacements = placementCountries.reduce((sum, country) => sum + country.values.consensusTop100, 0);
+const topByConsensus = [...countries]
+  .sort((a, b) => b.values.consensusTop100 - a.values.consensusTop100)
+  .slice(0, 10);
+const top3Share =
+  totalPlacements > 0
+    ? topByConsensus.slice(0, 3).reduce((sum, country) => sum + country.values.consensusTop100, 0) /
+      totalPlacements
+    : 0;
+const gainers = [...countries]
+  .filter((country) => country.values.natureShareShift > 0)
+  .sort((a, b) => b.values.natureShareShift - a.values.natureShareShift)
+  .slice(0, 8);
+const topGainer = gainers[0];
+---
+
+<BaseLayout
+  title="Research atlas"
+  description="An interactive world map of university strength and research output: consensus top-100 placements, Nature Index share and its shift, ARWU seats, and OpenAlex output, joined to country geometry."
+>
+  <section class="page-hero">
+    <div class="shell hero-grid">
+      <div>
+        <p class="eyebrow">Where the signal concentrates</p>
+        <h1>The world map behind the tables.</h1>
+        <p class="lede">
+          Rankings are geographic before they are institutional. This atlas joins
+          six country-level measures to a world basemap so you can switch lenses—
+          elite placements, research output, and how the balance is shifting—
+          without mistaking any single one for the whole story.
+        </p>
+      </div>
+      <aside class="hero-note">
+        <span class="mono">CONSENSUS TOP-100 REACH</span>
+        <strong>{placementCountries.length}</strong>
+        <p>
+          countries place at least one institution inside a global top 100, yet
+          the top three hold {decimal.format(top3Share * 100)}% of all
+          {` ${number.format(totalPlacements)} `}placements.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <SectionHeading
+        eyebrow="Interactive choropleth"
+        title="Switch the lens; watch the map redraw."
+        description="Each measure answers a different question. Elite placements reward a few dense systems; research-output measures spread wider; the Nature share shift exposes a decade of change that the static tables hide."
+      />
+      <WorldMap atlas={atlas} />
+    </div>
+  </section>
+
+  <section class="section concentration-section">
+    <div class="shell">
+      <SectionHeading
+        eyebrow="Concentration"
+        title="Elite placements sit in a short list of systems."
+        description="Institutions ranked in the top 100 across the six consensus providers' latest overall editions, counted once per provider. Detail shows how many of the six providers each country reaches."
+      />
+      <div class="concentration-grid">
+        <BarChart
+          items={topByConsensus.map((country) => ({
+            label: country.country,
+            value: country.values.consensusTop100,
+            detail: `${country.values.providerReach}/6 providers`,
+          }))}
+          color="var(--violet)"
+        />
+        <aside class="mover-panel">
+          <span class="mono">NATURE SHARE SHIFT · 2016 → 2026</span>
+          <p class="mover-lede">
+            Largest rises in Nature Index academic Share. The basket of journals
+            is fixed, so direction is meaningful while magnitude is not a growth
+            rate.
+          </p>
+          <ol class="mover-list">
+            {gainers.map((country) => (
+              <li>
+                <span>{country.country}</span>
+                <b class="positive">+{number.format(Math.round(country.values.natureShareShift))}</b>
+              </li>
+            ))}
+          </ol>
+          {topGainer && (
+            <small>
+              {topGainer.country} alone added about
+              {` ${number.format(Math.round(topGainer.values.natureShareShift))} `}
+              of fractional share—more than any other system in the window.
+            </small>
+          )}
+        </aside>
+      </div>
+      <p class="fine-print">
+        Placements are not shares of national systems, and the six measures are
+        not directly comparable. Hong Kong and Macau remain separate from
+        mainland China; the 110m basemap cannot draw every small territory even
+        when it is present in the underlying data.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.5fr);
+    align-items: end;
+    gap: clamp(30px, 7vw, 90px);
+  }
+
+  .hero-note {
+    padding: 26px;
+    border-left: 4px solid var(--violet);
+    background: rgb(255 253 248 / 62%);
+  }
+
+  .hero-note > span {
+    color: var(--muted);
+    font-size: 0.62rem;
+  }
+
+  .hero-note > strong {
+    display: block;
+    margin: 12px 0 4px;
+    font-size: 4.4rem;
+    letter-spacing: -0.07em;
+    line-height: 1;
+  }
+
+  .hero-note p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.76rem;
+  }
+
+  .concentration-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(240px, 0.6fr);
+    gap: 26px;
+    align-items: start;
+  }
+
+  .mover-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+    border-radius: var(--radius);
+    color: white;
+    background: var(--teal-dark);
+  }
+
+  .mover-panel > span {
+    font-size: 0.6rem;
+    opacity: 0.7;
+  }
+
+  .mover-lede {
+    margin: 0;
+    font-size: 0.72rem;
+    opacity: 0.8;
+  }
+
+  .mover-list {
+    display: grid;
+    gap: 2px;
+    margin: 4px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .mover-list li {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 7px 0;
+    border-top: 1px solid rgb(255 255 255 / 16%);
+  }
+
+  .mover-list li:first-child {
+    border-top: 0;
+  }
+
+  .mover-list span {
+    overflow: hidden;
+    font-size: 0.76rem;
+    font-weight: 620;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mover-list b {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+  }
+
+  .mover-list .positive {
+    color: #7ce0c7;
+  }
+
+  .mover-panel small {
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid rgb(255 255 255 / 22%);
+    font-size: 0.64rem;
+    opacity: 0.72;
+  }
+
+  .concentration-section .fine-print {
+    margin: 22px 2px 0;
+  }
+
+  @media (max-width: 900px) {
+    .concentration-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

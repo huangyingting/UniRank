@@ -11,6 +11,7 @@ const countries = require("i18n-iso-countries") as {
   registerLocale(locale: unknown): void;
   isValid(code: string): boolean;
   alpha3ToAlpha2(code: string): string | undefined;
+  alpha2ToNumeric(code: string): string | undefined;
   getAlpha2Code(name: string, lang: string): string | undefined;
   getSimpleAlpha2Code(name: string, lang: string): string | undefined;
   getName(code: string, lang: string): string | undefined;
@@ -143,9 +144,80 @@ function corr(a: number[], b: number[]): number { const ma = mean(a), mb = mean(
 function spearman(a: number[], b: number[]): number { return corr(rankAverage(a), rankAverage(b)); }
 function buildLeidenSummary(snapshots: Snapshot[]): Row { let frame: Row[] = readColumns(globalSnapshotFor(snapshots, "leiden", 2025).path, new Set(["ranking_scope", "ranking", "mncs_ranking", "top_10_percent_ranking", "name", "country_code", "p", "mncs", "pp_top_10"])).filter((r) => r.ranking_scope === "overall").map((r): Row => ({ ...r, ranking: toNumber(r.ranking), mncs_ranking: toNumber(r.mncs_ranking), top_10_percent_ranking: toNumber(r.top_10_percent_ranking), p: toNumber(r.p), mncs: toNumber(r.mncs), pp_top_10: toNumber(r.pp_top_10) })); frame = frame.filter((r) => !Number.isNaN(r.ranking) && !Number.isNaN(r.mncs_ranking) && !Number.isNaN(r.top_10_percent_ranking)); const scaleImpactOverlap = frame.filter((r) => r.ranking <= 100 && r.mncs_ranking <= 100).length; const scaleTop10Overlap = frame.filter((r) => r.ranking <= 100 && r.top_10_percent_ranking <= 100).length; const minBy = (col: string) => frame.reduce((best, r) => r[col] < best[col] ? r : best, frame[0]); const spotlights: Row[] = []; const seen = new Set<string>(); for (const row of [minBy("ranking"), minBy("mncs_ranking"), minBy("top_10_percent_ranking")]) { const name = String(row.name); if (seen.has(name)) continue; seen.add(name); const code = countryCode(row.country_code); spotlights.push({ name, country: countryLabel(code, row.country_code), scaleRank: Math.trunc(row.ranking), impactRank: Math.trunc(row.mncs_ranking), top10Rank: Math.trunc(row.top_10_percent_ranking), publicationCount: pyRound(row.p, 1), normalizedImpact: pyRound(row.mncs, 3), top10Share: pyRound(row.pp_top_10 * 100, 2) }); } return { year: 2025, institutionCount: frame.length, scaleImpactSpearman: pyRound(spearman(frame.map((r) => r.ranking), frame.map((r) => r.mncs_ranking)), 3), scaleTop10Spearman: pyRound(spearman(frame.map((r) => r.ranking), frame.map((r) => r.top_10_percent_ranking)), 3), scaleImpactTop100Overlap: scaleImpactOverlap, scaleTop10Top100Overlap: scaleTop10Overlap, spotlights }; }
 function buildInstitutionTrends(snapshots: Snapshot[], consensus: Row[]): Row[] { const selected = new Map(consensus.slice(0, 14).map((item) => [keyOf(item.canonical, item.countryCode), item])); const points = new Map<string, Map<string, Row[]>>(); for (const key of selected.keys()) points.set(key, new Map()); const seenSourceYear = new Set<string>(); for (const snapshot of [...snapshots].sort((a, b) => a.year - b.year || sortStrings(a.source, b.source))) { const sy = `${snapshot.source}\u0000${snapshot.year}`; if (!TREND_PROVIDERS.includes(snapshot.source as any) || !isGlobal(snapshot) || seenSourceYear.has(sy)) continue; seenSourceYear.add(sy); for (const row of overallFrame(snapshot)) { const name = rowName(row, snapshot.source); const [code] = rowCountry(row, snapshot.source); const key = entityKey(name, code); if (!selected.has(key)) continue; const [rank, display] = rowRank(row, snapshot.source); if (rank === null) continue; const byProvider = points.get(key)!; if (!byProvider.has(snapshot.source)) byProvider.set(snapshot.source, []); byProvider.get(snapshot.source)!.push({ year: snapshot.year, rank: pyRound(rank, 1), rankDisplay: display }); } } return [...selected.entries()].map(([key, inst]) => { const series: Row[] = []; for (const source of TREND_PROVIDERS) { const providerPoints = points.get(key)!.get(source) ?? []; if (providerPoints.length < 2) continue; series.push({ provider: source, label: PROVIDER_META[source].label, color: PROVIDER_META[source].color, points: [...providerPoints].sort((a, b) => a.year - b.year) }); } return { id: inst.id, name: inst.name, country: inst.country, series }; }); }
+const ATLAS_METRICS: Row[] = [
+  { id: "consensusTop100", label: "Top-100 placements", short: "Top-100 seats", unit: "institutions", format: "count", diverging: false, description: "Institutions ranked in the top 100 across the six consensus providers' latest overall editions. A country can appear once per provider." },
+  { id: "providerReach", label: "Provider reach", short: "Providers in top 100", unit: "of 6 providers", format: "count", diverging: false, description: "How many of the six consensus providers place at least one institution from this country inside their top 100." },
+  { id: "natureShare", label: "Nature Index share", short: "Nature 2026 share", unit: "fractional share", format: "decimal", diverging: false, description: "Summed national fractional Share in the Nature Index 2026 academic table. Covers a selected natural- and health-science journal set." },
+  { id: "natureShareShift", label: "Nature share shift", short: "2016 to 2026 change", unit: "share change", format: "signed", diverging: true, description: "Change in Nature Index academic Share from the 2016 edition (2015 output) to the 2026 edition (2025 output). Direction is informative; magnitude reflects a fixed journal basket." },
+  { id: "arwuTop100", label: "ARWU top-100 seats", short: "ARWU 2025 top 100", unit: "institutions", format: "count", diverging: false, description: "Institutions in the ShanghaiRanking ARWU 2025 world top 100." },
+  { id: "openAlexWorks", label: "OpenAlex output", short: "2025 works", unit: "works associations", format: "compact", diverging: false, description: "Summed institutional works associations in the 2025 OpenAlex reconstruction. A scale proxy, not a quality measure." },
+];
+
+function buildCountryAtlas(snapshots: Snapshot[], consensus: Row[]): Row {
+  type Acc = { consensusTop100: number; providers: Set<string>; natureShare: number; natureShare2016: number; arwuTop100: number; openAlexWorks: number };
+  const acc = new Map<string, Acc>();
+  const ensure = (code: string): Acc => { if (!acc.has(code)) acc.set(code, { consensusTop100: 0, providers: new Set(), natureShare: 0, natureShare2016: 0, arwuTop100: 0, openAlexWorks: 0 }); return acc.get(code)!; };
+
+  const latest = latestGlobalSnapshots(snapshots, CONSENSUS_PROVIDERS);
+  for (const source of CONSENSUS_PROVIDERS) {
+    const best = new Map<string, { rank: number; code: string }>();
+    for (const row of overallFrame(latest[source])) {
+      const name = rowName(row, source);
+      const [rank] = rowRank(row, source);
+      const [code] = rowCountry(row, source);
+      if (!name || rank === null || !code) continue;
+      const key = entityKey(name, code);
+      const existing = best.get(key);
+      if (!existing || rank < existing.rank) best.set(key, { rank, code });
+    }
+    for (const { rank, code } of best.values()) { if (rank > 100) continue; const entry = ensure(code); entry.consensusTop100 += 1; entry.providers.add(source); }
+  }
+
+  for (const [year, field] of [[2026, "natureShare"], [2016, "natureShare2016"]] as const) {
+    const frame = readColumns(globalSnapshotFor(snapshots, "nature", year).path, new Set(["ranking_scope", "country", "share"])).filter((r) => r.ranking_scope === "academic-overall");
+    for (const row of frame) { const code = countryCode(row.country); if (!code) continue; ensure(code)[field] += toNumber(row.share) || 0; }
+  }
+
+  for (const row of overallFrame(globalSnapshotFor(snapshots, "arwu", 2025))) { const [rank] = rowRank(row, "arwu"); const [code] = rowCountry(row, "arwu"); if (rank === null || rank > 100 || !code) continue; ensure(code).arwuTop100 += 1; }
+
+  for (const row of readColumns(globalSnapshotFor(snapshots, "openalex", 2025).path, new Set(["country", "country_code", "works_count"]))) { const [code] = rowCountry(row, "openalex"); if (!code) continue; ensure(code).openAlexWorks += Math.trunc(toNumber(row.works_count) || 0); }
+
+  const topInstitution = new Map<string, string>();
+  for (const inst of consensus) { const code = inst.countryCode; if (code && !topInstitution.has(code)) topInstitution.set(code, inst.name); }
+
+  const countriesOut: Row[] = [];
+  for (const [code, entry] of acc) {
+    const shift = entry.natureShare > 0 || entry.natureShare2016 > 0 ? entry.natureShare - entry.natureShare2016 : 0;
+    const values = { consensusTop100: entry.consensusTop100, providerReach: entry.providers.size, natureShare: pyRound(entry.natureShare, 2), natureShareShift: pyRound(shift, 2), arwuTop100: entry.arwuTop100, openAlexWorks: entry.openAlexWorks };
+    if (!Object.values(values).some((v) => v !== 0)) continue;
+    countriesOut.push({ iso2: code, numericId: countries.alpha2ToNumeric(code) ?? null, country: countryLabel(code), topInstitution: topInstitution.get(code) ?? null, values });
+  }
+  countriesOut.sort((a, b) => b.values.consensusTop100 - a.values.consensusTop100 || b.values.natureShare - a.values.natureShare || sortStrings(a.country, b.country));
+  return { metrics: ATLAS_METRICS, countries: countriesOut };
+}
+
+function buildSubjectLeaders(snapshots: Snapshot[]): Row[] {
+  const snapshot = globalSnapshotFor(snapshots, "qs", 2026);
+  const frame = readColumns(snapshot.path, new Set(["ranking_scope", "title", "country", "rank_display", "rank"]));
+  const bySubject = new Map<string, Row[]>();
+  for (const row of frame) { const scope = String(row.ranking_scope || ""); if (!scope || scope === "overall") continue; if (!bySubject.has(scope)) bySubject.set(scope, []); bySubject.get(scope)!.push(row); }
+  const boards: Row[] = [];
+  for (const [scope, rows] of bySubject) {
+    const ranked: Row[] = [];
+    for (const row of rows) { const [rank, display] = rowRank(row, "qs"); if (rank === null) continue; const [code, label] = rowCountry(row, "qs"); const name = String(row.title).replace(/\s+/g, " ").replace(" ,", ",").trim(); ranked.push({ rank: Math.trunc(rank), rankDisplay: display, name, country: label, countryCode: code }); }
+    if (ranked.length < 5) continue;
+    ranked.sort((a, b) => a.rank - b.rank || sortStrings(a.name, b.name));
+    const counts = countItems(ranked.map((r) => r.countryCode).filter(Boolean) as string[]);
+    const countryDist = [...counts.entries()].sort((a, b) => b[1] - a[1] || sortStrings(countryLabel(a[0]), countryLabel(b[0]))).slice(0, 8).map(([code, count]) => ({ countryCode: code, country: countryLabel(code), count }));
+    boards.push({ subject: scope, label: QS_SUBJECT_LABELS[scope] ?? titleCase(scope.replace(/-/g, " ")), provider: "qs", providerLabel: PROVIDER_META.qs.label, year: 2026, totalRanked: ranked.length, countries: countryDist, institutions: ranked.slice(0, 12) });
+  }
+  boards.sort((a, b) => sortStrings(a.label, b.label));
+  return boards;
+}
+
 function uniqueCountryCount(snapshots: Snapshot[]): number { const frame = readColumns(globalSnapshotFor(snapshots, "openalex", 2025).path, new Set(["country_code", "country"])); return new Set(frame.map((row) => rowCountry(row, "openalex")[0]).filter(Boolean)).size; }
 function archiveMetadata(snapshots: Snapshot[], providers: Row[]): Row { const years = snapshots.filter(isGlobal).map((s) => s.year); const scopes = new Set<string>(); for (const s of snapshots) for (const scope of Object.keys(s.manifest.records_by_scope ?? {})) if (scope !== "overall") scopes.add(`${s.source}\u0000${scope}`); const retrieved = snapshots.map((s) => s.manifest.retrieved_at).filter(Boolean).map(String); return { archiveRows: snapshots.reduce((a, s) => a + s.records, 0), globalRows: snapshots.filter(isGlobal).reduce((a, s) => a + s.records, 0), csvFiles: snapshots.length, providers: providers.length, firstYear: Math.min(...years), lastYear: Math.max(...years), countries: uniqueCountryCount(snapshots), subjectViews: scopes.size, failedScopes: snapshots.reduce((a, s) => a + ((s.manifest.failures ?? []) as unknown[]).length, 0), latestRetrieval: retrieved.sort(sortStrings).at(-1) } }
-function buildPayload(): Row { const snapshots = loadSnapshots(); const providers = providerInventory(snapshots); const [consensus, countryFootprint, providerTop100] = buildConsensus(snapshots); const [natureSubjects, subjectMatrix] = buildNatureSubjects(snapshots, consensus); const latest = latestGlobalSnapshots(snapshots); return { meta: archiveMetadata(snapshots, providers), providers, consensus, countryFootprint, providerTop100, rankingUniverse: buildRankingUniverse(snapshots), arwuConcentration: buildArwuConcentration(snapshots), natureCountryShift: buildNatureCountryShift(snapshots), natureSubjects, subjectMatrix, qsSubjectOutperformers: buildQsSubjectOutperformers(snapshots), openAlexGrowth: buildOpenAlexGrowth(snapshots, consensus.slice(0, 40)), openAlexCountryMomentum: buildOpenAlexCountryMomentum(snapshots), leidenScaleImpact: buildLeidenScatter(snapshots), leidenSummary: buildLeidenSummary(snapshots), institutionTrends: buildInstitutionTrends(snapshots, consensus), methodology: { consensusProviders: CONSENSUS_PROVIDERS.map((source) => ({ id: source, label: PROVIDER_META[source].label, year: latest[source].year })), consensusMinimumProviders: 4, consensusDefinition: "Mean within-table percentile across the latest available broad overall editions; it is an analytical index, not a new ranking.", natureWindow: "2016 edition (2015 output) to 2026 edition (2025 output)", openAlexWindow: "Publication years 2016 to 2025" } }; }
+function buildPayload(): Row { const snapshots = loadSnapshots(); const providers = providerInventory(snapshots); const [consensus, countryFootprint, providerTop100] = buildConsensus(snapshots); const [natureSubjects, subjectMatrix] = buildNatureSubjects(snapshots, consensus); const latest = latestGlobalSnapshots(snapshots); return { meta: archiveMetadata(snapshots, providers), providers, consensus, countryFootprint, providerTop100, rankingUniverse: buildRankingUniverse(snapshots), arwuConcentration: buildArwuConcentration(snapshots), natureCountryShift: buildNatureCountryShift(snapshots), natureSubjects, subjectMatrix, subjectLeaders: buildSubjectLeaders(snapshots), qsSubjectOutperformers: buildQsSubjectOutperformers(snapshots), countryAtlas: buildCountryAtlas(snapshots, consensus), openAlexGrowth: buildOpenAlexGrowth(snapshots, consensus.slice(0, 40)), openAlexCountryMomentum: buildOpenAlexCountryMomentum(snapshots), leidenScaleImpact: buildLeidenScatter(snapshots), leidenSummary: buildLeidenSummary(snapshots), institutionTrends: buildInstitutionTrends(snapshots, consensus), methodology: { consensusProviders: CONSENSUS_PROVIDERS.map((source) => ({ id: source, label: PROVIDER_META[source].label, year: latest[source].year })), consensusMinimumProviders: 4, consensusDefinition: "Mean within-table percentile across the latest available broad overall editions; it is an analytical index, not a new ranking.", natureWindow: "2016 edition (2015 output) to 2026 edition (2025 output)", openAlexWindow: "Publication years 2016 to 2025" } }; }
 function main(): void { const payload = buildPayload(); mkdirSync(dirname(OUTPUT_PATH), { recursive: true }); writeFileSync(OUTPUT_PATH, JSON.stringify(payload, null, 2) + "\n", "utf8"); console.log(`Wrote ${relative(ROOT, OUTPUT_PATH)} (${(readFileSync(OUTPUT_PATH).byteLength / 1024).toFixed(1)} KiB)`); }
 
 main();

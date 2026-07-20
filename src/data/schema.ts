@@ -129,6 +129,63 @@ export interface SubjectMatrixRow {
   ranks: Record<string, number | null>;
 }
 
+export interface SubjectLeaderInstitution {
+  rank: number;
+  rankDisplay: string;
+  name: string;
+  country: string;
+  countryCode: string | null;
+}
+
+export interface SubjectLeaderCountry {
+  countryCode: string;
+  country: string;
+  count: number;
+}
+
+export interface SubjectLeaderBoard {
+  subject: string;
+  label: string;
+  provider: string;
+  providerLabel: string;
+  year: number;
+  totalRanked: number;
+  countries: SubjectLeaderCountry[];
+  institutions: SubjectLeaderInstitution[];
+}
+
+export interface CountryAtlasMetric {
+  id: string;
+  label: string;
+  short: string;
+  unit: string;
+  format: 'count' | 'decimal' | 'signed' | 'compact';
+  diverging: boolean;
+  description: string;
+}
+
+export interface CountryAtlasValues {
+  consensusTop100: number;
+  providerReach: number;
+  natureShare: number;
+  natureShareShift: number;
+  arwuTop100: number;
+  openAlexWorks: number;
+}
+
+export interface CountryAtlasEntry {
+  iso2: string;
+  numericId: string | null;
+  country: string;
+  topInstitution: string | null;
+  values: CountryAtlasValues;
+}
+
+export interface CountryAtlas {
+  metrics: CountryAtlasMetric[];
+  countries: CountryAtlasEntry[];
+}
+
 export interface OpenAlexGrowth {
   name: string;
   country: string;
@@ -225,7 +282,9 @@ export interface InsightsData {
   natureCountryShift: NatureCountryShift[];
   natureSubjects: NatureSubject[];
   subjectMatrix: SubjectMatrixRow[];
+  subjectLeaders: SubjectLeaderBoard[];
   qsSubjectOutperformers: QsSubjectOutperformer[];
+  countryAtlas: CountryAtlas;
   openAlexGrowth: OpenAlexGrowth[];
   openAlexCountryMomentum: OpenAlexCountryMomentum;
   leidenScaleImpact: LeidenPoint[];
