@@ -212,6 +212,7 @@ const universalTop20 = insights.consensus.filter(
     toggleShortlist,
     subscribeShortlist,
   } from '../lib/shortlist';
+  import { onPageLeave } from '../lib/client-lifecycle';
 
   const PROVIDER_ABBR: Record<string, string> = {
     usnews: 'USN', times: 'THE', qs: 'QS', cwur: 'CWUR', ntu: 'NTU',
@@ -253,15 +254,24 @@ const universalTop20 = insights.consensus.filter(
     const trayCount = document.querySelector<HTMLElement>('[data-tray-count]');
     if (!body || !count) return;
 
+    const lifecycle = new AbortController();
+    let unsubscribeShortlist = (): void => {};
+    onPageLeave(() => {
+      lifecycle.abort();
+      unsubscribeShortlist();
+    });
+
     let directory: Directory;
     try {
-      const response = await fetch('/data/directory.json');
+      const response = await fetch('/data/directory.json', { signal: lifecycle.signal });
       if (!response.ok) throw new Error(String(response.status));
       directory = (await response.json()) as Directory;
     } catch {
+      if (lifecycle.signal.aborted) return;
       count.textContent = 'The institution index could not be loaded. Please retry later.';
       return;
     }
+    if (lifecycle.signal.aborted) return;
 
     const providerOrder = directory.providers.map((item) => item.id);
     const providerLabels = new Map(directory.providers.map((item) => [item.id, item.label]));
@@ -446,8 +456,8 @@ const universalTop20 = insights.consensus.filter(
     provider?.addEventListener('change', onControlChange);
     coverage?.addEventListener('change', onControlChange);
     sort?.addEventListener('change', onControlChange);
-    window.addEventListener('popstate', () => { readUrl(); render(); });
-    subscribeShortlist(() => syncCompareUI());
+    window.addEventListener('popstate', () => { readUrl(); render(); }, { signal: lifecycle.signal });
+    unsubscribeShortlist = subscribeShortlist(() => syncCompareUI());
 
     readUrl();
     render();

@@ -97,6 +97,8 @@ const defaultIso = countryData[0]?.iso2 ?? '';
 </section>
 
 <script>
+  import { onPageLeave } from '../lib/client-lifecycle';
+
   interface Metric { id: string; label: string; short: string; unit: string; format: string }
   interface School { name: string; consensusRank: number; score: number }
   interface Subject { label: string; count: number }
@@ -188,14 +190,16 @@ const defaultIso = countryData[0]?.iso2 ?? '';
     picker.addEventListener('change', () => render(picker.value));
 
     // Let a click on the world map above drive this panel.
-    window.addEventListener('atlas:country', (event) => {
+    const onCountry = (event: Event): void => {
       const numericId = (event as CustomEvent<string>).detail;
       const entry = byNumeric.get(numericId);
       if (!entry) return;
       picker.value = entry.iso2;
       render(entry.iso2);
       root.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    });
+    };
+    window.addEventListener('atlas:country', onCountry);
+    onPageLeave(() => window.removeEventListener('atlas:country', onCountry));
 
     render(picker.value);
   };
