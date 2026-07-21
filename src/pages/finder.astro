@@ -336,6 +336,7 @@ const universalTop20 = insights.consensus.filter(
       checkbox.type = 'checkbox';
       checkbox.className = 'compare-check';
       checkbox.dataset.compareId = institution.id;
+      checkbox.dataset.compareName = institution.name;
       checkbox.setAttribute('aria-label', `Add ${institution.name} to your comparison`);
       checkbox.addEventListener('change', () => {
         toggleShortlist(institution.id);
@@ -368,6 +369,11 @@ const universalTop20 = insights.consensus.filter(
         const checked = selected.includes(id);
         box.checked = checked;
         box.disabled = full && !checked;
+        const name = box.dataset.compareName ?? 'this university';
+        box.setAttribute(
+          'aria-label',
+          checked ? `Remove ${name} from your comparison` : `Add ${name} to your comparison`,
+        );
       });
       if (tray && trayCount) {
         tray.hidden = selected.length === 0;
