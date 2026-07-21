@@ -37,6 +37,7 @@ jobs:
         run: npm run build
         env:
           SITE_URL: https://unirank.genisisiq.com
+          PUBLIC_GA_ID: ${{ vars.PUBLIC_GA_ID }}
 
       - name: Disable Jekyll processing
         run: touch dist/.nojekyll

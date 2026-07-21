@@ -84,6 +84,18 @@ Astro site and deploys `dist/`. In the repository settings, set **Pages → Buil
 and deployment → Source** to **GitHub Actions**, then configure the custom
 domain as `unirank.genisisiq.com`.
 
+### Google Analytics
+
+Google Analytics 4 is optional and production-only. Create a GA4 web data
+stream for `https://unirank.genisisiq.com`, then add its Measurement ID (for
+example, `G-XXXXXXXXXX`) as the repository Actions variable `PUBLIC_GA_ID`.
+The deploy workflow passes that value to Astro at build time. Missing or
+invalid IDs do not inject Google scripts, and local development remains
+untracked.
+
+For a local production build, copy `.env.example` to `.env` and replace the
+placeholder with the stream's Measurement ID. Never commit the local `.env`.
+
 ## Installation
 
 ```bash

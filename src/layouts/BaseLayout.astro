@@ -32,6 +32,11 @@ const fullTitle = title === 'Overview' ? 'University Signals' : `${title} · Uni
 const siteOrigin = Astro.site ?? new URL('https://unirank.genisisiq.com');
 const canonicalURL = new URL(path, siteOrigin);
 const socialImage = new URL('/og.png', siteOrigin);
+const rawGaId = import.meta.env.PUBLIC_GA_ID;
+const gaId = typeof rawGaId === 'string' && /^G-[A-Z0-9]+$/i.test(rawGaId.trim())
+  ? rawGaId.trim().toUpperCase()
+  : '';
+const enableGa = Boolean(gaId) && import.meta.env.PROD;
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -69,6 +74,12 @@ const jsonLd = {
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImage} />
+    {enableGa && (
+      <>
+        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+        <script is:inline set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${gaId}');`} />
+      </>
+    )}
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
     <ClientRouter />
   </head>

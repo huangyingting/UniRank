@@ -93,3 +93,15 @@ test("finder is subject-first without redundant ranking controls", () => {
   assert.doesNotMatch(component, /data-(?:provider|coverage|sort)(?:\s|=)/);
   assert.doesNotMatch(page, /Ranked by|Best coverage|Most rankings/);
 });
+
+test("Google Analytics is validated, production-only, and configured by the deploy workflow", () => {
+  const layout = readFileSync("src/layouts/BaseLayout.astro", "utf8");
+  const workflow = readFileSync(".github/workflows/deploy-pages.yml", "utf8");
+
+  assert.match(layout, /import\.meta\.env\.PUBLIC_GA_ID/);
+  assert.match(layout, /\^G-\[A-Z0-9\]\+\$/);
+  assert.match(layout, /import\.meta\.env\.PROD/);
+  assert.match(layout, /https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=/);
+  assert.match(layout, /gtag\('config','\$\{gaId\}'\)/);
+  assert.match(workflow, /PUBLIC_GA_ID: \$\{\{ vars\.PUBLIC_GA_ID \}\}/);
+});
