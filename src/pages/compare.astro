@@ -106,6 +106,7 @@ import { SHORTLIST_MAX } from '../lib/shortlist';
     clearShortlist,
     subscribeShortlist,
   } from '../lib/shortlist';
+  import { onPageLeave } from '../lib/client-lifecycle';
 
   const PROVIDER_ABBR: Record<string, string> = {
     usnews: 'USN', times: 'THE', qs: 'QS', cwur: 'CWUR', ntu: 'NTU',
@@ -150,15 +151,24 @@ import { SHORTLIST_MAX } from '../lib/shortlist';
     const addResults = section?.querySelector<HTMLUListElement>('[data-add-results]');
     if (!grid || !gridWrap || !empty || !countEl) return;
 
+    const lifecycle = new AbortController();
+    let unsubscribeShortlist = (): void => {};
+    onPageLeave(document, () => {
+      lifecycle.abort();
+      unsubscribeShortlist();
+    });
+
     let directory: Directory;
     try {
-      const response = await fetch('/data/directory.json');
+      const response = await fetch('/data/directory.json', { signal: lifecycle.signal });
       if (!response.ok) throw new Error(String(response.status));
       directory = (await response.json()) as Directory;
     } catch {
+      if (lifecycle.signal.aborted) return;
       countEl.textContent = 'The institution index could not be loaded. Please retry later.';
       return;
     }
+    if (lifecycle.signal.aborted) return;
 
     const byId = new Map(directory.institutions.map((item) => [item.id, item]));
     const providers = directory.providers;
@@ -356,11 +366,11 @@ import { SHORTLIST_MAX } from '../lib/shortlist';
       addSearch.addEventListener('focus', runSearch);
       document.addEventListener('click', (event) => {
         if (!addResults.contains(event.target as Node) && event.target !== addSearch) closeResults();
-      });
+      }, { signal: lifecycle.signal });
     }
 
     clearBtn?.addEventListener('click', () => clearShortlist());
-    subscribeShortlist(() => render());
+    unsubscribeShortlist = subscribeShortlist(() => render());
     render();
   };
 
