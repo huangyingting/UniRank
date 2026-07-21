@@ -183,13 +183,13 @@ import { SHORTLIST_MAX } from '../lib/shortlist';
       if (next !== `${location.pathname}${location.search}`) history.replaceState(null, '', next);
     };
 
-    const removeButton = (id: string): HTMLButtonElement => {
+    const removeButton = (school: DirectoryInstitution): HTMLButtonElement => {
       const button = document.createElement('button');
       button.type = 'button';
       button.className = 'remove';
-      button.setAttribute('aria-label', 'Remove from comparison');
+      button.setAttribute('aria-label', `Remove ${school.name} from your comparison`);
       button.textContent = '\u00d7';
-      button.addEventListener('click', () => removeFromShortlist(id));
+      button.addEventListener('click', () => removeFromShortlist(school.id));
       return button;
     };
 
@@ -237,7 +237,7 @@ import { SHORTLIST_MAX } from '../lib/shortlist';
         name.textContent = school.name;
         const place = document.createElement('small');
         place.textContent = school.country || 'Location n/a';
-        th.append(removeButton(school.id), name, place);
+        th.append(removeButton(school), name, place);
         headRow.append(th);
       }
       rows.push(headRow);
